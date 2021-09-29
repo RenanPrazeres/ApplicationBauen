@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <SearchView
+        android:id="@+id/serach_View"
+        android:layout_width="258dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/searchview_menu_background" />
+
+    <ImageView
+        android:id="@+id/id_filter"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        android:src="@drawable/filter" />
+
+    <ImageView
+        android:id="@+id/id_order"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="79dp"
+        android:layout_marginRight="79dp"
+        android:layout_toEndOf="@+id/serach_View"
+        android:layout_toRightOf="@+id/serach_View"
+        android:src="@drawable/ordenar" />
+
+    <View
+        android:id="@+id/id_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/serach_View"
+        android:background="#DADADA" />
+
+    <TextView
+        android:id="@+id/id_number_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_line"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="0 Resultados"
+        android:textColor="#223263" />
+
+    <TextView
+        android:id="@+id/id_text_premium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id_line"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:text="Premium"
+        android:textColor="#223263"
+        />
+
+    <View
+        android:id="@+id/id_line2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/id_number_result"
+        android:layout_marginTop="5dp"
+        android:background="#DADADA" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/id_nicho"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@id/id_line2"
+        app:cardBackgroundColor="#074EAD" />
+
+
+        <ListView
+        android:id="@+id/list_View"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_below="@id/id_nicho"/>
+
+
+</RelativeLayout>
