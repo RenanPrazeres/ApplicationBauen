@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:background="@color/white">
+    android:background="white">
 
 
     <LinearLayout
@@ -25,7 +25,7 @@
                 android:layout_width="80dp"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/profile"
-                android:layout_marginLeft="45dp"
+                android:layout_marginLeft="35dp"
                 />
 
             <ImageView
@@ -36,34 +36,37 @@
                 android:layout_gravity="right"
                 android:layout_marginRight="12dp"/>
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="200dp"
-                android:layout_height="20dp"
-                android:text="Nome do Prestador"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginLeft="25dp"
-                android:textSize="18dp"
-                android:textColor="@color/white"
-                android:layout_marginTop="8dp" />
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="180dp"
-                android:layout_height="20dp"
-                android:text="Função do Prestador"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginLeft="25dp"
-                android:textSize="15dp"
-                android:textColor="@color/white"
-                android:layout_marginTop="30dp" />
-
             <ImageView
                 android:id="@+id/imageView5"
                 android:layout_width="45dp"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/less"
                 android:rotation="270"/>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/Branco"
+                android:text="Nome prestador"
+                android:textSize="18dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="sans-serif-black"/>
+
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:textColor="@color/Branco"
+                android:text="Função prestador"
+                android:textSize="18dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="20dp"
+               />
 
 
         </androidx.cardview.widget.CardView>
@@ -73,8 +76,78 @@
     <androidx.cardview.widget.CardView
         cardBackgroundColor="android:blue"
         android:layout_width="match_parent"
-        android:layout_height="600dp"
-        app:cardBackgroundColor="#0000" />
+        android:layout_height="710dp"
+        app:cardBackgroundColor="#0000"
+        >
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/images"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            />
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/images"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="200dp"
+            />
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            app:srcCompat="@drawable/mulher"
+            android:layout_marginTop="100dp"
+           android:layout_marginLeft="340dp" />
+
+        <ImageView
+            android:id="@+id/imageView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/images"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="200dp"
+            />
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/images"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="400dp"
+            />
+        <ImageView
+            android:id="@+id/imageView14"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            app:srcCompat="@drawable/mulher"
+            android:layout_marginTop="300dp"
+            android:layout_marginLeft="340dp" />
+
+        <ImageView
+            android:id="@+id/imageView15"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            app:srcCompat="@drawable/mulher"
+            android:layout_marginTop="500dp"
+            android:layout_marginLeft="340dp" />
+
+        <ImageView
+            android:id="@+id/imageView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/images"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="600dp"
+            />
+
+        />
+    </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         cardBackgroundColor="android:blue"
@@ -85,11 +158,11 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="310dp"
-            android:layout_height="30dp"
+            android:layout_height="35dp"
             android:layout_gravity="left"
             app:cardBackgroundColor="#F5F5F5"
             app:cardCornerRadius="19dp"
-            android:layout_marginTop="11dp"
+            android:layout_marginTop="14dp"
             android:layout_marginLeft="30dp"
             >
 
@@ -98,12 +171,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Digite uma mensagem..." />
+                android:text="Digite uma mensagem..."
+                android:textSize="18dp"/>
 
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 app:srcCompat="@drawable/attach"
                 android:layout_gravity="right"
                 android:layout_marginRight="5dp"
@@ -129,7 +203,8 @@
             android:layout_height="50dp"
             android:layout_gravity="right"
             app:srcCompat="@drawable/audio"
-            android:layout_marginRight="10dp"/>
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5"/>
 
 
     </androidx.cardview.widget.CardView>
