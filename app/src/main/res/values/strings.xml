@@ -1,4 +1,5 @@
 <resources>
     <string name="Empresa">Bauen</string>
     <string name="Slogan">Conectando a solução a você</string>
+    <string name="app_name">App Name here</string>
 </resources>
