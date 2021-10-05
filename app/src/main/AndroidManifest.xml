@@ -9,11 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MainActivit">
-<<<<<<< HEAD
-        <activity android:name=".ListagemPestadorActivity">
-=======
+
         <activity android:name=".ListagemPrestadorActivity">
->>>>>>> 85992f134eddf6d8c9df3bd5e327155b063e4fe3
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
