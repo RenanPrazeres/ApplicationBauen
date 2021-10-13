@@ -85,15 +85,6 @@
             app:srcCompat="@drawable/pngegg" />
 
 
-
-        <ImageView
-            android:id="@+id/imageView9"
-            android:layout_width="60sp"
-            android:layout_height="60sp"
-            android:layout_marginLeft="340dp"
-            android:layout_marginTop="100dp"
-            app:srcCompat="@drawable/fotoChat" />
-
         <ImageView
             android:id="@+id/imageView13"
             android:layout_width="60sp"
@@ -109,22 +100,6 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="400dp"
             app:srcCompat="@drawable/pngegg" />
-
-        <ImageView
-            android:id="@+id/imageView14"
-            android:layout_width="60sp"
-            android:layout_height="60sp"
-            android:layout_marginLeft="340dp"
-            android:layout_marginTop="300dp"
-            app:srcCompat="@drawable/fotoChat" />
-
-        <ImageView
-            android:id="@+id/imageView15"
-            android:layout_width="60sp"
-            android:layout_height="60sp"
-            android:layout_marginLeft="340dp"
-            android:layout_marginTop="500dp"
-            app:srcCompat="@drawable/fotoChat" />
 
         <ImageView
             android:id="@+id/imageView16"
@@ -263,16 +238,6 @@
                 android:textColor="#000000"
                 android:textSize="16dp" />
         </androidx.cardview.widget.CardView>
-
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" />
-        </ScrollView>
 
 
     </androidx.cardview.widget.CardView>

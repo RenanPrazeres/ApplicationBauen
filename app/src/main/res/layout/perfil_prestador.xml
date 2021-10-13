@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -13,24 +10,26 @@
         android:id="@+id/cl_location"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:background="@color/Preto">
+        android:background="@color/Branco">
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:paddingEnd="6dp"
+            android:paddingRight="6dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/location"
-            android:paddingEnd="6dp"/>
+            tools:ignore="VectorDrawableCompat" />
 
         <TextView
             android:id="@+id/info_location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Está a 5km de você"
-            android:textColor="@color/Branco"
+            android:text="Está a 5 km de você"
+            android:textColor="@color/Primaria"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/imageView"
             app:layout_constraintTop_toTopOf="parent" />
@@ -39,7 +38,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="210dp"
-        android:background="@color/Cinza">
+        android:background="@color/Branco">
 
 
         <androidx.cardview.widget.CardView
@@ -66,7 +65,7 @@
             android:layout_marginTop="8dp"
             android:layout_marginBottom="16dp"
             android:text="Meu nome é"
-            android:textColor="@color/Preto"
+            android:textColor="@color/Secundária"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -93,7 +92,8 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/star" />
+                    app:srcCompat="@drawable/star"
+                    tools:ignore="VectorDrawableCompat" />
 
                 <ImageView
                     android:id="@+id/imageView8"
@@ -102,15 +102,40 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/imageView7"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/star" />
+                    app:srcCompat="@drawable/star"
+                    tools:ignore="VectorDrawableCompat" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"></LinearLayout>
+        android:background="@color/Primaria">
+
+        <Button
+            android:id="@+id/btn_contato"
+            android:layout_width="373dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:text="Entrar em Contato"
+            android:textColor="@color/Secundária"
+            app:backgroundTint="@color/Branco"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Tipos de Serviços Prestados "
+            android:textColor="@color/Branco"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_contato" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>
