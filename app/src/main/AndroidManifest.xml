@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
     package="br.com.bauen.mainactivit">
 
     <application
@@ -9,18 +10,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MainActivit">
-        <activity android:name=".Login"></activity>
-        <activity android:name=".ListagemPrestadorActivity" />
-        <activity android:name=".PerfilPrestadorActivity" />
-        <activity
-            android:name=".ChatActivity"
+
+        <activity android:name=".Login"/>
+        <activity android:name=".ListagemPrestadorActivity"/>
+        <activity android:name=".PerfilPrestadorActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ChatActivity" />
         <activity android:name=".MainActivity" />
     </application>
 

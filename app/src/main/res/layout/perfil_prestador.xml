@@ -81,30 +81,20 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/nome_prestador">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
-                <ImageView
-                    android:id="@+id/imageView7"
+                <RatingBar
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/star"
-                    tools:ignore="VectorDrawableCompat" />
+                    android:id="@+id/rb_ratingBar"
+                    android:layout_centerInParent="true"
+                    android:outlineAmbientShadowColor="@color/Branco">
 
-                <ImageView
-                    android:id="@+id/imageView8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/imageView7"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/star"
-                    tools:ignore="VectorDrawableCompat" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                </RatingBar>
+
+            </RelativeLayout>
         </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
