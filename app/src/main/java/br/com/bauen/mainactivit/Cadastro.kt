@@ -33,7 +33,7 @@ class Cadastro : AppCompatActivity() {
         bairroResidencia = findViewById(R.id.et_bairro)
         bntContinuar = findViewById(R.id.button_continuar)
 
-        cepResidencia.setOnClickListener {
+
 
 
 
