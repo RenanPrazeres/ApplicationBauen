@@ -11,14 +11,14 @@
         android:theme="@style/Theme.MainActivit">
         <activity android:name=".Cadastro"/>
         <activity android:name=".Login"/>
-        <activity android:name=".ListagemPrestadorActivity"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+        <activity android:name=".ListagemPrestadorActivity"/>
+        <activity android:name=".PerfilPrestadorActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-        <activity android:name=".PerfilPrestadorActivity"/>
         <activity android:name=".ChatActivity"/>
         <activity android:name=".MainActivity"/>
     </application>
