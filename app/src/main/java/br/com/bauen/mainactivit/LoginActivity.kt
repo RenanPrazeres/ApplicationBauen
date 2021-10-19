@@ -7,7 +7,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 
-class Login : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
 
     lateinit var email_login: EditText
     lateinit var senha_login: EditText

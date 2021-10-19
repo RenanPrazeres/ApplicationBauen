@@ -26,7 +26,16 @@ class Cadastro : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cadastro)
 
+        cepResidencia = findViewById(R.id.et_cep)
+        ruaResidencia = findViewById(R.id.et_rua)
+        estadoResidencia = findViewById(R.id.et_estado)
+        cidadeResidencia = findViewById(R.id.et_cidade)
+        bairroResidencia = findViewById(R.id.et_bairro)
         bntContinuar = findViewById(R.id.button_continuar)
+
+        cepResidencia.setOnClickListener {
+
+
 
         bntContinuar.setOnClickListener {
             val intent = Intent (this, Cadastro2::class.java)
