@@ -1,5 +1,6 @@
 package br.com.bauen.mainactivit
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -19,18 +20,18 @@ class Cadastro : AppCompatActivity() {
     lateinit var bairroResidencia: EditText
     lateinit var numeroResidencia: EditText
     lateinit var complementoResidencia: EditText
-    lateinit var dataDeNascimento: EditText
-    lateinit var cpf: EditText
-    lateinit var rg: EditText
-    lateinit var senha: EditText
-    lateinit var confirmacaoSenha: EditText
-    lateinit var bntCadastro: Button
+    lateinit var bntContinuar: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cadastro)
 
+        bntContinuar = findViewById(R.id.button_continuar)
 
+        bntContinuar.setOnClickListener {
+            val intent = Intent (this, Cadastro2::class.java)
+            startActivity(intent)
+        }
 
 
 
