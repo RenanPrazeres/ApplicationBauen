@@ -1,4 +1,8 @@
 <resources>
     <string name="Empresa">Bauen</string>
     <string name="Slogan">Conectando a solução a você</string>
+    <string name="first_fragment_label">Teste</string>
+    <string name="second_fragment_label">Teste</string>
+    <string name="app_name">Aplicativo</string>
+    <string name="novaa">NOVA</string>
 </resources>
