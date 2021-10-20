@@ -76,6 +76,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="20dp"
+                android:padding="15dp"
                 android:background="@drawable/edit_text_login_background"/>
 
             <EditText
@@ -87,6 +88,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="20dp"
+                android:padding="15dp"
                 android:background="@drawable/edit_text_login_background"/>
 
             <EditText
@@ -97,6 +99,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="20dp"
+                android:padding="15dp"
                 android:background="@drawable/edit_text_login_background"/>
 
             <EditText
@@ -107,6 +110,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="20dp"
+                android:padding="15dp"
                 android:background="@drawable/edit_text_login_background"/>
 
             <Button
@@ -116,7 +120,8 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="11dp"
                 android:layout_marginRight="20dp"
-                android:text="Continuar"
+                android:padding="15dp"
+                android:text="Avançar"
                 android:background="@drawable/edit_text_login_background"/>
 
         </LinearLayout>

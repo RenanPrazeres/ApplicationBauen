@@ -5,14 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login" >
-
-<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--        android:id="@+id/const_nome"-->
-<!--        android:layout_width="100dp"-->
-<!--        android:layout_height="200dp">-->
-
-<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+    tools:context=".LoginActivity" >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/const_logo_login"
