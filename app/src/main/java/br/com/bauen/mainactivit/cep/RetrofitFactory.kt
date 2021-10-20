@@ -1,6 +1,6 @@
 package br.com.bauen.mainactivit.cep
 
-import br.com.bauen.mainactivit.cep.RetrofitService
+
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

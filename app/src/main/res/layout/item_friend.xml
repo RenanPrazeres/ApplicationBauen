@@ -14,11 +14,11 @@
         android:layout_height="wrap_content"
         app:cardCornerRadius="48dp">
 
-    <androidx.appcompat.widget.AppCompatImageView
-        app:srcCompat="@tools:sample/avatars"
-        android:scaleType="centerCrop"
-        android:layout_width="56dp"
-        android:layout_height="56dp" />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/fotoredonda" />
 
     </androidx.cardview.widget.CardView>
 
@@ -68,8 +68,7 @@
         android:paddingLeft="3dp"
         android:paddingRight="3dp"
         android:textSize="12sp"
-        android:textStyle="bold"
-        />
+        android:textStyle="bold" />
 
 
 
