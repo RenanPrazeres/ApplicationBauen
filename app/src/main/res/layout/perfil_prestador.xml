@@ -37,7 +37,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="210dp"
+        android:layout_height="200dp"
         android:background="@color/Branco">
 
 
@@ -120,8 +120,9 @@
             android:id="@+id/textView11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
             android:text="Tipos de Serviços Prestados "
             android:textColor="@color/Branco"
             app:layout_constraintStart_toStartOf="parent"
@@ -249,12 +250,13 @@
             android:id="@+id/textView12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="4dp"
+
             android:text="Portifolio"
             android:textColor="@color/Branco"
             app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView"
             tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="10dp" />
+            tools:layout_editor_absoluteX="16dp" />
 
         <HorizontalScrollView
             android:id="@+id/horizontalScrollView2"
@@ -273,6 +275,15 @@
                     android:layout_height="100dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="4dp">
+
+                    <ImageView
+
+                        android:id="@+id/btn_add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/add" />
+
 
                 </androidx.cardview.widget.CardView>
 
@@ -304,12 +315,12 @@
             android:id="@+id/textView14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="4dp"
             android:text="Comentarios"
             android:textColor="@color/Branco"
             app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView2"
             tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="10dp" />
+            tools:layout_editor_absoluteX="16dp" />
 
         <HorizontalScrollView
             android:layout_width="match_parent"
