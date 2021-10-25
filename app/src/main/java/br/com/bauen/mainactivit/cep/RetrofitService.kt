@@ -11,6 +11,7 @@ interface RetrofitService {
     @GET("{CEP}/json/")
     fun getCEP(@Path("CEP") cep: String): Call<Cep>
     @GET("{uf}/{cidade}/{logradouro}/json")
+
     fun getCEPByLogradouro(
         @Path("uf") uf: String,
         @Path("cidade") cidade: String,
