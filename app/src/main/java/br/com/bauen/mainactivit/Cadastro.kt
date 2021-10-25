@@ -9,37 +9,30 @@ import android.widget.TextView
 
 class Cadastro : AppCompatActivity() {
 
-    lateinit var criarConta: TextView
-    lateinit var nomeCompleto: EditText
-    lateinit var emailUtilizado: EditText
-    lateinit var numeroCelular: EditText
-    lateinit var cepResidencia: EditText
-    lateinit var ruaResidencia: EditText
-    lateinit var estadoResidencia: EditText
-    lateinit var cidadeResidencia: EditText
-    lateinit var bairroResidencia: EditText
-    lateinit var numeroResidencia: EditText
-    lateinit var complementoResidencia: EditText
-    lateinit var bntContinuar: Button
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cadastro)
 
-        cepResidencia = findViewById(R.id.et_cep)
-        ruaResidencia = findViewById(R.id.et_rua)
-        estadoResidencia = findViewById(R.id.et_estado)
-        cidadeResidencia = findViewById(R.id.et_cidade)
-        bairroResidencia = findViewById(R.id.et_bairro)
-        bntContinuar = findViewById(R.id.button_continuar)
-
-
-
-
+        val nomeCompleto = findViewById<EditText>(R.id.et_nome)
+        val emailUtilizado = findViewById<EditText>(R.id.et_email)
+        val numeroCelular = findViewById<EditText>(R.id.et_celular)
+        val cepResidencia = findViewById<EditText>(R.id.et_cep)
+        val ruaResidencia = findViewById<EditText>(R.id.et_rua)
+        val estadoResidencia = findViewById<EditText>(R.id.et_estado)
+        val cidadeResidencia = findViewById<EditText>(R.id.et_cidade)
+        val bairroResidencia = findViewById<EditText>(R.id.et_bairro)
+        val numeroResidencia= findViewById<EditText>(R.id.et_numero)
+        val complementoResidencia= findViewById<EditText>(R.id.et_complemento)
+        val bntContinuar = findViewById<Button>(R.id.button_continuar)
 
         bntContinuar.setOnClickListener {
-            val intent = Intent (this, Cadastro2::class.java)
-            startActivity(intent)
+            //Criar um objeto Prestador
+            val prestadorDeServico = Cadastro()
+            //prestadorDeServico.et_ = nomeCompleto.text.toString()
+
+
+            val abrirCadastro2 = Intent (this, Cadastro2::class.java)
+            startActivity(abrirCadastro2 )
         }
 
 
