@@ -278,23 +278,35 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="4dp">
 
-                    <ImageView
+<!--                    <ImageView-->
 
-                        android:id="@+id/btn_add"
+<!--                        android:id="@+id/btn_add"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:src="@drawable/add" />-->
+
+
+                    <Button
+                        android:id="@+id/btn_test"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:src="@drawable/add" />
-
-
+                        android:text="Button" />
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/card1"
                     android:layout_width="150dp"
                     android:layout_height="100dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="4dp">
 
+
+                    <ImageView
+                        android:id="@+id/imagem_test"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/images" />
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
