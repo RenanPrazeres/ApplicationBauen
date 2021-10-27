@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import br.com.bauen.mainactivit.cliente.Cliente
+import br.com.bauen.mainactivit.login.Cliente
 import com.google.gson.Gson
 
 class Cadastro2 : AppCompatActivity() {
@@ -25,18 +25,17 @@ class Cadastro2 : AppCompatActivity() {
         val cpfEditText = findViewById<EditText>(R.id.et_cpf)
         val rgEditText = findViewById<EditText>(R.id.et_rg)
         val senhaEditText = findViewById<EditText>(R.id.et_senha)
-        val confirmacaoSenhaEditText = findViewById<EditText>(R.id.et_confirmação_de_senha)
         val bntCadastro = findViewById<Button>(R.id.button_cadastro)
 
         bntCadastro.setOnClickListener {
             //Criar um objeto Cliente para cadastro 2
 
             val cliente = Cliente()
-            cliente.dataNascimento = dataDeNascimento.text.toString()
+
+            cliente.born = dataDeNascimento.text.toString()
             cliente.cpf = cpfEditText.text.toString()
             cliente.rg = rgEditText.text.toString()
-            cliente.senha = senhaEditText.text.toString()
-            cliente.senhaConfirmacao = confirmacaoSenhaEditText.text.toString()
+            cliente.password = senhaEditText.text.toString()
 
 
             val gson = Gson()

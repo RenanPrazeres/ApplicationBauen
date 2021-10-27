@@ -7,16 +7,17 @@ import retrofit2.Call
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 import br.com.bauen.mainactivit.cep.Cep
 import br.com.bauen.mainactivit.cep.RetrofitFactory
-import br.com.bauen.mainactivit.cliente.Cliente
+import br.com.bauen.mainactivit.login.Cliente
+import br.com.bauen.mainactivit.login.Endereco
 import com.google.gson.Gson
 import retrofit2.Callback
 import retrofit2.Response
 
 
 class Cadastro : AppCompatActivity() {
+
 
     lateinit var editTextCep: EditText
     lateinit var editTextRua: EditText
@@ -42,29 +43,35 @@ class Cadastro : AppCompatActivity() {
         val bairroResidencia = findViewById<EditText>(R.id.et_bairro)
         editTextBairro = findViewById(R.id.et_bairro)
         val numeroResidencia= findViewById<EditText>(R.id.et_numero)
-        val complementoResidencia= findViewById<EditText>(R.id.et_complemento)
         val bntContinuar = findViewById<Button>(R.id.button_continuar)
 
         bntContinuar.setOnClickListener {
             //Criar um objeto Cliente
             val cliente = Cliente()
-            cliente.nome = nomeCompleto.text.toString()
+            cliente.name = nomeCompleto.text.toString()
             cliente.email = emailUtilizado.text.toString()
-            cliente.celular = numeroCelular.text.toString()
-            cliente.cep = cepResidencia.text.toString()
-            cliente.rua = ruaResidencia.text.toString()
-            cliente.estado = estadoResidencia.text.toString()
-            cliente.cidade = cidadeResidencia.text.toString()
-            cliente.bairro = bairroResidencia.text.toString()
-            cliente.numeroResidencia = numeroResidencia.text.toString()
-            cliente.complemento = complementoResidencia.text.toString()
+            cliente.phone = numeroCelular.text.toString()
+
+            val endereco = Endereco()
+            endereco.zipcode = cepResidencia.text.toString()
+            endereco.street = ruaResidencia.text.toString()
+            endereco.state = estadoResidencia.text.toString()
+            endereco.city = cidadeResidencia.text.toString()
+            endereco.zipcode = bairroResidencia.text.toString()
+            endereco.number = numeroResidencia.text.toString()
+
 
             //Converter o cliente em json
             val gson = Gson()
             val clienteJson = gson.toJson(cliente)
 
-
             println("############" + clienteJson)
+
+            //Converte o endereço em json
+            val gsonEndereco = Gson()
+            val enderecoJson = gsonEndereco.toJson(endereco)
+
+            println("///////////" + enderecoJson)
 
             //Abrir Tela de Cadastro2
             val abrirCadastro2 = Intent (this, Cadastro2::class.java)

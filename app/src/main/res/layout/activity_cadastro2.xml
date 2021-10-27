@@ -65,6 +65,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="20dp"
+                android:inputType="datetime"
                 android:background="@drawable/edit_text_login_background"/>
 
             <EditText
@@ -102,16 +103,16 @@
                 android:padding="15dp"
                 android:background="@drawable/edit_text_login_background"/>
 
-            <EditText
-                android:id="@+id/et_confirmação_de_senha"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Confirme sua senha"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginRight="20dp"
-                android:padding="15dp"
-                android:background="@drawable/edit_text_login_background"/>
+<!--            <EditText-->
+<!--                android:id="@+id/et_confirmação_de_senha"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:hint="Confirme sua senha"-->
+<!--                android:layout_marginLeft="20dp"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:layout_marginRight="20dp"-->
+<!--                android:padding="15dp"-->
+<!--                android:background="@drawable/edit_text_login_background"/>-->
 
             <Button
                 android:id="@+id/button_cadastro"
