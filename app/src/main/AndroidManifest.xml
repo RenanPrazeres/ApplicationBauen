@@ -2,29 +2,33 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="br.com.bauen.mainactivit">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher_background"
-        android:label="@string/app_name"
+        android:label="Bauen"
         android:roundIcon="@drawable/ic_launcher_foreground"
         android:supportsRtl="true"
         android:theme="@style/Theme.MainActivit">
-
-        <activity android:name=".Cadastro2"/>
+        <activity android:name=".MensagensRecentesActivity"/>
+        <activity android:name=".Cadastro2" />
         <activity android:name=".Cadastro" />
-        <activity android:name=".LoginActivity"/>
-        <activity android:name=".ListagemPrestadorActivity"/>
-        <activity android:name=".PerfilPrestadorActivity"
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".ListagemPrestadorActivity" />
+        <activity android:name=".ChatActivity" />
+
+        <activity
+            android:name=".PerfilPrestadorActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ChatActivity"/>
-        <activity android:name=".MainActivity"/>
+
+
 
     </application>
 

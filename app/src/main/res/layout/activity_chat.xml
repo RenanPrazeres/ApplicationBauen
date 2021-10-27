@@ -1,34 +1,320 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
-<LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    tools:context=".ChatActivity">
-    <include/>
-<!--        app:date="@{'Dez 20'}"  />   parei aqui. ver como passa os paramentros e aqui defino as variaveis-->
+    android:layout_height="match_parent"
+    android:background="@color/Branco"
+    android:orientation="vertical">
 
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            cardBackgroundColor="android:blue"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            app:cardBackgroundColor="#074EAD"
+            app:cardCornerRadius="0dp">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="35dp"
+                app:srcCompat="@drawable/pngegg" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="12dp"
+                app:srcCompat="@drawable/money" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="200dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="8dp"
+                android:text="Nome do Prestador"
+                android:textColor="@color/Branco"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="180dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="30dp"
+                android:text="Função do Prestador"
+                android:textColor="@color/Branco"
+                android:textSize="15dp" />
 
 
-    <include layout="@layout/item_friend"/>
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:rotation="270"
+                app:srcCompat="@drawable/less" />
 
-    <include layout="@layout/item_friend"/>
 
-    <include layout="@layout/item_friend"/>
+        </androidx.cardview.widget.CardView>
 
-    <include layout="@layout/item_friend"/>
+    </LinearLayout>
 
-    <include layout="@layout/item_friend"/>
+    <androidx.cardview.widget.CardView
+        cardBackgroundColor="android:blue"
+        android:layout_width="match_parent"
+        android:layout_height="642dp"
+        app:cardBackgroundColor="@color/Branco">
 
-    <include layout="@layout/item_friend"/>
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/pngegg" />
 
-    <include layout="@layout/item_friend"/>
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            android:layout_marginLeft="340dp"
+            android:layout_marginTop="100dp"
+            app:srcCompat="@drawable/fotoredonda" />
 
-    <include layout="@layout/item_friend"/>
 
+        <ImageView
+            android:id="@+id/imageView13"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="200dp"
+            app:srcCompat="@drawable/pngegg" />
+
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            android:layout_marginLeft="340dp"
+            android:layout_marginTop="300dp"
+            app:srcCompat="@drawable/fotoredonda" />
+
+        <ImageView
+            android:id="@+id/imageView12"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="400dp"
+            app:srcCompat="@drawable/pngegg" />
+
+        <ImageView
+            android:id="@+id/imageView14"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            android:layout_marginLeft="340dp"
+            android:layout_marginTop="500dp"
+            app:srcCompat="@drawable/fotoredonda" />
+
+        <ImageView
+            android:id="@+id/imageView16"
+            android:layout_width="60sp"
+            android:layout_height="60sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="600dp"
+            app:srcCompat="@drawable/pngegg" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="90dp"
+            android:layout_marginTop="20dp"
+            app:cardBackgroundColor="@color/Cinza"
+            app:cardCornerRadius="19dp">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="nós podemos marcar?"
+                android:textColor="#000000"
+                android:textSize="16dp" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="110dp"
+            app:cardBackgroundColor="#074EAD"
+            app:cardCornerRadius="19dp">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Quando você pode vir?"
+                android:textColor="#FFFFFF"
+                android:textSize="16dp" />
+            />
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="180dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="90dp"
+            android:layout_marginTop="210dp"
+            app:cardBackgroundColor="@color/Cinza"
+            app:cardCornerRadius="19dp">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="No sabado pode ser?"
+                android:textColor="#000000"
+                android:textSize="16dp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="160dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="170dp"
+            android:layout_marginTop="310dp"
+            app:cardBackgroundColor="#074EAD"
+            app:cardCornerRadius="19dp">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Isso, está otimo!!!"
+                android:textColor="#FFFFFF"
+                android:textSize="16dp" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="260dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="90dp"
+            android:layout_marginTop="410dp"
+            app:cardBackgroundColor="@color/Cinza"
+            app:cardCornerRadius="19dp">
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Combinado, umas 14:00 estou aí "
+                android:textColor="#000000"
+                android:textSize="16dp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="120dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="210dp"
+            android:layout_marginTop="510dp"
+            app:cardBackgroundColor="#074EAD"
+            app:cardCornerRadius="19dp">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Combinado!!!"
+                android:textColor="#FFFFFF"
+                android:textSize="16dp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="240dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="90dp"
+            android:layout_marginTop="610dp"
+            app:cardBackgroundColor="@color/Cinza"
+            app:cardCornerRadius="19dp">
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Ok, até logo! "
+                android:textColor="#000000"
+                android:textSize="16dp" />
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.cardview.widget.CardView>
+    <!--************-->
+    <androidx.cardview.widget.CardView
+        cardBackgroundColor="android:blue"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:cardBackgroundColor="#223263">
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="310dp"
+            android:layout_height="35dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"
+            app:cardBackgroundColor="#F5F5F5"
+            app:cardCornerRadius="19dp">
+
+            <EditText
+                android:id="@+id/editTextTextPersonName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Digite uma mensagem..."
+                android:textSize="16dp" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:rotation="340"
+                app:srcCompat="@drawable/attach" />
+
+        </androidx.cardview.widget.CardView>
+        <!--       *****************************************-->
+        <ImageView
+            android:id="@+id/imageAudio"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_gravity="end"
+            android:layout_marginRight="10dp"
+            app:srcCompat="@drawable/audio" />
+
+    </androidx.cardview.widget.CardView>
 
 </LinearLayout>
-</layout>

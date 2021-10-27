@@ -3,14 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-        <variable name="username" type="java.lang.String" />
-        <variable name="message" type="java.lang.String" />
-        <variable name="date" type="java.lang.String" />
-        <variable name="icon" type="android.graphics.drawable.Drawable" />
-        <variable name="isNew" type="java.lang.Integer" />
-        <variable name="isOnline" type="java.lang.Integer" />
-    </data>
+<!--    <data>-->
+<!--        <variable name="username" type="java.lang.String" />-->
+<!--        <variable name="message" type="java.lang.String" />-->
+<!--        <variable name="date" type="java.lang.String" />-->
+<!--        <variable name="icon" type="android.graphics.drawable.Drawable" />-->
+<!--        <variable name="isNew" type="java.lang.Integer" />-->
+<!--        <variable name="isOnline" type="java.lang.Integer" />-->
+<!--    </data>-->
 
 <RelativeLayout
     android:background="#FFFFFF"
@@ -30,8 +30,9 @@
             android:layout_width="56dp"
             android:layout_height="56dp"
             android:scaleType="centerCrop"
-            android:src="(icon)"
             app:srcCompat="@drawable/fotoredonda" />
+<!--            android:src="(icon)"-->
+
 
     </androidx.cardview.widget.CardView>
 
