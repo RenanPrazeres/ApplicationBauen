@@ -245,59 +245,11 @@
         </LinearLayout>
 
     </HorizontalScrollView>
-<ScrollView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
 
-        <ListView
-            android:id="@+id/list_View"
-            android:layout_width="match_parent"
-            android:layout_height="461dp"
-            android:layout_below="@id/id_nicho" />
-    </LinearLayout>
-</ScrollView>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleViewListagem"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:gravity="center"
-
-        android:orientation="horizontal"
-        android:visibility="visible">
-
-        <ImageView
-            android:id="@+id/imageView8"
-            android:layout_width="80dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/menuraio"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints" />
-
-        <ImageView
-            android:layout_width="84dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/menuraio"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/imageView9"
-            app:layout_constraintStart_toEndOf="@+id/imageView8"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints" />
-
-        <ImageView
-            android:id="@+id/imageView9"
-            android:layout_width="84dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/menuraio"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="501dp" />
 
 
 </LinearLayout>

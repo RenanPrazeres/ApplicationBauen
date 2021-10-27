@@ -62,5 +62,5 @@ class PerfilPrestadorActivity : AppCompatActivity() {
 //
 //        rb_rating.setOnRatingBarChangeListener { ratingBar, rating, fromUser ->
 //            Toast.makeText( this, "Rating: $rating", Toast.LENGTH_SHORT).show()
-
+//
 //        }
