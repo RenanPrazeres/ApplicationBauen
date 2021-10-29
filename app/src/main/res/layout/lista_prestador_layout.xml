@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:layout_margin="5dp">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/recycleCard"
@@ -41,7 +43,7 @@
             </androidx.cardview.widget.CardView>
 
             <TextView
-                android:id="@+id/nome_listagem"
+                android:id="@+id/TextNome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Ciclana de Tal "
@@ -50,7 +52,7 @@
                 tools:layout_editor_absoluteY="13dp" />
 
             <TextView
-                android:id="@+id/profissao_listagem"
+                android:id="@+id/TextProfissao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Pedreiro"
@@ -59,7 +61,7 @@
                 tools:layout_editor_absoluteY="84dp" />
 
             <TextView
-                android:id="@+id/numeros_projeto"
+                android:id="@+id/TextNunberProjetos"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Mais de 30 Projetos Realizados"
@@ -68,7 +70,7 @@
                 tools:layout_editor_absoluteY="84dp" />
 
             <RatingBar
-                android:id="@+id/ratingCard"
+                android:id="@+id/ratingAvaliacao"
                 style="?android:attr/ratingBarStyleSmall"
                 android:layout_width="81dp"
                 android:layout_height="19dp"
@@ -83,4 +85,4 @@
 
     </androidx.cardview.widget.CardView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

@@ -247,9 +247,8 @@
     </HorizontalScrollView>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycleViewListagem"
         android:layout_width="match_parent"
-        android:layout_height="501dp" />
+        android:layout_height="520dp" />
 
 
 </LinearLayout>
