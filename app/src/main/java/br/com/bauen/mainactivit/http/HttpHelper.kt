@@ -9,7 +9,7 @@ class HttpHelper {
 
     fun post (json: String) : String {
         //Definir URL do servidor
-        val URLApi = "http://192.168.0.102:3334/"
+        val URLApi = "http://10.107.144.3:3334//register/client"
 
         //Definir o cabeçalho
         val headerHttp = MediaType.parse("application/json; charset=utf-8")
@@ -30,9 +30,10 @@ class HttpHelper {
 
     }
 
+    //GET PRESTADOR
     fun get(){
         //Definir URL do servidor
-        val URLApi = "http://192.168.0.102:3334/"
+        val URLApi = "http://10.107.144.3:3334//service-provider"
 
         // Criar cliente que vai disparar a requisição
         val client = OkHttpClient()

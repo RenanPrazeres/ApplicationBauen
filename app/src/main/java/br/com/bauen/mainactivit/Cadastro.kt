@@ -75,13 +75,15 @@ class Cadastro : AppCompatActivity() {
 
             println("///////////" + enderecoJson)
 
-            doAsync {
+            doAsync{
                 val http = HttpHelper()
                 http.post(clienteJson)
 
                 val http2 = HttpHelper()
                 http2.post(enderecoJson)
             }
+
+
 
             //Declarando o tipo do conteúdo a ser transferido
             val nomeCliente: String = nomeCompleto.text.toString()
@@ -101,18 +103,17 @@ class Cadastro : AppCompatActivity() {
             detalhesCliente.putExtra("email", emailCliente)
             detalhesCliente.putExtra("phone", phoneCliente)
 
-            val detalhesEndereco = Intent(this, Cadastro2::class.java)
-            detalhesEndereco.putExtra("cep", cepCliente)
-            detalhesEndereco.putExtra("rua", ruaCliente)
-            detalhesEndereco.putExtra("estado", estadoCliente)
-            detalhesEndereco.putExtra("cidade", cidadeCliente)
-            detalhesEndereco.putExtra("bairro", bairroCliente)
-            detalhesEndereco.putExtra("number", numeroResidenciaCliente)
+
+//            detalhesCliente.putExtra("cep", cepCliente)
+//            detalhesCliente.putExtra("rua", ruaCliente)
+//            detalhesCliente.putExtra("estado", estadoCliente)
+//            detalhesCliente.putExtra("cidade", cidadeCliente)
+//            detalhesCliente.putExtra("bairro", bairroCliente)
+//            detalhesCliente.putExtra("number", numeroResidenciaCliente)
+
+            startActivity(detalhesCliente)
 
 
-            //Abrir Tela de Cadastro2
-            val abrirCadastro2 = Intent (this, Cadastro2::class.java)
-            startActivity(abrirCadastro2 )
         }
 
         cepResidencia.setOnFocusChangeListener { v, hasFocus ->

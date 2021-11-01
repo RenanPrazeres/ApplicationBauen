@@ -27,6 +27,8 @@ class Cadastro2 : AppCompatActivity() {
         val senhaEditText = findViewById<EditText>(R.id.et_senha)
         val bntCadastro = findViewById<Button>(R.id.button_cadastro)
 
+        val nomeCompleto = findViewById<EditText>(R.id.et_nome)
+
         bntCadastro.setOnClickListener {
             //Criar um objeto Cliente para cadastro 2
 
@@ -37,18 +39,23 @@ class Cadastro2 : AppCompatActivity() {
             cliente.rg = rgEditText.text.toString()
             cliente.password = senhaEditText.text.toString()
 
+
+
             //Recuperar dados da activity Cadastro
             val dados = intent.extras
-            var nomeCliente2 = dados?.getString("name")
-            var emailCliente2 = dados?.getString("email")
+//            var nomeCliente2 = dados?.getString("name")
+            val emailCliente2 = dados?.getString("email")
             var phoneCliente2 = dados?.getDouble("phone")
+            val nomeCliente2 =  intent.getStringExtra("name")
 
-            var cepCliente2 = dados?.getDouble("cep")
-            var ruaCliente2 = dados?.getString("rua")
-            var estadoCliente2 = dados?.getString("estado")
-            var cidadeCliente2 = dados?.getString("cidade")
-            var bairroCliente2 = dados?.getString("bairro")
-            var numberCliente2 = dados?.getDouble("number")
+
+
+//            var cepCliente2 = dados?.getDouble("cep")
+//            var ruaCliente2 = dados?.getString("rua")
+//            var estadoCliente2 = dados?.getString("estado")
+//            var cidadeCliente2 = dados?.getString("cidade")
+//            var bairroCliente2 = dados?.getString("bairro")
+//            var numberCliente2 = dados?.getDouble("number")
 
             //Converte o endereço em json
             val gson = Gson()
@@ -56,8 +63,8 @@ class Cadastro2 : AppCompatActivity() {
 
             println("*******" + clienteJson)
 
-            //Abrir Tela de Cadastro2
-            val perfilPrestador = Intent (this, PerfilPrestadorActivity::class.java)
+            //Abrir Tela de Login volta
+            val perfilPrestador = Intent (this, LoginActivity::class.java)
             startActivity(perfilPrestador)
         }
     }
