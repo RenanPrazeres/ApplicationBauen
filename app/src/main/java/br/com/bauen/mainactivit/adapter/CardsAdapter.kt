@@ -1,7 +1,6 @@
-package adapter
+package br.com.bauen.mainactivit.adapter
 import android.view.View
 import android.view.ViewGroup
-import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import model.Card
 

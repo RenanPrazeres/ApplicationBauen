@@ -37,7 +37,20 @@ class Cadastro2 : AppCompatActivity() {
             cliente.rg = rgEditText.text.toString()
             cliente.password = senhaEditText.text.toString()
 
+            //Recuperar dados da activity Cadastro
+            val dados = intent.extras
+            var nomeCliente2 = dados?.getString("name")
+            var emailCliente2 = dados?.getString("email")
+            var phoneCliente2 = dados?.getDouble("phone")
 
+            var cepCliente2 = dados?.getDouble("cep")
+            var ruaCliente2 = dados?.getString("rua")
+            var estadoCliente2 = dados?.getString("estado")
+            var cidadeCliente2 = dados?.getString("cidade")
+            var bairroCliente2 = dados?.getString("bairro")
+            var numberCliente2 = dados?.getDouble("number")
+
+            //Converte o endereço em json
             val gson = Gson()
             val clienteJson = gson.toJson(cliente)
 

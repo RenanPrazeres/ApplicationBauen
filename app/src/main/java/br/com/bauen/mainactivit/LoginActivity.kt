@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import br.com.bauen.mainactivit.http.HttpHelper
+import org.jetbrains.anko.doAsync
 
 class LoginActivity : AppCompatActivity() {
 
@@ -29,6 +31,11 @@ class LoginActivity : AppCompatActivity() {
         cadastre_se.setOnClickListener {
             val intent = Intent (this, Cadastro::class.java)
             startActivity(intent)
+
+            doAsync {
+                val http = HttpHelper()
+                http.get()
+            }
         }
     }
 }

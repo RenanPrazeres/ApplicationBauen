@@ -9,9 +9,11 @@ import android.widget.Button
 import android.widget.EditText
 import br.com.bauen.mainactivit.cep.Cep
 import br.com.bauen.mainactivit.cep.RetrofitFactory
+import br.com.bauen.mainactivit.http.HttpHelper
 import br.com.bauen.mainactivit.login.Cliente
 import br.com.bauen.mainactivit.login.Endereco
 import com.google.gson.Gson
+import org.jetbrains.anko.doAsync
 import retrofit2.Callback
 import retrofit2.Response
 
@@ -73,6 +75,41 @@ class Cadastro : AppCompatActivity() {
 
             println("///////////" + enderecoJson)
 
+            doAsync {
+                val http = HttpHelper()
+                http.post(clienteJson)
+
+                val http2 = HttpHelper()
+                http2.post(enderecoJson)
+            }
+
+            //Declarando o tipo do conteúdo a ser transferido
+            val nomeCliente: String = nomeCompleto.text.toString()
+            val emailCliente: String = emailUtilizado.text.toString()
+            val phoneCliente: Double = numeroCelular.text.toString().toDouble()
+
+            val cepCliente: Double = cepResidencia.text.toString().toDouble()
+            val numeroResidenciaCliente: Double = numeroResidencia.text.toString().toDouble()
+            val ruaCliente: String = ruaResidencia.text.toString()
+            val estadoCliente: String = estadoResidencia.text.toString()
+            val cidadeCliente: String = cidadeResidencia.text.toString()
+            val bairroCliente: String = bairroResidencia.text.toString()
+
+            //Passar dados para outra activity
+            val detalhesCliente = Intent(this, Cadastro2::class.java)
+            detalhesCliente.putExtra("name", nomeCliente)
+            detalhesCliente.putExtra("email", emailCliente)
+            detalhesCliente.putExtra("phone", phoneCliente)
+
+            val detalhesEndereco = Intent(this, Cadastro2::class.java)
+            detalhesEndereco.putExtra("cep", cepCliente)
+            detalhesEndereco.putExtra("rua", ruaCliente)
+            detalhesEndereco.putExtra("estado", estadoCliente)
+            detalhesEndereco.putExtra("cidade", cidadeCliente)
+            detalhesEndereco.putExtra("bairro", bairroCliente)
+            detalhesEndereco.putExtra("number", numeroResidenciaCliente)
+
+
             //Abrir Tela de Cadastro2
             val abrirCadastro2 = Intent (this, Cadastro2::class.java)
             startActivity(abrirCadastro2 )
@@ -121,3 +158,4 @@ class Cadastro : AppCompatActivity() {
         })
     }
 }
+
