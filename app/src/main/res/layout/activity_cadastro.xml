@@ -158,7 +158,56 @@
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="8dp"/>
 
+            <EditText
+                android:id="@+id/et_datadenascimento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Data de nascimento"
+                android:padding="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="20dp"
+                android:inputType="datetime"
+                android:background="@drawable/edit_text_login_background"
+                android:visibility="gone"/>
 
+            <EditText
+                android:id="@+id/et_cpf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="CPF"
+                android:inputType="numberDecimal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="20dp"
+                android:padding="15dp"
+                android:background="@drawable/edit_text_login_background"
+                android:visibility="gone"/>
+
+            <EditText
+                android:id="@+id/et_rg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="RG"
+                android:inputType="numberDecimal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="20dp"
+                android:padding="15dp"
+                android:background="@drawable/edit_text_login_background"
+                android:visibility="gone"/>
+
+            <EditText
+                android:id="@+id/et_senha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Senha"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="20dp"
+                android:padding="15dp"
+                android:background="@drawable/edit_text_login_background"
+                android:visibility="gone"/>
 
             <Button
                 android:id="@+id/button_continuar"

@@ -45,6 +45,12 @@ class Cadastro : AppCompatActivity() {
         val bairroResidencia = findViewById<EditText>(R.id.et_bairro)
         editTextBairro = findViewById(R.id.et_bairro)
         val numeroResidencia= findViewById<EditText>(R.id.et_numero)
+
+        val dataDeNascimento = findViewById<EditText>(R.id.et_datadenascimento)
+        val cpfEditText = findViewById<EditText>(R.id.et_cpf)
+        val rgEditText = findViewById<EditText>(R.id.et_rg)
+        val senhaEditText = findViewById<EditText>(R.id.et_senha)
+
         val bntContinuar = findViewById<Button>(R.id.button_continuar)
 
         bntContinuar.setOnClickListener {
@@ -53,13 +59,18 @@ class Cadastro : AppCompatActivity() {
             cliente.name = nomeCompleto.text.toString()
             cliente.email = emailUtilizado.text.toString()
             cliente.phone = numeroCelular.text.toString()
+            cliente.born = dataDeNascimento.text.toString()
+
+            cliente.cpf = cpfEditText.text.toString()
+            cliente.rg = rgEditText.text.toString()
+            cliente.password = senhaEditText.text.toString()
 
             val endereco = Endereco()
             endereco.zipcode = cepResidencia.text.toString()
             endereco.street = ruaResidencia.text.toString()
             endereco.state = estadoResidencia.text.toString()
             endereco.city = cidadeResidencia.text.toString()
-            endereco.zipcode = bairroResidencia.text.toString()
+            endereco.neighborhood = bairroResidencia.text.toString()
             endereco.number = numeroResidencia.text.toString()
 
 
@@ -90,28 +101,16 @@ class Cadastro : AppCompatActivity() {
             val emailCliente: String = emailUtilizado.text.toString()
             val phoneCliente: Double = numeroCelular.text.toString().toDouble()
 
-            val cepCliente: Double = cepResidencia.text.toString().toDouble()
-            val numeroResidenciaCliente: Double = numeroResidencia.text.toString().toDouble()
-            val ruaCliente: String = ruaResidencia.text.toString()
-            val estadoCliente: String = estadoResidencia.text.toString()
-            val cidadeCliente: String = cidadeResidencia.text.toString()
-            val bairroCliente: String = bairroResidencia.text.toString()
 
             //Passar dados para outra activity
             val detalhesCliente = Intent(this, Cadastro2::class.java)
-            detalhesCliente.putExtra("name", nomeCliente)
-            detalhesCliente.putExtra("email", emailCliente)
-            detalhesCliente.putExtra("phone", phoneCliente)
 
-
-//            detalhesCliente.putExtra("cep", cepCliente)
-//            detalhesCliente.putExtra("rua", ruaCliente)
-//            detalhesCliente.putExtra("estado", estadoCliente)
-//            detalhesCliente.putExtra("cidade", cidadeCliente)
-//            detalhesCliente.putExtra("bairro", bairroCliente)
-//            detalhesCliente.putExtra("number", numeroResidenciaCliente)
+//            detalhesCliente.putExtra("name", nomeCliente)
+//            detalhesCliente.putExtra("email", emailCliente)
+//            detalhesCliente.putExtra("phone", phoneCliente)
 
             startActivity(detalhesCliente)
+            finish()
 
 
         }

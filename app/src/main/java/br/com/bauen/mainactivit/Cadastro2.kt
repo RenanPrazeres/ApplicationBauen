@@ -39,14 +39,14 @@ class Cadastro2 : AppCompatActivity() {
             cliente.rg = rgEditText.text.toString()
             cliente.password = senhaEditText.text.toString()
 
-
+            cliente.name = getExternalFilesDir("nomeCliente2").toString()
 
             //Recuperar dados da activity Cadastro
-            val dados = intent.extras
+            var dados = intent
 //            var nomeCliente2 = dados?.getString("name")
-            val emailCliente2 = dados?.getString("email")
-            var phoneCliente2 = dados?.getDouble("phone")
-            val nomeCliente2 =  intent.getStringExtra("name")
+            val emailCliente2 = dados.getStringExtra("email")
+            var phoneCliente2 = dados.getDoubleExtra("phone", 0.0)
+            val nomeCliente2 =  dados.getStringExtra("name")
 
 
 
