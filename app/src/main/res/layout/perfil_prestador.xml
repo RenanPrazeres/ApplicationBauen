@@ -261,7 +261,8 @@
             android:layout_width="match_parent"
             android:layout_height="105dp"
             android:background="@color/Primaria"
-            app:layout_constraintTop_toBottomOf="@+id/textView12">
+            app:layout_constraintTop_toBottomOf="@+id/textView12"
+            tools:layout_editor_absoluteX="-153dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
