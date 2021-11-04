@@ -57,8 +57,12 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 }
-compileKotlin {
-    kotlinOptions {
-        languageVersion = "1.4"
-    }
-}
+
+
+//FOI COMNENTADO SÓ PARA CONSEGUIR RODAR O SIMULADOR POIS ESTAVA DANDO ERRO CASO SE NESCESSARIO DESCOMENTAR
+//
+//compileKotlin {
+//    kotlinOptions {
+//        languageVersion = "1.4"
+//    }
+//}

@@ -43,7 +43,7 @@
             </androidx.cardview.widget.CardView>
 
             <TextView
-                android:id="@+id/TextNome"
+                android:id="@+id/textNome"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Ciclana de Tal "
@@ -52,7 +52,7 @@
                 tools:layout_editor_absoluteY="13dp" />
 
             <TextView
-                android:id="@+id/TextProfissao"
+                android:id="@+id/textProfissao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Pedreiro"
@@ -61,7 +61,7 @@
                 tools:layout_editor_absoluteY="84dp" />
 
             <TextView
-                android:id="@+id/TextNunberProjetos"
+                android:id="@+id/textDescricao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Mais de 30 Projetos Realizados"

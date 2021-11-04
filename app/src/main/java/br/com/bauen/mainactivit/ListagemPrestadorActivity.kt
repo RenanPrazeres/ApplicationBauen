@@ -10,10 +10,12 @@ class ListagemPrestadorActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_listagem_prestador)
 
-        val recycleview_card = findViewById<RecyclerView>(R.id.recycleCard)
-        recycleview_card.layoutManager = LinearLayoutManager(this)
-        recycleview_card.setHasFixedSize(true)
 
+
+//        val recycleview_card = findViewById<RecyclerView>(R.id.recycleCard)
+//        recycleview_card.layoutManager = LinearLayoutManager(this)
+//        recycleview_card.setHasFixedSize(true)
+//
 
     }
 }
