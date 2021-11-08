@@ -1,12 +1,17 @@
 package br.com.bauen.mainactivit
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import retrofit2.Call
 import android.util.Log
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.LinearLayout
+import android.widget.Toast
+import androidx.core.view.isVisible
 import br.com.bauen.mainactivit.cep.Cep
 import br.com.bauen.mainactivit.cep.RetrofitFactory
 import br.com.bauen.mainactivit.http.HttpHelper
@@ -26,7 +31,16 @@ class Cadastro : AppCompatActivity() {
     lateinit var editTextEstado: EditText
     lateinit var editTextCidade: EditText
     lateinit var editTextBairro: EditText
+    lateinit var numeroCasa: EditText
+    lateinit var cpfCliente: EditText
+    lateinit var rgCliente: EditText
+    lateinit var senhaCliente : EditText
 
+    lateinit var btnContinuarTeste: Button
+
+//    lateinit var llCadastro: LinearLayout
+
+    @SuppressLint("WrongConstant")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cadastro)
@@ -34,24 +48,39 @@ class Cadastro : AppCompatActivity() {
         val nomeCompleto = findViewById<EditText>(R.id.et_nome)
         val emailUtilizado = findViewById<EditText>(R.id.et_email)
         val numeroCelular = findViewById<EditText>(R.id.et_celular)
+
         editTextCep = findViewById(R.id.et_cep)
         val cepResidencia = findViewById<EditText>(R.id.et_cep)
+
         val ruaResidencia = findViewById<EditText>(R.id.et_rua)
         editTextRua = findViewById(R.id.et_rua)
+
         val estadoResidencia = findViewById<EditText>(R.id.et_estado)
         editTextEstado = findViewById(R.id.et_estado)
+
         val cidadeResidencia = findViewById<EditText>(R.id.et_cidade)
         editTextCidade = findViewById(R.id.et_cidade)
+
         val bairroResidencia = findViewById<EditText>(R.id.et_bairro)
         editTextBairro = findViewById(R.id.et_bairro)
+
         val numeroResidencia= findViewById<EditText>(R.id.et_numero)
+        numeroCasa = findViewById(R.id.et_numero)
 
         val dataDeNascimento = findViewById<EditText>(R.id.et_datadenascimento)
+
         val cpfEditText = findViewById<EditText>(R.id.et_cpf)
+        cpfCliente = findViewById(R.id.et_cpf)
+
         val rgEditText = findViewById<EditText>(R.id.et_rg)
+        rgCliente = findViewById(R.id.et_rg)
+
         val senhaEditText = findViewById<EditText>(R.id.et_senha)
+        senhaCliente = findViewById<EditText>(R.id.et_senha)
 
         val bntContinuar = findViewById<Button>(R.id.button_continuar)
+        btnContinuarTeste = findViewById(R.id.button_continuar)
+
 
         bntContinuar.setOnClickListener {
             //Criar um objeto Cliente
@@ -72,6 +101,9 @@ class Cadastro : AppCompatActivity() {
             endereco.city = cidadeResidencia.text.toString()
             endereco.neighborhood = bairroResidencia.text.toString()
             endereco.number = numeroResidencia.text.toString()
+
+            btnContinuarTeste = findViewById(R.id.button_continuar)
+
 
 
             //Converter o cliente em json
@@ -95,24 +127,48 @@ class Cadastro : AppCompatActivity() {
             }
 
 
-
-            //Declarando o tipo do conteúdo a ser transferido
-            val nomeCliente: String = nomeCompleto.text.toString()
-            val emailCliente: String = emailUtilizado.text.toString()
-            val phoneCliente: Double = numeroCelular.text.toString().toDouble()
-
-
             //Passar dados para outra activity
             val detalhesCliente = Intent(this, Cadastro2::class.java)
-
-//            detalhesCliente.putExtra("name", nomeCliente)
-//            detalhesCliente.putExtra("email", emailCliente)
-//            detalhesCliente.putExtra("phone", phoneCliente)
-
             startActivity(detalhesCliente)
             finish()
 
+        }
 
+
+
+        editTextBairro.setOnFocusChangeListener { v, hasFocus ->
+            if (!hasFocus){
+                Toast.makeText(this, "DATA DE NASCIMENTO ABERTA", Toast.LENGTH_LONG).show()
+                dataDeNascimento.isVisible = true
+            }
+        }
+
+        numeroCasa.setOnFocusChangeListener { v, hasFocus ->
+            if (!hasFocus){
+                Toast.makeText(this, "CPF CLIENTE ABERTO", Toast.LENGTH_LONG).show()
+                cpfCliente.isVisible = true
+            }
+        }
+
+        dataDeNascimento.setOnFocusChangeListener { v, hasFocus ->
+            if (!hasFocus){
+                Toast.makeText(this, "RG CLIENTE ABERTO", Toast.LENGTH_LONG).show()
+                rgCliente.isVisible = true
+            }
+        }
+
+        cpfCliente.setOnFocusChangeListener { v, hasFocus ->
+            if (!hasFocus){
+                Toast.makeText(this, "SENHA CLIENTE ABERTO", Toast.LENGTH_LONG).show()
+                senhaCliente.isVisible = true
+            }
+        }
+
+        rgCliente.setOnFocusChangeListener { v, hasFocus ->
+            if (!hasFocus){
+                Toast.makeText(this, "SENHA CLIENTE ABERTO", Toast.LENGTH_LONG).show()
+                btnContinuarTeste.isVisible = true
+            }
         }
 
         cepResidencia.setOnFocusChangeListener { v, hasFocus ->
