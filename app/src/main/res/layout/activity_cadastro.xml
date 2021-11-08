@@ -59,164 +59,165 @@
                 android:id="@+id/et_nome"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Nome Completo"
-                android:background="@drawable/edit_text_login_background"
-                android:padding="15dp"
                 android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginTop="8dp"/>
+                android:background="@drawable/edit_text_login_background"
+                android:hint="Nome Completo"
+                android:padding="15dp" />
 
             <EditText
                 android:id="@+id/et_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/edit_text_login_background"
                 android:hint="E-mail mais utilizado"
                 android:inputType="textEmailAddress"
-                android:background="@drawable/edit_text_login_background"
-                android:padding="15dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="8dp"/>
+                android:padding="15dp" />
 
             <EditText
                 android:id="@+id/et_celular"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/edit_text_login_background"
                 android:hint="Celular (com DDD)"
                 android:inputType="numberDecimal"
-                android:background="@drawable/edit_text_login_background"
-                android:padding="15dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="8dp"/>
+                android:padding="15dp" />
 
             <EditText
                 android:id="@+id/et_cep"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/edit_text_login_background"
                 android:hint="CEP"
                 android:inputType="numberDecimal"
-                android:background="@drawable/edit_text_login_background"
-                android:padding="15dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="8dp"/>
+                android:padding="15dp" />
 
             <EditText
                 android:id="@+id/et_rua"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Rua"
-                android:background="@drawable/edit_text_login_background"
-                android:padding="15dp"
                 android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginTop="8dp"/>
+                android:background="@drawable/edit_text_login_background"
+                android:hint="Rua"
+                android:padding="15dp" />
 
             <EditText
                 android:id="@+id/et_estado"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Estado"
-                android:background="@drawable/edit_text_login_background"
-                android:padding="15dp"
                 android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginTop="8dp"/>
+                android:background="@drawable/edit_text_login_background"
+                android:hint="Estado"
+                android:padding="15dp" />
 
             <EditText
                 android:id="@+id/et_cidade"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Cidade "
-                android:background="@drawable/edit_text_login_background"
-                android:padding="15dp"
                 android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginTop="8dp"/>
+                android:background="@drawable/edit_text_login_background"
+                android:hint="Cidade "
+                android:padding="15dp" />
 
             <EditText
                 android:id="@+id/et_bairro"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Bairro"
-                android:background="@drawable/edit_text_login_background"
-                android:padding="15dp"
                 android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginTop="8dp"/>
+                android:background="@drawable/edit_text_login_background"
+                android:hint="Bairro"
+                android:padding="15dp" />
 
             <EditText
                 android:id="@+id/et_numero"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/edit_text_login_background"
                 android:hint="Número da residência"
                 android:inputType="numberDecimal"
-                android:background="@drawable/edit_text_login_background"
-                android:padding="15dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="8dp"/>
+                android:padding="15dp" />
 
             <EditText
                 android:id="@+id/et_datadenascimento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Data de nascimento"
-                android:padding="15dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="20dp"
-                android:inputType="datetime"
                 android:background="@drawable/edit_text_login_background"
-                android:visibility="gone"/>
+                android:hint="Data de nascimento"
+                android:inputType="datetime"
+                android:padding="15dp"
+                android:visibility="gone" />
 
             <EditText
                 android:id="@+id/et_cpf"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="CPF"
-                android:inputType="numberDecimal"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="20dp"
-                android:padding="15dp"
                 android:background="@drawable/edit_text_login_background"
-                android:visibility="gone"/>
+                android:hint="CPF"
+                android:inputType="numberDecimal"
+                android:padding="15dp"
+                android:visibility="gone" />
 
             <EditText
                 android:id="@+id/et_rg"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="RG"
-                android:inputType="numberDecimal"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="20dp"
-                android:padding="15dp"
                 android:background="@drawable/edit_text_login_background"
-                android:visibility="gone"/>
+                android:hint="RG"
+                android:inputType="numberDecimal"
+                android:padding="15dp"
+                android:visibility="gone" />
 
             <EditText
                 android:id="@+id/et_senha"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Senha"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="20dp"
-                android:padding="15dp"
                 android:background="@drawable/edit_text_login_background"
-                android:visibility="gone"/>
+                android:hint="Senha"
+                android:padding="15dp"
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/button_continuar"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Continuar"
                 android:layout_marginLeft="20dp"
+                android:layout_marginTop="11dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginTop="11dp"/>
+                android:text="Continuar"
+                android:visibility="gone" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
