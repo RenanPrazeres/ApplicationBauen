@@ -247,8 +247,10 @@
     </HorizontalScrollView>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_Cards"
         android:layout_width="match_parent"
-        android:layout_height="520dp" />
+        android:layout_height="520dp"
+        tools:listitem="@layout/lista_prestador_layout" />
 
 
 </LinearLayout>

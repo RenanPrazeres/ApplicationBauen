@@ -1,12 +1,17 @@
 package br.com.bauen.mainactivit
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import retrofit2.Call
 import android.util.Log
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.LinearLayout
+import android.widget.Toast
+import androidx.core.view.isVisible
 import br.com.bauen.mainactivit.cep.Cep
 import br.com.bauen.mainactivit.cep.RetrofitFactory
 import br.com.bauen.mainactivit.http.HttpHelper
