@@ -2,222 +2,26 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/Branco"
-    android:orientation="vertical">
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".ChatActivity">
 
+    <include layout="@layout/item_friend"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+    <include layout="@layout/item_friend"/>
 
-        <androidx.cardview.widget.CardView
-            cardBackgroundColor="android:blue"
-            android:layout_width="match_parent"
-            android:layout_height="66dp"
-            app:cardBackgroundColor="#074EAD"
-            app:cardCornerRadius="0dp">
+    <include layout="@layout/item_friend"/>
 
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="35dp"
-                app:srcCompat="@drawable/profile" />
+    <include layout="@layout/item_friend"/>
 
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:layout_marginRight="12dp"
-                app:srcCompat="@drawable/money" />
+    <include layout="@layout/item_friend"/>
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="200dp"
-                android:layout_height="20dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginLeft="25dp"
-                android:layout_marginTop="8dp"
-                android:text="Nome do Prestador"
-                android:textColor="@color/Branco"
-                android:textSize="18dp" />
+    <include layout="@layout/item_friend"/>
 
-            <TextView
-                android:id="@+id/textView8"
-                android:layout_width="180dp"
-                android:layout_height="20dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginLeft="25dp"
-                android:layout_marginTop="30dp"
-                android:text="Função do Prestador"
-                android:textColor="@color/Branco"
-                android:textSize="15dp" />
+    <include layout="@layout/item_friend"/>
 
+    <include layout="@layout/item_friend"/>
 
-            <ImageView
-                android:id="@+id/imageView5"
-                android:layout_width="45dp"
-                android:layout_height="wrap_content"
-                android:rotation="270"
-                app:srcCompat="@drawable/less" />
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
-                android:fontFamily="sans-serif-black"
-                android:text="Nome prestador"
-                android:textColor="@color/Branco"
-                android:textSize="18sp" />
-
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="25sp"
-                android:text="Função prestador"
-                android:textColor="@color/Branco"
-                android:textSize="18sp" />
-
-
-        </androidx.cardview.widget.CardView>
-
-    </LinearLayout>
-    <!--    IMPORTANTE-->
-    <androidx.cardview.widget.CardView
-        cardBackgroundColor="android:blue"
-        android:layout_width="match_parent"
-        android:layout_height="710dp"
-        app:cardBackgroundColor="@color/Branco">
-
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            app:srcCompat="@drawable/images" />
-
-        <ImageView
-            android:id="@+id/imageView10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="200dp"
-            app:srcCompat="@drawable/images" />
-
-        <ImageView
-            android:id="@+id/imageView9"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_marginLeft="340dp"
-            android:layout_marginTop="100dp"
-            app:srcCompat="@drawable/mulher" />
-
-        <ImageView
-            android:id="@+id/imageView13"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="200dp"
-            app:srcCompat="@drawable/images" />
-
-        <ImageView
-            android:id="@+id/imageView12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="400dp"
-            app:srcCompat="@drawable/images" />
-
-        <ImageView
-            android:id="@+id/imageView14"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_marginLeft="340dp"
-            android:layout_marginTop="300dp"
-            app:srcCompat="@drawable/mulher" />
-
-        <ImageView
-            android:id="@+id/imageView15"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:layout_marginLeft="340dp"
-            android:layout_marginTop="500dp"
-            app:srcCompat="@drawable/mulher" />
-
-        <ImageView
-            android:id="@+id/imageView16"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="600dp"
-            app:srcCompat="@drawable/images" />
-
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        cardBackgroundColor="android:blue"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:cardBackgroundColor="#223263">
-
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="310dp"
-            android:layout_height="35dp"
-            android:layout_gravity="left"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="14dp"
-            app:cardBackgroundColor="#F5F5F5"
-            app:cardCornerRadius="19dp">
-
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Digite uma mensagem..."
-                android:textSize="18dp" />
-
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_gravity="right"
-                android:layout_marginTop="5dp"
-                android:layout_marginRight="5dp"
-                android:rotation="340"
-                app:srcCompat="@drawable/attach" />
-
-        </androidx.cardview.widget.CardView>
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="40dp"
-            android:layout_height="50dp"
-            android:layout_gravity="right"
-            android:layout_marginRight="10dp"
-            android:shadowColor="#223263"
-            android:text="Button" />
-
-        <ImageView
-            android:id="@+id/imageAudio"
-            android:layout_width="40dp"
-            android:layout_height="50dp"
-            android:layout_gravity="end"
-            android:layout_marginRight="10dp"
-            app:srcCompat="@drawable/audio" />
-
-    </androidx.cardview.widget.CardView>
 
 </LinearLayout>

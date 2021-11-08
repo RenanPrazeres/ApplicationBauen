@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="5dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/recycleCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:cardBackgroundColor="@color/Branco"
+        app:cardCornerRadius="8dp"
+        tools:ignore="MissingConstraints">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="119dp"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view_profile"
+                android:layout_width="40dp"
+                android:layout_height="44dp"
+                app:cardCornerRadius="50dp"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="24dp">
+
+                <ImageView
+                    android:id="@+id/foto_listagem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/beyonce_profile" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/TextNome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ciclana de Tal "
+                android:textColor="@color/Primaria"
+                tools:layout_editor_absoluteX="63dp"
+                tools:layout_editor_absoluteY="13dp" />
+
+            <TextView
+                android:id="@+id/TextProfissao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pedreiro"
+                android:textColor="@color/Primaria"
+                tools:layout_editor_absoluteX="318dp"
+                tools:layout_editor_absoluteY="84dp" />
+
+            <TextView
+                android:id="@+id/TextNunberProjetos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mais de 30 Projetos Realizados"
+                android:textColor="@color/Primaria"
+                tools:layout_editor_absoluteX="65dp"
+                tools:layout_editor_absoluteY="84dp" />
+
+            <RatingBar
+                android:id="@+id/ratingAvaliacao"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="81dp"
+                android:layout_height="19dp"
+                android:layout_centerInParent="true"
+                android:numStars="5"
+                android:stepSize="0.5"
+                tools:layout_editor_absoluteX="63dp"
+                tools:layout_editor_absoluteY="50dp" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Cadastro2">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/const_logo_cadastro2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <ImageView
+            android:id="@+id/iv_logo_cadastro2"
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:scaleType="centerInside"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/logotcc" />
+
+        <TextView
+            android:id="@+id/tv_vamoscomecar_cadastro2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vamos começar!"
+            android:textColor="@color/Primaria"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_logo_cadastro2" />
+
+        <TextView
+            android:id="@+id/tv_facalogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Crie sua nova conta"
+            android:textColor="@color/Preto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_vamoscomecar_cadastro2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_cadastro"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <EditText
+                android:id="@+id/et_datadenascimento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Data de nascimento"
+                android:padding="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="20dp"
+                android:inputType="datetime"
+                android:background="@drawable/edit_text_login_background"/>
+
+            <EditText
+                android:id="@+id/et_cpf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="CPF"
+                android:inputType="numberDecimal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="20dp"
+                android:padding="15dp"
+                android:background="@drawable/edit_text_login_background"/>
+
+            <EditText
+                android:id="@+id/et_rg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="RG"
+                android:inputType="numberDecimal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="20dp"
+                android:padding="15dp"
+                android:background="@drawable/edit_text_login_background"/>
+
+            <EditText
+                android:id="@+id/et_senha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Senha"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="20dp"
+                android:padding="15dp"
+                android:background="@drawable/edit_text_login_background"/>
+
+<!--            <EditText-->
+<!--                android:id="@+id/et_confirmação_de_senha"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:hint="Confirme sua senha"-->
+<!--                android:layout_marginLeft="20dp"-->
+<!--                android:layout_marginTop="8dp"-->
+<!--                android:layout_marginRight="20dp"-->
+<!--                android:padding="15dp"-->
+<!--                android:background="@drawable/edit_text_login_background"/>-->
+
+            <Button
+                android:id="@+id/button_cadastro"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginRight="20dp"
+                android:padding="15dp"
+                android:text="Avançar"
+                android:background="@drawable/edit_text_login_background"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
