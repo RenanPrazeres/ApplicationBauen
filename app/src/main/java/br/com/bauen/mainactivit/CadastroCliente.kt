@@ -23,7 +23,7 @@ import retrofit2.Callback
 import retrofit2.Response
 
 
-class Cadastro : AppCompatActivity() {
+class CadastroCliente : AppCompatActivity() {
 
 
     lateinit var editTextCep: EditText
@@ -35,6 +35,7 @@ class Cadastro : AppCompatActivity() {
     lateinit var cpfCliente: EditText
     lateinit var rgCliente: EditText
     lateinit var senhaCliente : EditText
+    lateinit var lugarReformadoCliente: EditText
 
     lateinit var btnContinuarTeste: Button
 
@@ -48,6 +49,7 @@ class Cadastro : AppCompatActivity() {
         val nomeCompleto = findViewById<EditText>(R.id.et_nome)
         val emailUtilizado = findViewById<EditText>(R.id.et_email)
         val numeroCelular = findViewById<EditText>(R.id.et_celular)
+        val dataDeNascimento = findViewById<EditText>(R.id.et_datadenascimento)
 
         editTextCep = findViewById(R.id.et_cep)
         val cepResidencia = findViewById<EditText>(R.id.et_cep)
@@ -67,8 +69,6 @@ class Cadastro : AppCompatActivity() {
         val numeroResidencia= findViewById<EditText>(R.id.et_numero)
         numeroCasa = findViewById(R.id.et_numero)
 
-        val dataDeNascimento = findViewById<EditText>(R.id.et_datadenascimento)
-
         val cpfEditText = findViewById<EditText>(R.id.et_cpf)
         cpfCliente = findViewById(R.id.et_cpf)
 
@@ -76,10 +76,14 @@ class Cadastro : AppCompatActivity() {
         rgCliente = findViewById(R.id.et_rg)
 
         val senhaEditText = findViewById<EditText>(R.id.et_senha)
-        senhaCliente = findViewById<EditText>(R.id.et_senha)
+        senhaCliente = findViewById(R.id.et_senha)
 
         val bntContinuar = findViewById<Button>(R.id.button_continuar)
         btnContinuarTeste = findViewById(R.id.button_continuar)
+
+        lugarReformadoCliente = findViewById(R.id.et_room)
+        val lugarAReformmarCliente = findViewById<EditText>(R.id.et_room)
+
 
 
         bntContinuar.setOnClickListener {
@@ -92,6 +96,7 @@ class Cadastro : AppCompatActivity() {
 
             cliente.cpf = cpfEditText.text.toString()
             cliente.rg = rgEditText.text.toString()
+            cliente.room = lugarAReformmarCliente.text.toString()
             cliente.password = senhaEditText.text.toString()
 
             val endereco = Endereco()
@@ -101,8 +106,6 @@ class Cadastro : AppCompatActivity() {
             endereco.city = cidadeResidencia.text.toString()
             endereco.neighborhood = bairroResidencia.text.toString()
             endereco.number = numeroResidencia.text.toString()
-
-            btnContinuarTeste = findViewById(R.id.button_continuar)
 
 
 
@@ -126,22 +129,18 @@ class Cadastro : AppCompatActivity() {
                 http2.post(enderecoJson)
             }
 
-
-            //Passar dados para outra activity
-            val detalhesCliente = Intent(this, Cadastro2::class.java)
-            startActivity(detalhesCliente)
             finish()
 
         }
 
 
 
-        editTextBairro.setOnFocusChangeListener { v, hasFocus ->
-            if (!hasFocus){
-                Toast.makeText(this, "DATA DE NASCIMENTO ABERTA", Toast.LENGTH_LONG).show()
-                dataDeNascimento.isVisible = true
-            }
-        }
+//        editTextBairro.setOnFocusChangeListener { v, hasFocus ->
+//            if (!hasFocus){
+//                Toast.makeText(this, "DATA DE NASCIMENTO ABERTA", Toast.LENGTH_LONG).show()
+//                dataDeNascimento.isVisible = true
+//            }
+//        }
 
         numeroCasa.setOnFocusChangeListener { v, hasFocus ->
             if (!hasFocus){
@@ -159,17 +158,26 @@ class Cadastro : AppCompatActivity() {
 
         cpfCliente.setOnFocusChangeListener { v, hasFocus ->
             if (!hasFocus){
-                Toast.makeText(this, "SENHA CLIENTE ABERTO", Toast.LENGTH_LONG).show()
-                senhaCliente.isVisible = true
+                Toast.makeText(this, "ROOM CLIENTE ABERTO", Toast.LENGTH_LONG).show()
+                lugarReformadoCliente.isVisible = true
             }
         }
 
         rgCliente.setOnFocusChangeListener { v, hasFocus ->
             if (!hasFocus){
                 Toast.makeText(this, "SENHA CLIENTE ABERTO", Toast.LENGTH_LONG).show()
+                senhaCliente.isVisible = true
+            }
+        }
+
+        lugarReformadoCliente.setOnFocusChangeListener { v, hasFocus ->
+            if (!hasFocus){
+                Toast.makeText(this, "BOTÃO ABERTO", Toast.LENGTH_LONG).show()
                 btnContinuarTeste.isVisible = true
             }
         }
+
+
 
         cepResidencia.setOnFocusChangeListener { v, hasFocus ->
 

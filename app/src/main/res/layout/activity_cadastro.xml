@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Cadastro">
+    tools:context=".CadastroCliente">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/const_logo_cadastro2"
@@ -169,7 +169,7 @@
                 android:hint="Data de nascimento"
                 android:inputType="datetime"
                 android:padding="15dp"
-                android:visibility="gone" />
+                android:visibility="visible" />
 
             <EditText
                 android:id="@+id/et_cpf"
@@ -198,6 +198,19 @@
                 android:visibility="gone" />
 
             <EditText
+                android:id="@+id/et_room"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/edit_text_login_background"
+                android:hint="Digite um número para entrar em contato com o prestador"
+                android:inputType="numberDecimal"
+                android:padding="15dp"
+                android:visibility="gone" />
+
+            <EditText
                 android:id="@+id/et_senha"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -216,6 +229,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="11dp"
                 android:layout_marginRight="20dp"
+                android:padding="15dp"
                 android:text="Continuar"
                 android:visibility="gone" />
         </LinearLayout>
