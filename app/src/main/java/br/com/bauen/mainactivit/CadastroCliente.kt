@@ -1,16 +1,12 @@
 package br.com.bauen.mainactivit
 
 import android.annotation.SuppressLint
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import retrofit2.Call
 import android.util.Log
-import android.view.View
 import android.widget.Button
 import android.widget.EditText
-import android.widget.LinearLayout
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import br.com.bauen.mainactivit.cep.Cep
 import br.com.bauen.mainactivit.cep.RetrofitFactory
@@ -19,12 +15,14 @@ import br.com.bauen.mainactivit.login.Cliente
 import br.com.bauen.mainactivit.login.Endereco
 import com.google.gson.Gson
 import org.jetbrains.anko.doAsync
+import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.text.SimpleDateFormat
+import java.util.*
 
 
 class CadastroCliente : AppCompatActivity() {
-
 
     lateinit var editTextCep: EditText
     lateinit var editTextRua: EditText
@@ -41,48 +39,48 @@ class CadastroCliente : AppCompatActivity() {
 
 //    lateinit var llCadastro: LinearLayout
 
-    @SuppressLint("WrongConstant")
+    @SuppressLint("WrongConstant", "NewApi")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_cadastro)
+        setContentView(R.layout.activity_cadastro_cliente)
 
-        val nomeCompleto = findViewById<EditText>(R.id.et_nome)
-        val emailUtilizado = findViewById<EditText>(R.id.et_email)
-        val numeroCelular = findViewById<EditText>(R.id.et_celular)
-        val dataDeNascimento = findViewById<EditText>(R.id.et_datadenascimento)
+        val nomeCompleto = findViewById<EditText>(R.id.et_nomeCliente)
+        val emailUtilizado = findViewById<EditText>(R.id.et_emailCliente)
+        val numeroCelular = findViewById<EditText>(R.id.et_celularCliente)
+        val dataDeNascimento = findViewById<EditText>(R.id.et_datadenascimentoCliente)
 
-        editTextCep = findViewById(R.id.et_cep)
-        val cepResidencia = findViewById<EditText>(R.id.et_cep)
+        editTextCep = findViewById(R.id.et_cepCliente)
+        val cepResidencia = findViewById<EditText>(R.id.et_cepCliente)
 
-        val ruaResidencia = findViewById<EditText>(R.id.et_rua)
-        editTextRua = findViewById(R.id.et_rua)
+        val ruaResidencia = findViewById<EditText>(R.id.et_ruaCliente)
+        editTextRua = findViewById(R.id.et_ruaCliente)
 
-        val estadoResidencia = findViewById<EditText>(R.id.et_estado)
-        editTextEstado = findViewById(R.id.et_estado)
+        val estadoResidencia = findViewById<EditText>(R.id.et_estadoCliente)
+        editTextEstado = findViewById(R.id.et_estadoCliente)
 
-        val cidadeResidencia = findViewById<EditText>(R.id.et_cidade)
-        editTextCidade = findViewById(R.id.et_cidade)
+        val cidadeResidencia = findViewById<EditText>(R.id.et_cidadeCliente)
+        editTextCidade = findViewById(R.id.et_cidadeCliente)
 
-        val bairroResidencia = findViewById<EditText>(R.id.et_bairro)
-        editTextBairro = findViewById(R.id.et_bairro)
+        val bairroResidencia = findViewById<EditText>(R.id.et_bairroCliente)
+        editTextBairro = findViewById(R.id.et_bairroCliente)
 
-        val numeroResidencia= findViewById<EditText>(R.id.et_numero)
-        numeroCasa = findViewById(R.id.et_numero)
+        val numeroResidencia= findViewById<EditText>(R.id.et_numeroCliente)
+        numeroCasa = findViewById(R.id.et_numeroCliente)
 
-        val cpfEditText = findViewById<EditText>(R.id.et_cpf)
-        cpfCliente = findViewById(R.id.et_cpf)
+        val cpfEditText = findViewById<EditText>(R.id.et_cpfCliente)
+        cpfCliente = findViewById(R.id.et_cpfCliente)
 
-        val rgEditText = findViewById<EditText>(R.id.et_rg)
-        rgCliente = findViewById(R.id.et_rg)
+        val rgEditText = findViewById<EditText>(R.id.et_rgCliente)
+        rgCliente = findViewById(R.id.et_rgCliente)
 
-        val senhaEditText = findViewById<EditText>(R.id.et_senha)
-        senhaCliente = findViewById(R.id.et_senha)
+        val senhaEditText = findViewById<EditText>(R.id.et_senhaCliente)
+        senhaCliente = findViewById(R.id.et_senhaCliente)
 
-        val bntContinuar = findViewById<Button>(R.id.button_continuar)
-        btnContinuarTeste = findViewById(R.id.button_continuar)
+        val bntContinuar = findViewById<Button>(R.id.button_cadastrarCliente)
+        btnContinuarTeste = findViewById(R.id.button_cadastrarCliente)
 
-        lugarReformadoCliente = findViewById(R.id.et_room)
-        val lugarAReformmarCliente = findViewById<EditText>(R.id.et_room)
+        lugarReformadoCliente = findViewById(R.id.et_roomCliente)
+        val lugarAReformmarCliente = findViewById<EditText>(R.id.et_roomCliente)
 
 
 
@@ -129,18 +127,26 @@ class CadastroCliente : AppCompatActivity() {
                 http2.post(enderecoJson)
             }
 
+            //Formatação de aniversário
+//            var formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd")
+//            var date = LocalDate.parse("$dataDeNascimento", "$formatter")
+
+
+
+
+//            var formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy")
+//            var dater = LocalDate.parse("$dataDeNascimento", formatter)
+
             finish()
 
         }
 
 
+//        val localDate: LocalDate = LocalDate.now()
+//        val strLocalDate2: String =
+//            LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy"))
 
-//        editTextBairro.setOnFocusChangeListener { v, hasFocus ->
-//            if (!hasFocus){
-//                Toast.makeText(this, "DATA DE NASCIMENTO ABERTA", Toast.LENGTH_LONG).show()
-//                dataDeNascimento.isVisible = true
-//            }
-//        }
+
 
         numeroCasa.setOnFocusChangeListener { v, hasFocus ->
             if (!hasFocus){
@@ -221,5 +227,11 @@ class CadastroCliente : AppCompatActivity() {
 
         })
     }
-}
 
+
+//    fun convertDate(){
+//        val mydate = "10/05/2003"
+//        val targetFormat = SimpleDateFormat("yyyy MM dd")
+//        date = originalFormat.parse(mydate)
+//    }
+}
