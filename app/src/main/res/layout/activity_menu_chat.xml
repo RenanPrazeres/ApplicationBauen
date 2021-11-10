@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             app:cardCornerRadius="48dp"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="15dp"
+            android:layout_marginLeft="50dp"
             >
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -41,8 +41,8 @@
             android:id="@+id/txt_friend_name"
             android:layout_width="172dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="90dp"
-            android:layout_marginLeft="200dp"
+            android:layout_marginStart="120dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:layout_toEndOf="@id/card_img_friend_profile"
             android:layout_toRightOf="@id/card_img_friend_profile"
@@ -51,8 +51,31 @@
             android:textSize="20dp"
             android:textStyle="bold"
             tools:text="Jean Henrique">
-
         </androidx.appcompat.widget.AppCompatTextView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/FunçãoPrestador"
+            android:layout_width="172dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="40dp"
+            android:layout_toEndOf="@id/card_img_friend_profile"
+            android:layout_toRightOf="@id/card_img_friend_profile"
+            android:text="(Função do prestador)"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            tools:text="azulegista"/>
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            app:srcCompat="@drawable/left_arrow"
+            android:backgroundTint="#074EAD"
+            android:layout_marginTop="15dp"
+
+            />
 
     </androidx.cardview.widget.CardView>
 

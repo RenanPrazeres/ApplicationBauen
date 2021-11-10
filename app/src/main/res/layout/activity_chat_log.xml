@@ -8,58 +8,62 @@
     android:background="@android:color/white">
 <!--    contexto-->
 
-<include layout="@layout/activity_menu_chat"/>
+    <include
+        layout="@layout/activity_menu_chat"
+        android:layout_width="match_parent"
+        android:layout_height="81dp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview_chat_log"
         android:layout_width="match_parent"
-        android:layout_height="590dp"
+        android:layout_height="584dp"
         android:layout_marginTop="80dp"
         android:layout_marginBottom="8dp"
         android:background="@android:color/holo_green_light"
+        android:backgroundTint="@color/Branco"
         app:layout_constraintBottom_toTopOf="@+id/edittext_chat_log"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:backgroundTint="@color/Branco"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_marginTop="200dp">
-        //terminar
+        android:layout_height="59dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="200dp"
+        android:layout_marginBottom="0dp"
+        app:cardBackgroundColor="#223263">
+
+        <ImageButton
+            android:id="@+id/send_button_chat_log"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/recyclerview_chat_log"
+            android:layout_marginStart="370dp"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/edittext_chat_log"
+            app:srcCompat="@drawable/send"
+            android:backgroundTint="#223263"
+            android:layout_marginTop="15dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="320dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="19dp">
+
+            <EditText
+                android:id="@+id/editTextTextPersonName"
+                android:layout_width="207dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="10dp"
+                android:inputType="textPersonName"
+                android:text="Digite uma mensagem..."
+                android:textSize="12dp" />
+        </androidx.cardview.widget.CardView>
+
     </androidx.cardview.widget.CardView>
 
-    <EditText
-        android:id="@+id/edittext_chat_log"
-        android:layout_width="290dp"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="@+id/recyclerview_chat_log"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@android:color/white"
-        android:ems="10"
-        android:hint="Enter Message"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toStartOf="@+id/send_button_chat_log"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="680dp"/>
- //gambiarra (tirar depois)
-
-    <Button
-        android:id="@+id/send_button_chat_log"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_below="@id/recyclerview_chat_log"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="6dp"
-        android:layout_toRightOf="@+id/edittext_chat_log"
-        android:text="Enviar"
-        android:textColor="@android:color/white"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@id/edittext_chat_log" />
 </RelativeLayout>
