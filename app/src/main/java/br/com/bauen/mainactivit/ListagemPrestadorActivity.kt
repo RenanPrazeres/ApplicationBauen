@@ -2,11 +2,12 @@ package br.com.bauen.mainactivit
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import br.com.bauen.mainactivit.adapter.CardsAdapter
+
+
 
 class ListagemPrestadorActivity : AppCompatActivity() {
 
@@ -18,9 +19,9 @@ class ListagemPrestadorActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_listagem_prestador)
 
+
         //Configuração da recycleView
-        //
-        rvCard = findViewById(R.id.rv_Cards)
+        rvCard = findViewById(R.id.rv_cards)
         cardsAdapter = CardsAdapter(this)
 
         //Deteminar o Layout da RV
@@ -29,12 +30,14 @@ class ListagemPrestadorActivity : AppCompatActivity() {
 
         //Definir o adapter da RV
         rvCard.adapter = cardsAdapter
-
-
         rvCard.layoutManager = GridLayoutManager(this,2)
+
         //Definir o adapter da Rv
         rvCard.adapter = cardsAdapter
 
 
     }
+
+
+
 }

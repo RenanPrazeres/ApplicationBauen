@@ -14,17 +14,15 @@
         android:theme="@style/Theme.MainActivit">
         <activity android:name=".CadastroPrestadorDeServico"></activity>
         <activity android:name=".CadastroCliente" />
-        <activity android:name=".LoginActivity" >
+        <activity android:name=".LoginActivity"/>
+        <activity
+            android:name=".ListagemPrestadorActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".ListagemPrestadorActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-
         </activity>
         <activity android:name=".PerfilPrestadorActivity" />
         <activity android:name=".ChatActivity" />
