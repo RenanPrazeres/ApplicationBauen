@@ -16,10 +16,9 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview_chat_log"
         android:layout_width="match_parent"
-        android:layout_height="584dp"
+        android:layout_height="705dp"
         android:layout_marginTop="80dp"
         android:layout_marginBottom="8dp"
-        android:background="@android:color/holo_green_light"
         android:backgroundTint="@color/Branco"
         app:layout_constraintBottom_toTopOf="@+id/edittext_chat_log"
         app:layout_constraintEnd_toEndOf="parent"
@@ -48,9 +47,9 @@
 
         <androidx.cardview.widget.CardView
             android:layout_width="320dp"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="30dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             app:cardCornerRadius="19dp">
 
             <EditText
@@ -58,10 +57,9 @@
                 android:layout_width="207dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="35dp"
-                android:layout_marginTop="10dp"
                 android:inputType="textPersonName"
                 android:text="Digite uma mensagem..."
-                android:textSize="12dp" />
+                android:textSize="18dp" />
         </androidx.cardview.widget.CardView>
 
     </androidx.cardview.widget.CardView>
