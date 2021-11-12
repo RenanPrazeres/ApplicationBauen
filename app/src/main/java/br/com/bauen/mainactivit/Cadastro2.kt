@@ -27,6 +27,8 @@ class Cadastro2 : AppCompatActivity() {
         val senhaEditText = findViewById<EditText>(R.id.et_senha)
         val bntCadastro = findViewById<Button>(R.id.button_cadastro)
 
+        val nomeCompleto = findViewById<EditText>(R.id.et_nome)
+
         bntCadastro.setOnClickListener {
             //Criar um objeto Cliente para cadastro 2
 
@@ -37,14 +39,32 @@ class Cadastro2 : AppCompatActivity() {
             cliente.rg = rgEditText.text.toString()
             cliente.password = senhaEditText.text.toString()
 
+            cliente.name = getExternalFilesDir("nomeCliente2").toString()
 
+            //Recuperar dados da activity Cadastro
+            var dados = intent
+//            var nomeCliente2 = dados?.getString("name")
+            val emailCliente2 = dados.getStringExtra("email")
+            var phoneCliente2 = dados.getDoubleExtra("phone", 0.0)
+            val nomeCliente2 =  dados.getStringExtra("name")
+
+
+
+//            var cepCliente2 = dados?.getDouble("cep")
+//            var ruaCliente2 = dados?.getString("rua")
+//            var estadoCliente2 = dados?.getString("estado")
+//            var cidadeCliente2 = dados?.getString("cidade")
+//            var bairroCliente2 = dados?.getString("bairro")
+//            var numberCliente2 = dados?.getDouble("number")
+
+            //Converte o endereço em json
             val gson = Gson()
             val clienteJson = gson.toJson(cliente)
 
             println("*******" + clienteJson)
 
-            //Abrir Tela de Cadastro2
-            val perfilPrestador = Intent (this, PerfilPrestadorActivity::class.java)
+            //Abrir Tela de Login volta
+            val perfilPrestador = Intent (this, LoginActivity::class.java)
             startActivity(perfilPrestador)
         }
     }

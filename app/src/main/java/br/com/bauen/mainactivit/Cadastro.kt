@@ -9,9 +9,11 @@ import android.widget.Button
 import android.widget.EditText
 import br.com.bauen.mainactivit.cep.Cep
 import br.com.bauen.mainactivit.cep.RetrofitFactory
+import br.com.bauen.mainactivit.http.HttpHelper
 import br.com.bauen.mainactivit.login.Cliente
 import br.com.bauen.mainactivit.login.Endereco
 import com.google.gson.Gson
+import org.jetbrains.anko.doAsync
 import retrofit2.Callback
 import retrofit2.Response
 
@@ -43,6 +45,12 @@ class Cadastro : AppCompatActivity() {
         val bairroResidencia = findViewById<EditText>(R.id.et_bairro)
         editTextBairro = findViewById(R.id.et_bairro)
         val numeroResidencia= findViewById<EditText>(R.id.et_numero)
+
+        val dataDeNascimento = findViewById<EditText>(R.id.et_datadenascimento)
+        val cpfEditText = findViewById<EditText>(R.id.et_cpf)
+        val rgEditText = findViewById<EditText>(R.id.et_rg)
+        val senhaEditText = findViewById<EditText>(R.id.et_senha)
+
         val bntContinuar = findViewById<Button>(R.id.button_continuar)
 
         bntContinuar.setOnClickListener {
@@ -51,13 +59,18 @@ class Cadastro : AppCompatActivity() {
             cliente.name = nomeCompleto.text.toString()
             cliente.email = emailUtilizado.text.toString()
             cliente.phone = numeroCelular.text.toString()
+            cliente.born = dataDeNascimento.text.toString()
+
+            cliente.cpf = cpfEditText.text.toString()
+            cliente.rg = rgEditText.text.toString()
+            cliente.password = senhaEditText.text.toString()
 
             val endereco = Endereco()
             endereco.zipcode = cepResidencia.text.toString()
             endereco.street = ruaResidencia.text.toString()
             endereco.state = estadoResidencia.text.toString()
             endereco.city = cidadeResidencia.text.toString()
-            endereco.zipcode = bairroResidencia.text.toString()
+            endereco.neighborhood = bairroResidencia.text.toString()
             endereco.number = numeroResidencia.text.toString()
 
 
@@ -73,9 +86,33 @@ class Cadastro : AppCompatActivity() {
 
             println("///////////" + enderecoJson)
 
-            //Abrir Tela de Cadastro2
-            val abrirCadastro2 = Intent (this, Cadastro2::class.java)
-            startActivity(abrirCadastro2 )
+            doAsync{
+                val http = HttpHelper()
+                http.post(clienteJson)
+
+                val http2 = HttpHelper()
+                http2.post(enderecoJson)
+            }
+
+
+
+            //Declarando o tipo do conteúdo a ser transferido
+            val nomeCliente: String = nomeCompleto.text.toString()
+            val emailCliente: String = emailUtilizado.text.toString()
+            val phoneCliente: Double = numeroCelular.text.toString().toDouble()
+
+
+            //Passar dados para outra activity
+            val detalhesCliente = Intent(this, Cadastro2::class.java)
+
+//            detalhesCliente.putExtra("name", nomeCliente)
+//            detalhesCliente.putExtra("email", emailCliente)
+//            detalhesCliente.putExtra("phone", phoneCliente)
+
+            startActivity(detalhesCliente)
+            finish()
+
+
         }
 
         cepResidencia.setOnFocusChangeListener { v, hasFocus ->
@@ -121,3 +158,4 @@ class Cadastro : AppCompatActivity() {
         })
     }
 }
+
