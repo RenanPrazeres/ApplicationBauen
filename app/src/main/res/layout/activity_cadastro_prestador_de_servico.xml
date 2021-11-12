@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Cadastro">
+    tools:context=".CadastroCliente">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/const_logo_cadastro2"
@@ -56,167 +56,191 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/et_nome"
+                android:id="@+id/et_nomePrestador"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Nome Completo"
-                android:background="@drawable/edit_text_login_background"
-                android:padding="15dp"
                 android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginTop="8dp"/>
+                android:background="@drawable/edit_text_login_background"
+                android:hint="Nome Completo"
+                android:padding="15dp"
+                android:visibility="visible"/>
 
             <EditText
-                android:id="@+id/et_email"
+                android:id="@+id/et_emailPrestador"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/edit_text_login_background"
                 android:hint="E-mail mais utilizado"
                 android:inputType="textEmailAddress"
-                android:background="@drawable/edit_text_login_background"
                 android:padding="15dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="8dp"/>
+                android:visibility="visible"/>
 
             <EditText
-                android:id="@+id/et_celular"
+                android:id="@+id/et_celularPrestador"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/edit_text_login_background"
                 android:hint="Celular (com DDD)"
                 android:inputType="numberDecimal"
-                android:background="@drawable/edit_text_login_background"
                 android:padding="15dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="8dp"/>
+                android:visibility="visible"/>
 
             <EditText
-                android:id="@+id/et_cep"
+                android:id="@+id/et_cepPrestador"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/edit_text_login_background"
                 android:hint="CEP"
                 android:inputType="numberDecimal"
-                android:background="@drawable/edit_text_login_background"
                 android:padding="15dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="8dp"/>
+                android:visibility="visible"/>
 
             <EditText
-                android:id="@+id/et_rua"
+                android:id="@+id/et_ruaPrestador"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/edit_text_login_background"
                 android:hint="Rua"
-                android:background="@drawable/edit_text_login_background"
                 android:padding="15dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="8dp"/>
+                android:visibility="visible"/>
 
             <EditText
-                android:id="@+id/et_estado"
+                android:id="@+id/et_estadoPrestador"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/edit_text_login_background"
                 android:hint="Estado"
-                android:background="@drawable/edit_text_login_background"
                 android:padding="15dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="8dp"/>
+                android:visibility="visible"/>
 
             <EditText
-                android:id="@+id/et_cidade"
+                android:id="@+id/et_cidadePrestador"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/edit_text_login_background"
                 android:hint="Cidade "
-                android:background="@drawable/edit_text_login_background"
                 android:padding="15dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="8dp"/>
+                android:visibility="visible"/>
 
             <EditText
-                android:id="@+id/et_bairro"
+                android:id="@+id/et_bairroPrestador"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/edit_text_login_background"
                 android:hint="Bairro"
-                android:background="@drawable/edit_text_login_background"
                 android:padding="15dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="8dp"/>
+                android:visibility="visible"/>
 
             <EditText
-                android:id="@+id/et_numero"
+                android:id="@+id/et_numeroPrestador"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/edit_text_login_background"
                 android:hint="Número da residência"
                 android:inputType="numberDecimal"
-                android:background="@drawable/edit_text_login_background"
                 android:padding="15dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="8dp"/>
+                android:visibility="visible"/>
 
             <EditText
-                android:id="@+id/et_datadenascimento"
+                android:id="@+id/et_datadenascimentoPrestador"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Data de nascimento"
-                android:padding="15dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="20dp"
-                android:inputType="datetime"
                 android:background="@drawable/edit_text_login_background"
-                android:visibility="gone"/>
+                android:hint="Data de nascimento"
+                android:inputType="datetime"
+                android:padding="15dp"
+                android:visibility="visible" />
 
             <EditText
-                android:id="@+id/et_cpf"
+                android:id="@+id/et_cpfPrestador"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/edit_text_login_background"
                 android:hint="CPF"
                 android:inputType="numberDecimal"
+                android:padding="15dp"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/et_rgPrestador"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="20dp"
-                android:padding="15dp"
                 android:background="@drawable/edit_text_login_background"
-                android:visibility="gone"/>
-
-            <EditText
-                android:id="@+id/et_rg"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:hint="RG"
                 android:inputType="numberDecimal"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginRight="20dp"
                 android:padding="15dp"
-                android:background="@drawable/edit_text_login_background"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
             <EditText
-                android:id="@+id/et_senha"
+                android:id="@+id/et_roomPrestador"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Senha"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginRight="20dp"
-                android:padding="15dp"
                 android:background="@drawable/edit_text_login_background"
-                android:visibility="gone"/>
+                android:hint="Digite um número para entrar em contato com o prestador"
+                android:inputType="numberDecimal"
+                android:padding="15dp"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/et_senhaPrestador"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/edit_text_login_background"
+                android:hint="Senha"
+                android:padding="15dp"
+                android:visibility="gone" />
 
             <Button
-                android:id="@+id/button_continuar"
+                android:id="@+id/button_cadastrarPrestador"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Continuar"
                 android:layout_marginLeft="20dp"
+                android:layout_marginTop="11dp"
                 android:layout_marginRight="20dp"
-                android:layout_marginTop="11dp"/>
+                android:padding="15dp"
+                android:text="Cadastrar-me"
+                android:visibility="visible" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

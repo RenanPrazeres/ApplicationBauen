@@ -29,7 +29,7 @@ class LoginActivity : AppCompatActivity() {
 
         //clique e abrir nova activity
         cadastre_se.setOnClickListener {
-            val intent = Intent (this, Cadastro::class.java)
+            val intent = Intent (this, CadastroCliente::class.java)
             startActivity(intent)
 
             doAsync {
