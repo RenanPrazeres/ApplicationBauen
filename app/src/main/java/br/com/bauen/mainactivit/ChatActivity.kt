@@ -1,25 +1,14 @@
 package com.letsbuildthatapp.kotlinmessenger.messages
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.ChildEventListener
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.FirebaseDatabase
-import com.letsbuildthatapp.kotlinmessenger.R
-import com.letsbuildthatapp.kotlinmessenger.models.ChatMessage
+import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.RecyclerView
+import br.com.bauen.mainactivit.R
 import com.letsbuildthatapp.kotlinmessenger.models.User
-import com.letsbuildthatapp.kotlinmessenger.views.ChatFromItem
-import com.letsbuildthatapp.kotlinmessenger.views.ChatToItem
-import com.squareup.picasso.Picasso
-import com.xwray.groupie.GroupAdapter
-import com.xwray.groupie.Item
-import com.xwray.groupie.ViewHolder
-import kotlinx.android.synthetic.main.activity_chat_log.*
-import kotlinx.android.synthetic.main.chat_from_row.view.*
-import kotlinx.android.synthetic.main.chat_to_row.view.*
+
+//import com.squareup.picasso.Picasso
 
 class ChatLogActivity : AppCompatActivity() {
 
@@ -27,29 +16,33 @@ class ChatLogActivity : AppCompatActivity() {
         val TAG = "ChatLog"
     }
 
-    val adapter = GroupAdapter<ViewHolder>()
+    //val adapter = GroupAdapter<RecyclerView.ViewHolder>()
 
     var toUser: User? = null
+
+    lateinit var recyclerview_chat_log:RecyclerView
+    lateinit var send_button_chat_log:Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chat_log)
 
-        recyclerview_chat_log.adapter = adapter
+        //recyclerview_chat_log.adapter = adapter
 
-        toUser = intent.getParcelableExtra<User>(NewMessageActivity.USER_KEY)
+        //toUser = intent.getParcelableExtra<User>(NewMessageActivity.USER_KEY)
 
         supportActionBar?.title = toUser?.username
 
 //    setupDummyData()
-        listenForMessages()
+       // listenForMessages()
 
         send_button_chat_log.setOnClickListener {
             Log.d(TAG, "Attempt to send message....")
-            performSendMessage()
+           // performSendMessage()
         }
     }
 
+    /*
     private fun listenForMessages() {
         val fromId = FirebaseAuth.getInstance().uid
         val toId = toUser?.uid
@@ -127,4 +120,6 @@ class ChatLogActivity : AppCompatActivity() {
         val latestMessageToRef = FirebaseDatabase.getInstance().getReference("/latest-messages/$toId/$fromId")
         latestMessageToRef.setValue(chatMessage)
     }
+    */
+
 }

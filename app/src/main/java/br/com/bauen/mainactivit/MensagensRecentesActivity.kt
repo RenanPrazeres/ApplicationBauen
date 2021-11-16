@@ -8,7 +8,7 @@ import android.view.MenuItem
 class MensagensRecentesActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_mensagens_recentes)
+        //setContentView(R.layout.activity_mensagens_recentes)
         supportActionBar?.title="<"
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

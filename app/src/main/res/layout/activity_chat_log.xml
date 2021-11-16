@@ -5,25 +5,85 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white">
-<!--    contexto-->
+    android:background="@android:color/white"
+    tools:context=".ChatActivityLog">
 
-    <include
-        layout="@layout/activity_menu_chat"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="81dp" />
+        android:layout_height="80dp"
+        app:cardBackgroundColor="#074EAD">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_img_friend_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="48dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="50dp"
+            >
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:scaleType="fitStart"
+                app:srcCompat="@drawable/fotoredonda" />
+            <!--            android:src="(icon)"-->
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_friend_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@id/card_img_friend_profile"
+            android:layout_toRightOf="@id/card_img_friend_profile"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            tools:text="Jean Henrique">
+        </androidx.appcompat.widget.AppCompatTextView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/FunçãoPrestador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="40dp"
+            android:layout_toEndOf="@id/card_img_friend_profile"
+            android:layout_toRightOf="@id/card_img_friend_profile"
+            android:text="(Função do prestador)"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            tools:text="azulegista"/>
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            app:srcCompat="@drawable/left_arrow"
+            android:backgroundTint="#074EAD"
+            android:layout_marginTop="15dp"
+
+            />
+
+    </androidx.cardview.widget.CardView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview_chat_log"
         android:layout_width="match_parent"
-        android:layout_height="705dp"
+        android:layout_height="592dp"
         android:layout_marginTop="80dp"
-        android:layout_marginBottom="8dp"
         android:backgroundTint="@color/Branco"
-        app:layout_constraintBottom_toTopOf="@+id/edittext_chat_log"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -54,11 +114,10 @@
 
             <EditText
                 android:id="@+id/editTextTextPersonName"
-                android:layout_width="207dp"
+                android:layout_width="278dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="35dp"
+                android:layout_marginLeft="20dp"
                 android:inputType="textPersonName"
-                android:text="Digite uma mensagem..."
                 android:textSize="18dp" />
         </androidx.cardview.widget.CardView>
 
