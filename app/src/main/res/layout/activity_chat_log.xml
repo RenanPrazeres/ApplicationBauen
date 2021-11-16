@@ -28,7 +28,6 @@
                 android:layout_height="60dp"
                 android:scaleType="fitStart"
                 app:srcCompat="@drawable/fotoredonda" />
-            <!--            android:src="(icon)"-->
 
 
         </androidx.cardview.widget.CardView>
