@@ -7,7 +7,7 @@ import okhttp3.Request
 
 class HttpHelper {
 
-    fun post (json: String) : String {
+    fun postCliente (json: String) : String {
         //Definir URL do servidor
         val URLApi = "http://10.107.144.3:3334//register/client"
 

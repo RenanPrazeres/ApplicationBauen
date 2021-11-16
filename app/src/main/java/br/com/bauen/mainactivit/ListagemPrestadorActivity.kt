@@ -19,8 +19,6 @@ class ListagemPrestadorActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_listagem_prestador)
 
-<<<<<<< HEAD
-=======
 
         //Configuração da recycleView
         rvCard = findViewById(R.id.rv_cards)
@@ -36,7 +34,6 @@ class ListagemPrestadorActivity : AppCompatActivity() {
 
         //Definir o adapter da Rv
         rvCard.adapter = cardsAdapter
->>>>>>> eb155262e083a4353e2829c80ce0bc104f079e4c
 
 
 //        val recycleview_card = findViewById<RecyclerView>(R.id.recycleCard)
