@@ -56,7 +56,10 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.2'
     implementation 'com.squareup.okhttp3:okhttp:3.10.0'
     implementation 'org.jetbrains.anko:anko-sqlite:0.10.4'
-
+    //***chat
+    implementation ('io.socket:socket.io-client:2.0.0'){
+        exclude group: 'org.json', module: 'json'
+    }
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'

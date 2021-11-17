@@ -10,7 +10,8 @@
         android:label="Bauen"
         android:roundIcon="@drawable/ic_launcher_foreground"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MainActivit">
+        android:theme="@style/Theme.MainActivit"
+        android:usesCleartextTraffic="true">
 
         <activity android:name=".MensagensRecentesActivity"/>
 
