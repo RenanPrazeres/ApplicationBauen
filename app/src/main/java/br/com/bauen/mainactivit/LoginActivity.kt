@@ -32,10 +32,10 @@ class LoginActivity : AppCompatActivity() {
             val intent = Intent (this, CadastroCliente::class.java)
             startActivity(intent)
 
-            doAsync {
-                val http = HttpHelper()
-                http.get()
-            }
+//            doAsync {
+//                val http = HttpHelper()
+//                http.get()
+//            }
         }
     }
 }

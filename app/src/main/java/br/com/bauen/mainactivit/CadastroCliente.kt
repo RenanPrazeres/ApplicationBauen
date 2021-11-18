@@ -9,19 +9,17 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
-import androidx.core.widget.addTextChangedListener
 import br.com.bauen.mainactivit.cep.Cep
 import br.com.bauen.mainactivit.cep.RetrofitFactory
 import br.com.bauen.mainactivit.http.HttpHelper
-import br.com.bauen.mainactivit.login.Cliente
-import br.com.bauen.mainactivit.login.Endereco
+import br.com.bauen.mainactivit.tables.Cliente
+import br.com.bauen.mainactivit.tables.Endereco
 import br.com.bauen.mainactivit.ultis.MaskFormatUtil
 import com.google.gson.Gson
 import org.jetbrains.anko.doAsync
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import java.text.SimpleDateFormat
 import java.util.*
 
 
@@ -37,12 +35,11 @@ class CadastroCliente : AppCompatActivity() {
     lateinit var cpfCliente: EditText
     lateinit var rgCliente: EditText
     lateinit var senhaCliente: EditText
-    lateinit var lugarReformadoCliente: EditText
+    lateinit var numeroParaChatCliente : EditText
     lateinit var nomeCliente: EditText
     lateinit var celularCliente: EditText
     lateinit var emailCliente: EditText
-
-    lateinit var btnContinuarTeste: Button
+    lateinit var btnCadastrarCliente: Button
 
 //    lateinit var llCadastro: LinearLayout
 
@@ -91,9 +88,9 @@ class CadastroCliente : AppCompatActivity() {
         senhaCliente = findViewById(R.id.et_senhaCliente)
 
         val bntContinuar = findViewById<Button>(R.id.button_cadastrarCliente)
-        btnContinuarTeste = findViewById(R.id.button_cadastrarCliente)
+        btnCadastrarCliente = findViewById(R.id.button_cadastrarCliente)
 
-        lugarReformadoCliente = findViewById(R.id.et_roomCliente)
+        numeroParaChatCliente = findViewById(R.id.et_roomCliente)
         val lugarAReformmarCliente = findViewById<EditText>(R.id.et_roomCliente)
 
 
@@ -133,6 +130,7 @@ class CadastroCliente : AppCompatActivity() {
                 cliente.room = lugarAReformmarCliente.text.toString()
                 cliente.password = senhaEditText.text.toString()
 
+                //Criar um objeto Endereço
                 val endereco = Endereco()
                 endereco.zipcode = cepResidencia.text.toString()
                 endereco.street = ruaResidencia.text.toString()
@@ -167,7 +165,6 @@ class CadastroCliente : AppCompatActivity() {
         }
 
         // Criar o calendário
-
         val calendario = Calendar.getInstance()
         val ano = calendario.get(Calendar.YEAR)
         val mes = calendario.get(Calendar.MONTH)
@@ -219,7 +216,7 @@ class CadastroCliente : AppCompatActivity() {
         cpfCliente.setOnFocusChangeListener { v, hasFocus ->
             if (!hasFocus) {
                 Toast.makeText(this, "ROOM CLIENTE ABERTO", Toast.LENGTH_LONG).show()
-                lugarReformadoCliente.isVisible = true
+                numeroParaChatCliente .isVisible = true
             }
 
             if (!hasFocus && cpfCliente.length() == 14) {
@@ -244,10 +241,10 @@ class CadastroCliente : AppCompatActivity() {
             }
         }
 
-        lugarReformadoCliente.setOnFocusChangeListener { v, hasFocus ->
+        numeroParaChatCliente.setOnFocusChangeListener { v, hasFocus ->
             if (!hasFocus) {
                 Toast.makeText(this, "BOTÃO ABERTO", Toast.LENGTH_LONG).show()
-                btnContinuarTeste.isVisible = true
+                btnCadastrarCliente.isVisible = true
             }
         }
 
@@ -305,8 +302,8 @@ class CadastroCliente : AppCompatActivity() {
             error = false
         }
 
-        if(lugarReformadoCliente.text.isEmpty()){
-            lugarReformadoCliente.error = "Insira um número de identificação, ele será utilizado para manter uma conversa no chat."
+        if(numeroParaChatCliente.text.isEmpty()){
+            numeroParaChatCliente.error = "Insira um número de identificação, ele será utilizado para manter uma conversa no chat."
             error = false
         }
 

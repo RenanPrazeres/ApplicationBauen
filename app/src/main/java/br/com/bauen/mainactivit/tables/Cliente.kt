@@ -1,4 +1,4 @@
-package br.com.bauen.mainactivit.login
+package br.com.bauen.mainactivit.tables
 
 class Cliente {
     var name = ""

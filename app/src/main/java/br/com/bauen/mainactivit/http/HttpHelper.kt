@@ -7,9 +7,10 @@ import okhttp3.Request
 
 class HttpHelper {
 
+    //POST CADASTRO CLIENTE
     fun postCliente (json: String) : String {
         //Definir URL do servidor
-        val URLApi = "http://10.107.144.3:3334//register/client"
+        val URLApi = "http://10.107.144.3:3334/register/client"
 
         //Definir o cabeçalho
         val headerHttp = MediaType.parse("application/json; charset=utf-8")
@@ -30,27 +31,51 @@ class HttpHelper {
 
     }
 
-    //GET PRESTADOR
-    fun get(){
+    //POST CADASTRO PRESTADOR
+    fun postPrestador (json: String) : String {
         //Definir URL do servidor
-        val URLApi = "http://10.107.144.3:3334//service-provider"
+        val URLApi = "http://10.107.144.3:3334/register/service-provider"
+
+        //Definir o cabeçalho
+        val headerHttp = MediaType.parse("application/json; charset=utf-8")
 
         // Criar cliente que vai disparar a requisição
-        val client = OkHttpClient()
+        val prestador = OkHttpClient()
 
-        //Criar uma requisição GET
-        val request = Request.Builder().url(URLApi).get().build()
+        //Criar o body da requisição
+        val bodyPrestador = RequestBody.create(headerHttp, json)
 
-        //Enviar a requisição para o servidor
-        val response = client.newCall(request).execute()
+        //Construir a requisição POST HTTP para o servidor
+        var requestPrestador = Request.Builder().url(URLApi).post(bodyPrestador).build()
 
-        //Extrair o body da requisição
-        val responseBody = response.body()
+        //Utilizar o client para fazer a requisição e receber a resposta
+        val response = prestador.newCall(requestPrestador).execute()
 
-        //Exibir o body da requisição
-        if (responseBody != null){
-            val json = responseBody.string()
-            println("RESPOSTA ===========" + json)
-        }
+        return response.body().toString()
+
     }
+
+    //GET PRESTADOR
+//    fun get(){
+//        //Definir URL do servidor
+//        val URLApi = "http://10.107.144.3:3334//service-provider"
+//
+//        // Criar cliente que vai disparar a requisição
+//        val client = OkHttpClient()
+//
+//        //Criar uma requisição GET
+//        val request = Request.Builder().url(URLApi).get().build()
+//
+//        //Enviar a requisição para o servidor
+//        val response = client.newCall(request).execute()
+//
+//        //Extrair o body da requisição
+//        val responseBody = response.body()
+//
+//        //Exibir o body da requisição
+//        if (responseBody != null){
+//            val json = responseBody.string()
+//            println("RESPOSTA ===========" + json)
+//        }
+//    }
 }
