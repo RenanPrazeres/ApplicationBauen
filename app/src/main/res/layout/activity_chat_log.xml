@@ -18,11 +18,10 @@
             android:id="@+id/card_img_friend_profile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="48dp"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="50dp"
             >
-
+        <!--            app:cardCornerRadius="48dp"-->
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="60dp"
                 android:layout_height="60dp"
@@ -76,7 +75,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview_chat_log"
         android:layout_width="match_parent"
-        android:layout_height="592dp"
+        android:layout_height="match_parent"
         android:layout_marginTop="80dp"
         android:backgroundTint="@color/Branco"
         app:layout_constraintEnd_toEndOf="parent"
@@ -86,14 +85,14 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="59dp"
+        android:layout_height="65dp"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="200dp"
         android:layout_marginBottom="0dp"
         app:cardBackgroundColor="#223263">
 
         <ImageButton
-            android:id="@+id/send_button_chat_log"
+            android:id="@+id/button_send_msg"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_below="@id/recyclerview_chat_log"
@@ -105,21 +104,20 @@
             android:layout_marginTop="15dp" />
 
         <androidx.cardview.widget.CardView
-            android:layout_width="320dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="5dp"
+            android:layout_width="340dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="13dp"
             app:cardCornerRadius="19dp">
 
             <EditText
                 android:id="@+id/editTextTextPersonName"
-                android:layout_width="278dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
                 android:inputType="textPersonName"
                 android:textSize="18dp" />
         </androidx.cardview.widget.CardView>
 
     </androidx.cardview.widget.CardView>
-
+<!--   ultima-->
 </RelativeLayout>
