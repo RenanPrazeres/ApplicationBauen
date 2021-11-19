@@ -5,6 +5,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="">
+    tools:context=".ultis.DialogCadastro">
+
+    <TextView
+        android:id="@+id/tv_titulo_dialog_cadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="O que você deseja realizar no aplicativo?"
+        android:layout_marginTop="48dp"
+        android:layout_centerHorizontal="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_titulo_dialog_cadastro"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bnt_contratar_prestador_dialog_cadastro"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="70dp"
+            android:text="Contratar um prestador de serviço"
+            android:layout_marginLeft="20dp"/>
+
+        <Button
+            android:id="@+id/bnt_ser_prestador_dialog_cadastro"
+            android:layout_width="150dp"
+            android:layout_height="76dp"
+            android:layout_marginTop="10dp"
+            android:text="Prestar meu serviço" />
+
+
+    </LinearLayout>
 
 </RelativeLayout>
