@@ -13,11 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MainActivit">
         <activity android:name=".ultis.DialogCadastro">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".CadastroCliente" />
         <activity android:name=".CadastroPrestadorDeServico" />

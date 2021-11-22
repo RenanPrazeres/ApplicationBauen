@@ -10,7 +10,7 @@ class HttpHelper {
     //POST CADASTRO CLIENTE
     fun postCliente (json: String) : String {
         //Definir URL do servidor
-        val URLApi = "http://10.107.144.3:3334/register/client"
+        val URLApi = "http://10.107.144.4:3334/register/client"
 
         //Definir o cabeçalho
         val headerHttp = MediaType.parse("application/json; charset=utf-8")
@@ -34,7 +34,7 @@ class HttpHelper {
     //POST CADASTRO PRESTADOR
     fun postPrestador (json: String) : String {
         //Definir URL do servidor
-        val URLApi = "http://10.107.144.3:3334/register/service-provider"
+        val URLApi = "http://10.107.144.4:3334/register/service-provider"
 
         //Definir o cabeçalho
         val headerHttp = MediaType.parse("application/json; charset=utf-8")

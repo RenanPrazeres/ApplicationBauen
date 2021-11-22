@@ -94,70 +94,76 @@ class CadastroCliente : AppCompatActivity() {
         val lugarAReformmarCliente = findViewById<EditText>(R.id.et_roomCliente)
 
 
-        cepResidencia.addTextChangedListener(
-            MaskFormatUtil.mask(
-                cepResidencia,
-                MaskFormatUtil.FORMAT_CEP
-            )
-        )
-
-        cpfCliente.addTextChangedListener(
-            MaskFormatUtil.mask(
-                cpfCliente,
-                MaskFormatUtil.FORMAT_CPF
-            )
-        )
-
-        rgEditText.addTextChangedListener(
-            MaskFormatUtil.mask(
-                rgEditText,
-                MaskFormatUtil.FORMAT_RG
-            )
-        )
+//        cepResidencia.addTextChangedListener(
+//            MaskFormatUtil.mask(
+//                cepResidencia,
+//                MaskFormatUtil.FORMAT_CEP
+//            )
+//        )
+//
+//        cpfCliente.addTextChangedListener(
+//            MaskFormatUtil.mask(
+//                cpfCliente,
+//                MaskFormatUtil.FORMAT_CPF
+//            )
+//        )
+//
+//        rgEditText.addTextChangedListener(
+//            MaskFormatUtil.mask(
+//                rgEditText,
+//                MaskFormatUtil.FORMAT_RG
+//            )
+//        )
 
         bntContinuar.setOnClickListener {
             if (validaForm()) {
 
-                //Criar um objeto Cliente
-                val cliente = Cliente()
-                cliente.name = nomeCompleto.text.toString()
-                cliente.email = emailUtilizado.text.toString()
-                cliente.phone = numeroCelular.text.toString()
-                cliente.born = dataDeNascimento.text.toString()
+                //instancia os elementos do objeto endereco
+                val zipcode = cepResidencia.text.toString()
+                val street = ruaResidencia.text.toString()
+                val state = estadoResidencia.text.toString()
+                val city = cidadeResidencia.text.toString()
+                val neighborhood = bairroResidencia.text.toString()
+                val number = numeroResidencia.text.toString()
+                //Cria o objeto Endereco
+                val enderecoo :Endereco = Endereco(zipcode,street,state,city,neighborhood,number)
 
-                cliente.cpf = cpfEditText.text.toString()
-                cliente.rg = rgEditText.text.toString()
-                cliente.room = lugarAReformmarCliente.text.toString()
-                cliente.password = senhaEditText.text.toString()
+                //instancia os elementos do objeto endereco
+                val name = nomeCompleto.text.toString()
+                val email = emailUtilizado.text.toString()
+                val phone = numeroCelular.text.toString()
+                val born = dataDeNascimento.text.toString()
 
-                //Criar um objeto Endereço
-                val endereco = Endereco()
-                endereco.zipcode = cepResidencia.text.toString()
-                endereco.street = ruaResidencia.text.toString()
-                endereco.state = estadoResidencia.text.toString()
-                endereco.city = cidadeResidencia.text.toString()
-                endereco.neighborhood = bairroResidencia.text.toString()
-                endereco.number = numeroResidencia.text.toString()
+                val cpf = cpfEditText.text.toString()
+                val rg = rgEditText.text.toString()
+                val room = lugarAReformmarCliente.text.toString()
+                val password = senhaEditText.text.toString()
+
+                //Cria o objeto endereco
+                val cliente: Cliente = Cliente(name, email,phone, born,cpf, rg,password, enderecoo,room)
+
+
 
 
                 //Converter o cliente em json
                 val gson = Gson()
                 val clienteJson = gson.toJson(cliente)
 
-                println("############" + clienteJson)
+                println("///////////" + clienteJson)
 
                 //Converte o endereço em json
                 val gsonEndereco = Gson()
-                val enderecoJson = gsonEndereco.toJson(endereco)
+                val enderecoJson = gsonEndereco.toJson(enderecoo)
 
                 println("///////////" + enderecoJson)
 
                 doAsync {
                     val http = HttpHelper()
                     http.postCliente(clienteJson)
+                    http.postCliente(enderecoJson)
 
-                    val http2 = HttpHelper()
-                    http2.postCliente(enderecoJson)
+//                    val http2 = HttpHelper()
+//                    http2.postCliente(enderecoJson)
                 }
 
                 finish()
