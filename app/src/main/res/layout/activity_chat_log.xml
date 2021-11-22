@@ -20,13 +20,14 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="50dp"
+            app:cardCornerRadius="30dp"
             >
         <!--            app:cardCornerRadius="48dp"-->
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:scaleType="fitStart"
-                app:srcCompat="@drawable/fotoredonda" />
+                app:srcCompat="@drawable/beyonce_profile" />
 
 
         </androidx.cardview.widget.CardView>
@@ -43,7 +44,7 @@
             android:textColor="#FFFFFF"
             android:textSize="20dp"
             android:textStyle="bold"
-            tools:text="Jean Henrique">
+            android:text="Jean Henrique">
         </androidx.appcompat.widget.AppCompatTextView>
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -55,10 +56,9 @@
             android:layout_marginTop="40dp"
             android:layout_toEndOf="@id/card_img_friend_profile"
             android:layout_toRightOf="@id/card_img_friend_profile"
-            android:text="(Função do prestador)"
             android:textColor="#FFFFFF"
             android:textSize="20dp"
-            tools:text="azulegista"/>
+            android:text="Azulegista"/>
 
         <ImageButton
             android:id="@+id/imageButton"
@@ -111,8 +111,8 @@
             app:cardCornerRadius="19dp">
 
             <EditText
-                android:id="@+id/editTextTextPersonName"
-                android:layout_width="wrap_content"
+                android:id="@+id/editTextChat"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="textPersonName"
                 android:textSize="18dp" />
