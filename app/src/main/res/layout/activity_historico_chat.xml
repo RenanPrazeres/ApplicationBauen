@@ -29,6 +29,22 @@
 
     <include layout="@layout/item_friend"/>
 
+    <include layout="@layout/item_friend"/>
+
+    <include layout="@layout/item_friend"/>
+
+    <include layout="@layout/item_friend"/>
+
+    <include layout="@layout/item_friend"/>
+
+    <include layout="@layout/item_friend"/>
+
+    <include layout="@layout/item_friend"/>
+
+    <include layout="@layout/item_friend"/>
+
+    <include layout="@layout/item_friend"/>
+
 
 </LinearLayout>
 </layout>
