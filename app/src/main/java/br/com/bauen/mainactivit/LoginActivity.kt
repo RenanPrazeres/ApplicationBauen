@@ -24,7 +24,7 @@ class LoginActivity : AppCompatActivity() {
         email_login = findViewById(R.id.email_login)
         senha_login = findViewById(R.id.senha_login)
         buttonLogin = findViewById(R.id.button_login)
-        novoPorAqui = findViewById(R.id.novo_por_aqui)
+        novoPorAqui = findViewById(R.id.nao_tem_conta)
         cadastre_se = findViewById(R.id.cadastre_se_login)
 
         //clique e abrir nova activity

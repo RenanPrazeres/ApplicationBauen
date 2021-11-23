@@ -98,13 +98,13 @@ class CadastroPrestadorDeServico : AppCompatActivity() {
                 prestador.password = senhaPrestador.text.toString()
 
                 //Criar um objeto Endereço
-                val endereco = Endereco()
-                endereco.zipcode = editTextCep.text.toString()
-                endereco.street = editTextRua.text.toString()
-                endereco.state = editTextEstado.text.toString()
-                endereco.city = editTextCidade.text.toString()
-                endereco.neighborhood = editTextBairro.text.toString()
-                endereco.number = numeroCasa.text.toString()
+//                val endereco = Endereco()
+//                endereco.zipcode = editTextCep.text.toString()
+//                endereco.street = editTextRua.text.toString()
+//                endereco.state = editTextEstado.text.toString()
+//                endereco.city = editTextCidade.text.toString()
+//                endereco.neighborhood = editTextBairro.text.toString()
+//                endereco.number = numeroCasa.text.toString()
 
                 //Converter o prestador em json
                 val gson = Gson()
@@ -113,15 +113,15 @@ class CadastroPrestadorDeServico : AppCompatActivity() {
 
                 //Converte o endereço em json
                 val gsonEndereco = Gson()
-                val enderecoJson = gsonEndereco.toJson(endereco)
-                println("++++++++++++" + enderecoJson)
+//                val enderecoJson = gsonEndereco.toJson(endereco)
+//                println("++++++++++++" + enderecoJson)
 
                 doAsync {
                     val http = HttpHelper()
                     http.postPrestador(prestadorJson)
 
                     val http2 = HttpHelper()
-                    http2.postPrestador(enderecoJson)
+//                    http2.postPrestador(enderecoJson)
                 }
 
                 finish()

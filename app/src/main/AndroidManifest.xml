@@ -15,19 +15,21 @@
         <activity android:name=".ultis.DialogCadastro">
 
         </activity>
+
         <activity android:name=".CadastroCliente" />
         <activity android:name=".CadastroPrestadorDeServico" />
-        <activity android:name=".ListagemPrestadorActivity" />
+        <activity
+            android:name=".ListagemPrestadorActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+        </activity>
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".PerfilPrestadorActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity android:name=".PerfilPrestadorActivity" />
         <activity android:name=".ChatActivity" />
         <activity android:name=".MainActivity" />
     </application>

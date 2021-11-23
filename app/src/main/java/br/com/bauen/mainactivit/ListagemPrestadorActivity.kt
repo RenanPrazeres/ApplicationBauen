@@ -2,47 +2,28 @@ package br.com.bauen.mainactivit
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Gravity.apply
+import androidx.core.view.GravityCompat.apply
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import br.com.bauen.mainactivit.adapter.CardsAdapter
-
+import br.com.bauen.mainactivit.http.HttpHelper
+import model.Card
+import org.jetbrains.anko.doAsync
+import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
 
 class ListagemPrestadorActivity : AppCompatActivity() {
-
-    lateinit var rvCard: RecyclerView
-    lateinit var cardsAdapter: CardsAdapter
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_listagem_prestador)
 
-
-        //Configuração da recycleView
-        rvCard = findViewById(R.id.rv_cards)
-        cardsAdapter = CardsAdapter(this)
-
-        //Deteminar o Layout da RV
-        rvCard.layoutManager = LinearLayoutManager(
-            this, LinearLayoutManager.VERTICAL, false)
-
-        //Definir o adapter da RV
-        rvCard.adapter = cardsAdapter
-        rvCard.layoutManager = GridLayoutManager(this,2)
-
-        //Definir o adapter da Rv
-        rvCard.adapter = cardsAdapter
-
-
-//        val recycleview_card = findViewById<RecyclerView>(R.id.recycleCard)
-//        recycleview_card.layoutManager = LinearLayoutManager(this)
-//        recycleview_card.setHasFixedSize(true)
-//
-
+        doAsync {
+            val http = HttpHelper()
+            http.get2()
+        }
     }
-
-
-
 }

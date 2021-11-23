@@ -41,109 +41,60 @@ class CadastroCliente : AppCompatActivity() {
     lateinit var emailCliente: EditText
     lateinit var btnCadastrarCliente: Button
 
-//    lateinit var llCadastro: LinearLayout
-
     @SuppressLint("WrongConstant", "NewApi")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cadastro_cliente)
 
-        val nomeCompleto = findViewById<EditText>(R.id.et_nomeCliente)
         nomeCliente = findViewById(R.id.et_nomeCliente)
-
-        val emailUtilizado = findViewById<EditText>(R.id.et_emailCliente)
         emailCliente = findViewById(R.id.et_emailCliente)
-
-        val numeroCelular = findViewById<EditText>(R.id.et_celularCliente)
         celularCliente = findViewById(R.id.et_celularCliente)
-
-        val dataDeNascimento = findViewById<EditText>(R.id.et_datadenascimentoCliente)
         editDataNascimento = findViewById(R.id.et_datadenascimentoCliente)
-
         editTextCep = findViewById(R.id.et_cepCliente)
-        val cepResidencia = findViewById<EditText>(R.id.et_cepCliente)
-
-        val ruaResidencia = findViewById<EditText>(R.id.et_ruaCliente)
         editTextRua = findViewById(R.id.et_ruaCliente)
-
-        val estadoResidencia = findViewById<EditText>(R.id.et_estadoCliente)
         editTextEstado = findViewById(R.id.et_estadoCliente)
-
-        val cidadeResidencia = findViewById<EditText>(R.id.et_cidadeCliente)
         editTextCidade = findViewById(R.id.et_cidadeCliente)
-
-        val bairroResidencia = findViewById<EditText>(R.id.et_bairroCliente)
         editTextBairro = findViewById(R.id.et_bairroCliente)
-
-        val numeroResidencia = findViewById<EditText>(R.id.et_numeroCliente)
         numeroCasa = findViewById(R.id.et_numeroCliente)
-
-        val cpfEditText = findViewById<EditText>(R.id.et_cpfCliente)
         cpfCliente = findViewById(R.id.et_cpfCliente)
-
-        val rgEditText = findViewById<EditText>(R.id.et_rgCliente)
         rgCliente = findViewById(R.id.et_rgCliente)
-
-        val senhaEditText = findViewById<EditText>(R.id.et_senhaCliente)
         senhaCliente = findViewById(R.id.et_senhaCliente)
-
-        val bntContinuar = findViewById<Button>(R.id.button_cadastrarCliente)
         btnCadastrarCliente = findViewById(R.id.button_cadastrarCliente)
-
         numeroParaChatCliente = findViewById(R.id.et_roomCliente)
-        val lugarAReformmarCliente = findViewById<EditText>(R.id.et_roomCliente)
 
-
-//        cepResidencia.addTextChangedListener(
+//        rgCliente.addTextChangedListener(
 //            MaskFormatUtil.mask(
-//                cepResidencia,
-//                MaskFormatUtil.FORMAT_CEP
-//            )
-//        )
-//
-//        cpfCliente.addTextChangedListener(
-//            MaskFormatUtil.mask(
-//                cpfCliente,
-//                MaskFormatUtil.FORMAT_CPF
-//            )
-//        )
-//
-//        rgEditText.addTextChangedListener(
-//            MaskFormatUtil.mask(
-//                rgEditText,
+//                rgCliente,
 //                MaskFormatUtil.FORMAT_RG
 //            )
 //        )
 
-        bntContinuar.setOnClickListener {
+        btnCadastrarCliente.setOnClickListener {
             if (validaForm()) {
 
                 //instancia os elementos do objeto endereco
-                val zipcode = cepResidencia.text.toString()
-                val street = ruaResidencia.text.toString()
-                val state = estadoResidencia.text.toString()
-                val city = cidadeResidencia.text.toString()
-                val neighborhood = bairroResidencia.text.toString()
-                val number = numeroResidencia.text.toString()
+                val zipcode = editTextCep.text.toString()
+                val street = editTextRua.text.toString()
+                val state = editTextEstado.text.toString()
+                val city = editTextCidade.text.toString()
+                val neighborhood = editTextBairro.text.toString()
+                val number = numeroCasa.text.toString()
                 //Cria o objeto Endereco
-                val enderecoo :Endereco = Endereco(zipcode,street,state,city,neighborhood,number)
+                val address :Endereco = Endereco(zipcode,street,state,city,neighborhood,number)
 
                 //instancia os elementos do objeto endereco
-                val name = nomeCompleto.text.toString()
-                val email = emailUtilizado.text.toString()
-                val phone = numeroCelular.text.toString()
-                val born = dataDeNascimento.text.toString()
+                val name = nomeCliente.text.toString()
+                val email = emailCliente.text.toString()
+                val phone = celularCliente.text.toString()
+                val born = editDataNascimento.text.toString()
 
-                val cpf = cpfEditText.text.toString()
-                val rg = rgEditText.text.toString()
-                val room = lugarAReformmarCliente.text.toString()
-                val password = senhaEditText.text.toString()
+                val cpf =  cpfCliente.text.toString()
+                val rg = rgCliente.text.toString()
+                val room = numeroParaChatCliente.text.toString()
+                val password = senhaCliente.text.toString()
 
                 //Cria o objeto endereco
-                val cliente: Cliente = Cliente(name, email,phone, born,cpf, rg,password, enderecoo,room)
-
-
-
+                val cliente: Cliente = Cliente(phone, name, cpf, rg, password, email, born, room, address)
 
                 //Converter o cliente em json
                 val gson = Gson()
@@ -151,19 +102,9 @@ class CadastroCliente : AppCompatActivity() {
 
                 println("///////////" + clienteJson)
 
-                //Converte o endereço em json
-                val gsonEndereco = Gson()
-                val enderecoJson = gsonEndereco.toJson(enderecoo)
-
-                println("///////////" + enderecoJson)
-
                 doAsync {
                     val http = HttpHelper()
                     http.postCliente(clienteJson)
-                    http.postCliente(enderecoJson)
-
-//                    val http2 = HttpHelper()
-//                    http2.postCliente(enderecoJson)
                 }
 
                 finish()
@@ -212,7 +153,7 @@ class CadastroCliente : AppCompatActivity() {
         }
 
 
-        dataDeNascimento.setOnFocusChangeListener { v, hasFocus ->
+        editDataNascimento.setOnFocusChangeListener { v, hasFocus ->
             if (!hasFocus) {
                 Toast.makeText(this, "RG CLIENTE ABERTO", Toast.LENGTH_LONG).show()
                 rgCliente.isVisible = true
@@ -225,11 +166,11 @@ class CadastroCliente : AppCompatActivity() {
                 numeroParaChatCliente .isVisible = true
             }
 
-            if (!hasFocus && cpfCliente.length() == 14) {
+            if (!hasFocus && cpfCliente.length() == 11) {
                 cpfCliente.error = null
             }
 
-            if (!hasFocus && cpfCliente.length() != 14) {
+            if (!hasFocus && cpfCliente.length() != 11) {
                 cpfCliente.error = "CPF inválido, deve ter 11 digitos"
             }
         }
@@ -239,10 +180,10 @@ class CadastroCliente : AppCompatActivity() {
                 Toast.makeText(this, "SENHA CLIENTE ABERTO", Toast.LENGTH_LONG).show()
                 senhaCliente.isVisible = true
             }
-            if (!hasFocus && rgCliente.length() == 12) {
+            if (!hasFocus && rgCliente.length() == 9) {
                 rgCliente.error = null
             }
-            if (!hasFocus && rgCliente.length() != 12) {
+            if (!hasFocus && rgCliente.length() != 9) {
                 rgCliente.error = "RG inválido, deve ter 9 digitos"
             }
         }
@@ -254,17 +195,17 @@ class CadastroCliente : AppCompatActivity() {
             }
         }
 
-        cepResidencia.setOnFocusChangeListener { v, hasFocus ->
+        editTextCep.setOnFocusChangeListener { v, hasFocus ->
 
-            val cep = cepResidencia.text
+            val cep = editTextCep.text
 
             if (!hasFocus && cep.length == 8) {
                 searchByCEP()
-                cepResidencia.error = null
+                editTextCep.error = null
             }
 
             if (!hasFocus && cep.length < 8) {
-                cepResidencia.error = "CEP inválido"
+                editTextCep.error = "CEP inválido"
             }
         }
 
@@ -290,65 +231,51 @@ class CadastroCliente : AppCompatActivity() {
             override fun onFailure(call: Call<Cep>, t: Throwable) {
                 Log.i("cep", t.message.toString())
             }
-
         })
     }
 
     private fun validaForm(): Boolean {
-
         var error = true
-
         if(numeroCasa.text.isEmpty()){
             numeroCasa.error = "Digite o número da sua casa."
             error = false
         }
-
         if(editDataNascimento.text.isEmpty()){
             editDataNascimento.error = "Escolha sua data de nascimento."
             error = false
         }
-
         if(numeroParaChatCliente.text.isEmpty()){
             numeroParaChatCliente.error = "Insira um número de identificação, ele será utilizado para manter uma conversa no chat."
             error = false
         }
-
         if(nomeCliente.text.isEmpty()){
             nomeCliente.error = "Coloque seu nome completo no campo."
             error = false
         }
-
         if(editTextCep.text.isEmpty()){
             editTextCep.error = "Insira o CEP de sua residência."
             error = false
         }
-
         if(celularCliente.text.isEmpty()){
             celularCliente.error = "Digite o número do seu celular."
             error = false
         }
-
         if(emailCliente.text.isEmpty()){
             emailCliente.error = "Digite o seu e-mail mais utilizado."
             error = false
         }
-
         if(cpfCliente.text.isEmpty()){
             cpfCliente.error = "Insira o seu CPF."
             error = false
         }
-
         if(rgCliente.text.isEmpty()){
             rgCliente.error = "Insira o seu RG."
             error = false
         }
-
         if(senhaCliente.text.isEmpty()){
             senhaCliente.error = "Crie uma senha, ela será ustilizada para efetuar o login."
             error = false
         }
-
         return error
-
     }
 }

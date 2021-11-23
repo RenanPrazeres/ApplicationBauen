@@ -7,43 +7,44 @@
     android:orientation="vertical"
     tools:context=".CadastroCliente">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/const_logo_cadastro2"
+    <LinearLayout
+        android:id="@+id/lv_topo_cadastro"
         android:layout_width="match_parent"
-        android:layout_height="200dp">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/iv_logo_cadastro"
-            android:layout_width="300dp"
-            android:layout_height="150dp"
-            android:scaleType="centerInside"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.495"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:srcCompat="@drawable/logotcc" />
+        <androidx.cardview.widget.CardView
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="50dp">
+
+            <ImageView
+                android:id="@+id/iv_logo_cadastro"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/logotcc"/>
+
+        </androidx.cardview.widget.CardView>
 
         <TextView
             android:id="@+id/tv_vamoscomecar_cadastro"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Vamos começar!"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/iv_logo_cadastro"
-            android:textColor="@color/Primaria"/>
+            android:textColor="@color/Primaria"
+            android:layout_gravity="center"/>
 
         <TextView
             android:id="@+id/tv_facalogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Crie sua nova conta"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_vamoscomecar_cadastro"
-            android:textColor="@color/Preto"/>
+            android:textColor="@color/Preto"
+            android:layout_gravity="center"/>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -243,4 +244,4 @@
                 android:visibility="visible" />
         </LinearLayout>
     </ScrollView>
-</LinearLayout>
+</LinearLayout >
