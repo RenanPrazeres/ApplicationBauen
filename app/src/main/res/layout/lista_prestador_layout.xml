@@ -19,6 +19,7 @@
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/card"
             android:layout_width="match_parent"
             android:layout_height="119dp"
             android:orientation="vertical"

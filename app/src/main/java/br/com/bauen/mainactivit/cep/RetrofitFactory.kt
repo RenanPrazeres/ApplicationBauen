@@ -15,3 +15,15 @@ class RetrofitFactory {
         return retrofitFactory.create(RetrofitService::class.java)
     }
 }
+
+class RetrofitFactory2 {
+    //RECEBE A URL Da API
+    val URL = "http://10.107.144.29:3334//service-provider"
+    val retrofitFactory = Retrofit.Builder()
+        .baseUrl(URL)
+        .addConverterFactory(GsonConverterFactory.create()).build()
+
+    fun retrofitService() : RetrofitService {
+        return retrofitFactory.create(RetrofitService::class.java)
+    }
+}

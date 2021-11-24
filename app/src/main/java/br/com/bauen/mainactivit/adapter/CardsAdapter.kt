@@ -34,7 +34,7 @@ class CardsAdapter( var context: Context) : RecyclerView.Adapter<CardsAdapter.Ca
         holder.textNome.text = card.nome
         holder.textDescricao.text = card.descricao
         holder.textProfissao.text = card.profissao
-        holder.ratingAvaliacao.text = card.avaliacao.toString() // ARRUMAR !!!!!!!!!!!!!!
+//        holder.ratingAvaliacao.text = card.avaliacao.toString() // ARRUMAR !!!!!!!!!!!!!!
 
     }
 
