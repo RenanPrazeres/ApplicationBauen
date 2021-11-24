@@ -15,7 +15,6 @@
         <activity android:name=".ultis.DialogCadastro">
 
         </activity>
-
         <activity android:name=".CadastroCliente" />
         <activity android:name=".CadastroPrestadorDeServico" />
         <activity

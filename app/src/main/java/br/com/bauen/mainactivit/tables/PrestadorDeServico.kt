@@ -1,17 +1,14 @@
 package br.com.bauen.mainactivit.tables
 
-class PrestadorDeServico {
-    var name : String = ""
-    var email = ""
-    var phone = ""
-    var born =  ""
-    var cpf =  ""
-    var rg = ""
-    var password = ""
-    var room = ""
+data class PrestadorDeServico (
+    var phone: String,
+    var name : String,
+    var cpf : String,
+    var rg : String,
+    var password : String,
+    var email : String,
+    var born : String,
+    var room : String,
+    var address: Endereco
+)
 
-    override fun toString(): String {
-        return "PrestadorDeServico(nomePrestador='$name', emailPrestador='$email', phonePrestador='$phone', " +
-                "dataNascimentoPrestador='$born', cpfPrestador='$cpf', rgPrestador='$rg', passwordPrestador='$password', roomPrestador='$room')"
-    }
-}

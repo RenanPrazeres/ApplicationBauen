@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.core.view.isVisible
 import br.com.bauen.mainactivit.cep.Cep
@@ -25,11 +26,11 @@ import java.util.*
 class CadastroPrestadorDeServico : AppCompatActivity() {
 
     lateinit var editTextCep: EditText
-    lateinit var editTextRua: EditText
-    lateinit var editTextEstado: EditText
-    lateinit var editTextCidade: EditText
-    lateinit var editTextBairro: EditText
-    lateinit var editDataNascimento: EditText
+    lateinit var editTextRua: TextView
+    lateinit var editTextEstado: TextView
+    lateinit var editTextCidade: TextView
+    lateinit var editTextBairro: TextView
+    lateinit var editDataNascimento: TextView
     lateinit var numeroCasa: EditText
     lateinit var cpfPrestador: EditText
     lateinit var rgPrestador: EditText
@@ -60,61 +61,61 @@ class CadastroPrestadorDeServico : AppCompatActivity() {
         numeroParaChatPrestador = findViewById(R.id.et_roomPrestador)
         btnCadastrarPrestador = findViewById(R.id.button_cadastrarPrestador)
 
-        //MÁSCARA NOS CAMPOS
-        editTextCep.addTextChangedListener(
-            MaskFormatUtil.mask(
-                editTextCep,
-                MaskFormatUtil.FORMAT_CEP
-            )
-        )
-
-        cpfPrestador.addTextChangedListener(
-            MaskFormatUtil.mask(
-                cpfPrestador,
-                MaskFormatUtil.FORMAT_CPF
-            )
-        )
-
-        rgPrestador.addTextChangedListener(
-            MaskFormatUtil.mask(
-                rgPrestador,
-                MaskFormatUtil.FORMAT_RG
-            )
-        )
+//        //MÁSCARA NOS CAMPOS
+//        editTextCep.addTextChangedListener(
+//            MaskFormatUtil.mask(
+//                editTextCep,
+//                MaskFormatUtil.FORMAT_CEP
+//            )
+//        )
+//
+//        cpfPrestador.addTextChangedListener(
+//            MaskFormatUtil.mask(
+//                cpfPrestador,
+//                MaskFormatUtil.FORMAT_CPF
+//            )
+//        )
+//
+//        rgPrestador.addTextChangedListener(
+//            MaskFormatUtil.mask(
+//                rgPrestador,
+//                MaskFormatUtil.FORMAT_RG
+//            )
+//        )
 
         //Click no botão de CADASTRO
         btnCadastrarPrestador.setOnClickListener {
             if (validaForm()) {
 
-                //Criar um objeto Cliente
-                val prestador = PrestadorDeServico()
-                prestador.name = nomePrestador.text.toString()
-                prestador.email = emailPrestador.text.toString()
-                prestador.phone = celularPrestador.text.toString()
-                prestador.born = editDataNascimento.text.toString()
-                prestador.cpf = cpfPrestador.text.toString()
-                prestador.rg = rgPrestador.text.toString()
-                prestador.room = numeroParaChatPrestador.text.toString()
-                prestador.password = senhaPrestador.text.toString()
+                val zipcode = editTextCep.text.toString()
+                val street = editTextRua.text.toString()
+                val state = editTextEstado.text.toString()
+                val city = editTextCidade.text.toString()
+                val neighborhood = editTextBairro.text.toString()
+                val number = numeroCasa.text.toString()
 
-                //Criar um objeto Endereço
-//                val endereco = Endereco()
-//                endereco.zipcode = editTextCep.text.toString()
-//                endereco.street = editTextRua.text.toString()
-//                endereco.state = editTextEstado.text.toString()
-//                endereco.city = editTextCidade.text.toString()
-//                endereco.neighborhood = editTextBairro.text.toString()
-//                endereco.number = numeroCasa.text.toString()
+                //Cria o objeto Endereco
+                val address :Endereco = Endereco(zipcode,street,state,city,neighborhood,number)
+
+                //instancia os elementos do objeto prestador
+                val name = nomePrestador.text.toString()
+                val email = emailPrestador.text.toString()
+                val phone = celularPrestador.text.toString()
+                val born = editDataNascimento.text.toString()
+                val cpf = cpfPrestador.text.toString()
+                val rg = rgPrestador.text.toString()
+                val room = numeroParaChatPrestador.text.toString()
+                val password = senhaPrestador.text.toString()
+
+                //Cria o objeto pestador + endereço
+                val prestador: PrestadorDeServico = PrestadorDeServico(phone, name, cpf, rg, password, email, born, room, address)
 
                 //Converter o prestador em json
                 val gson = Gson()
                 val prestadorJson = gson.toJson(prestador)
+
                 println("............" + prestadorJson)
 
-                //Converte o endereço em json
-                val gsonEndereco = Gson()
-//                val enderecoJson = gsonEndereco.toJson(endereco)
-//                println("++++++++++++" + enderecoJson)
 
                 doAsync {
                     val http = HttpHelper()
@@ -193,11 +194,11 @@ class CadastroPrestadorDeServico : AppCompatActivity() {
                 numeroParaChatPrestador.isVisible = true
             }
 
-            if (!hasFocus && cpfPrestador.length() == 14) {
+            if (!hasFocus && cpfPrestador.length() == 11) {
                 cpfPrestador.error = null
             }
 
-            if (!hasFocus && cpfPrestador.length() != 14) {
+            if (!hasFocus && cpfPrestador.length() != 11) {
                 cpfPrestador.error = "CPF inválido, deve ter 11 digitos"
             }
         }
@@ -207,10 +208,10 @@ class CadastroPrestadorDeServico : AppCompatActivity() {
                 Toast.makeText(this, "SENHA CLIENTE ABERTO", Toast.LENGTH_LONG).show()
                 senhaPrestador.isVisible = true
             }
-            if (!hasFocus && rgPrestador.length() == 12) {
+            if (!hasFocus && rgPrestador.length() == 9) {
                 rgPrestador.error = null
             }
-            if (!hasFocus && rgPrestador.length() != 12) {
+            if (!hasFocus && rgPrestador.length() != 9) {
                 rgPrestador.error = "RG inválido, deve ter 9 digitos"
             }
         }

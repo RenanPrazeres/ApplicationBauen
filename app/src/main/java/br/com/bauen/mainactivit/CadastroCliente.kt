@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
@@ -26,11 +27,11 @@ import java.util.*
 class CadastroCliente : AppCompatActivity() {
 
     lateinit var editTextCep: EditText
-    lateinit var editTextRua: EditText
-    lateinit var editTextEstado: EditText
-    lateinit var editTextCidade: EditText
-    lateinit var editTextBairro: EditText
-    lateinit var editDataNascimento: EditText
+    lateinit var editTextRua: TextView
+    lateinit var editTextEstado: TextView
+    lateinit var editTextCidade: TextView
+    lateinit var editTextBairro: TextView
+    lateinit var editDataNascimento: TextView
     lateinit var numeroCasa: EditText
     lateinit var cpfCliente: EditText
     lateinit var rgCliente: EditText
@@ -82,7 +83,7 @@ class CadastroCliente : AppCompatActivity() {
                 //Cria o objeto Endereco
                 val address :Endereco = Endereco(zipcode,street,state,city,neighborhood,number)
 
-                //instancia os elementos do objeto endereco
+                //instancia os elementos do objeto cliente
                 val name = nomeCliente.text.toString()
                 val email = emailCliente.text.toString()
                 val phone = celularCliente.text.toString()
@@ -93,7 +94,7 @@ class CadastroCliente : AppCompatActivity() {
                 val room = numeroParaChatCliente.text.toString()
                 val password = senhaCliente.text.toString()
 
-                //Cria o objeto endereco
+                //Cria o objeto cliente + endereço
                 val cliente: Cliente = Cliente(phone, name, cpf, rg, password, email, born, room, address)
 
                 //Converter o cliente em json
