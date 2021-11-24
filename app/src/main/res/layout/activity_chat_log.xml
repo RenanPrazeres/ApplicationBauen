@@ -76,7 +76,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="579dp"
         android:layout_marginTop="80dp"
         android:backgroundTint="@color/Branco"
         app:layout_constraintEnd_toEndOf="parent"
@@ -93,7 +93,7 @@
         app:cardBackgroundColor="#223263">
 
         <ImageButton
-            android:id="@+id/button_send_msg"
+            android:id="@+id/send_button"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_below="@id/recyclerview"

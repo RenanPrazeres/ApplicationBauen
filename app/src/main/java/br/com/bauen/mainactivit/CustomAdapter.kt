@@ -15,7 +15,7 @@ class CustomAdapter (val MensagemList: ArrayList<Mensagem>) : RecyclerView.Adapt
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val v = LayoutInflater.from(parent?.context).inflate(R.drawable.my_bubble_shape)
+        val v = LayoutInflater.from(parent?.context).inflate(R.layout.balao_chat, parent)
         return ViewHolder(v)
 
 //        como usar inflate para shape
