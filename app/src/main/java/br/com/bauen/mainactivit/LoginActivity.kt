@@ -38,5 +38,19 @@ class LoginActivity : AppCompatActivity() {
 //                http.get()
 //            }
         }
+
+
+        buttonLogin.setOnClickListener {
+            login()
+        }
+    }
+
+    private fun login(){
+        val user = email_login.text.toString()
+        val pass = senha_login.text.toString()
+
+//        val dao = UsuarioDao(this, null)
+//        val autenticado = dao.autenticar(user, pass)
+
     }
 }

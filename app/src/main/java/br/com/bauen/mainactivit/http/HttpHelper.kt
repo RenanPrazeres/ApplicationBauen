@@ -39,7 +39,7 @@ class HttpHelper {
         //Definir o cabeçalho
         val headerHttp = MediaType.parse("application/json; charset=utf-8")
 
-        // Criar cliente que vai disparar a requisição
+        // Criar prestador que vai disparar a requisição
         val prestador = OkHttpClient()
 
         //Criar o body da requisição
@@ -52,6 +52,22 @@ class HttpHelper {
         val response = prestador.newCall(requestPrestador).execute()
 
         return response.body().toString()
+
+    }
+
+    fun login (email: String, senha: String){
+        //Definir URL do servidor
+        val URLApiLogin = "http://10.107.144.4:3334/login-client"
+
+        // Criar login que vai disparar a requisição
+        val loginn = OkHttpClient()
+
+        //Construir a requisição POST HTTP para o servidor
+        val requestLogin = Request
+            .Builder()
+            .url(URLApiLogin)
+            .get()
+            .build()
 
     }
 
