@@ -1,11 +1,15 @@
 package br.com.bauen.mainactivit
 
+import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import br.com.bauen.mainactivit.http.HttpHelper
 import br.com.bauen.mainactivit.ultis.DialogCadastro
 import org.jetbrains.anko.doAsync
@@ -28,11 +32,54 @@ class LoginActivity : AppCompatActivity() {
         novoPorAqui = findViewById(R.id.nao_tem_conta)
         cadastre_se = findViewById(R.id.cadastre_se_login)
 
-        //clique e abrir nova activity
-        cadastre_se.setOnClickListener {
-            val intent = Intent (this, DialogCadastro::class.java)
-            startActivity(intent)
 
+<<<<<<< HEAD
+=======
+//        buttonLogin.setOnClickListener {
+//            login()
+//        }
+
+
+    }
+
+//    private fun login(){
+//        val user = email_login.text.toString()
+//        val pass = senha_login.text.toString()
+
+//        val dao = UsuarioDao(this, null)
+//        val autenticado = dao.autenticar(user, pass)
+
+
+
+    fun showDialog(view: View) {
+        when(view.id){
+            R.id.cadastre_se_login ->{
+                abrirDialog()
+            }
         }
     }
+
+    fun abrirDialog(){
+        val alertDialog = AlertDialog.Builder(this)
+        val inflater = layoutInflater
+        val view = inflater.inflate(R.layout.activity_dialog_cadastro, null)
+
+        alertDialog.setView(view)
+
+        val dialog = alertDialog.create()
+        dialog.show()
+
+        alertDialog.setPositiveButton("Sim") { dialogInterface: DialogInterface, i: Int ->
+            abrirTelaBiometria()
+>>>>>>> fccf7fc3ed29bb67388b13f527d5ffb3bd5dfafa
+        }
+    }
+
+    private fun abrirTelaBiometria() {
+        val intent = Intent(this, CadastroPrestadorDeServico::class.java)
+        startActivity(intent)
+        finish()
+    }
+
+
 }

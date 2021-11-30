@@ -68,17 +68,18 @@
             android:hint="E-mail"
             android:padding="15dp" />
 
-        <EditText
-            android:id="@+id/senha_login"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/email_login"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/edit_text_login_background"
-            android:hint="Senha"
-            android:padding="15dp" />
+            <EditText
+                android:id="@+id/senha_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/email_login"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/edit_text_login_background"
+                android:hint="Senha"
+                android:inputType="textPassword"
+                android:padding="15dp" />
 
         <Button
             android:id="@+id/button_login"
@@ -174,8 +175,10 @@
                 android:layout_toEndOf="@+id/novo_por_aqui"
                 android:layout_toRightOf="@+id/novo_por_aqui"
                 android:text="Cadastre-se"
-                android:textColor="@color/Primaria" />
-    </LinearLayout>
+                android:textColor="@color/Primaria"
+                android:onClick="showDialog"/>
+
+        </LinearLayout>
     </ScrollView>
 
 </RelativeLayout>

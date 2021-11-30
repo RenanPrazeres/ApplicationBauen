@@ -1,5 +1,7 @@
 package br.com.bauen.mainactivit.http
 
+import br.com.bauen.mainactivit.ultis.Usuario
+import com.google.gson.Gson
 import okhttp3.MediaType
 import okhttp3.OkHttpClient
 import okhttp3.RequestBody
@@ -8,7 +10,7 @@ import okhttp3.Request
 class HttpHelper {
 
     //POST CADASTRO CLIENTE
-    fun postCliente (json: String) : String {
+    fun postCliente(json: String): String {
         //Definir URL do servidor
         val URLApi = "http://10.107.144.4:3334/register/client"
 
@@ -32,14 +34,14 @@ class HttpHelper {
     }
 
     //POST CADASTRO PRESTADOR
-    fun postPrestador (json: String) : String {
+    fun postPrestador(json: String): String {
         //Definir URL do servidor
         val URLApi = "http://10.107.144.4:3334/register/service-provider"
 
         //Definir o cabeçalho
         val headerHttp = MediaType.parse("application/json; charset=utf-8")
 
-        // Criar cliente que vai disparar a requisição
+        // Criar prestador que vai disparar a requisição
         val prestador = OkHttpClient()
 
         //Criar o body da requisição
@@ -52,6 +54,40 @@ class HttpHelper {
         val response = prestador.newCall(requestPrestador).execute()
 
         return response.body().toString()
+
+    }
+
+    fun login(email: String, senha: String) : Usuario{
+        //Definir URL do servidor
+        val URLApiLoginCliente = "http://10.107.144.4:3334/login-client"
+
+        // Criar login que vai disparar a requisição
+        val loginn = OkHttpClient()
+
+        //Construir a requisição POST HTTP para o servidor
+        val requestLogin = Request
+            .Builder()
+            .url(URLApiLoginCliente)
+            .get()
+            .build()
+
+//        Enviar a requisição para o servidor
+        val response = loginn.newCall(requestLogin).execute()
+
+        //Extrair o body da requisição
+        val responseBody = response.body()
+
+        var usuario = Usuario()
+
+        //Criar um objeto usuario
+        if(responseBody!!.contentLength().toInt() != 0 ){
+            var json = responseBody.string()
+            var gson = Gson()
+
+            usuario = gson.fromJson(json, Usuario::class.java)
+        }
+
+        return usuario
 
     }
 
@@ -80,9 +116,9 @@ class HttpHelper {
 //    }
 //}
 
-       //GET Listagem
-        fun get2(){
-       //Definir URL do servidor
+    //GET Listagem
+    fun get2() {
+        //Definir URL do servidor
         val URLApi = "http://10.107.144.29:3334//service-provider"
 
         // Criar cliente que vai disparar a requisição
@@ -91,14 +127,14 @@ class HttpHelper {
         //Criar uma requisição GET
         val request = Request.Builder().url(URLApi).get().build()
 
-       //Enviar a requisição para o servidor
+        //Enviar a requisição para o servidor
         val response = client.newCall(request).execute()
 
         //Extrair o body da requisição
         val responseBody = response.body()
 
         //Exibir o body da requisição
-        if (responseBody != null){
+        if (responseBody != null) {
             val json = responseBody.string()
             println("RESPOSTA ===========" + json)
         }
