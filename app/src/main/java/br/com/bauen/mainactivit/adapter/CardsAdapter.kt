@@ -1,6 +1,5 @@
 package br.com.bauen.mainactivit.adapter
 import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -27,7 +26,7 @@ class CardsAdapter( var context: Context) : RecyclerView.Adapter<CardsAdapter.Ca
 
     override fun onBindViewHolder(holder: CardViewHolder, position: Int) {
 
-        Log.i("xptoholder", "onCreateViewHolder")
+//        Log.i("xptoholder", "onCreateViewHolder")
 
         val card = listaCard[position]
 
@@ -40,7 +39,7 @@ class CardsAdapter( var context: Context) : RecyclerView.Adapter<CardsAdapter.Ca
 
     override fun getItemCount(): Int {
 
-        Log.i("xptoholder", "getItemCount")
+//        Log.i("xptoholder", "getItemCount")
 
         return listaCard.size
     }
@@ -53,9 +52,6 @@ class CardsAdapter( var context: Context) : RecyclerView.Adapter<CardsAdapter.Ca
         val textProfissao = itemView.findViewById<TextView>(R.id.textProfissao)
         val ratingAvaliacao = itemView.findViewById<TextView>(R.id.ratingAvaliacao)
 
-
-
     }
-
 
 }

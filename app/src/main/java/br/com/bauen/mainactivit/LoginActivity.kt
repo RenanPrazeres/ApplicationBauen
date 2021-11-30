@@ -33,10 +33,6 @@ class LoginActivity : AppCompatActivity() {
             val intent = Intent (this, DialogCadastro::class.java)
             startActivity(intent)
 
-//            doAsync {
-//                val http = HttpHelper()
-//                http.get()
-//            }
         }
     }
 }
