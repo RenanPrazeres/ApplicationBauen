@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".ChatActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:cardBackgroundColor="#074EAD">
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_img_friend_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginLeft="0dp"
+            app:cardCornerRadius="30dp"
+            >
+        <!--            app:cardCornerRadius="48dp"-->
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:scaleType="fitStart"
+                app:srcCompat="@drawable/beyonce_profile" />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_friend_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@id/card_img_friend_profile"
+            android:layout_toRightOf="@id/card_img_friend_profile"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="Jean Henrique">
+        </androidx.appcompat.widget.AppCompatTextView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/FunçãoPrestador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="40dp"
+            android:layout_toEndOf="@id/card_img_friend_profile"
+            android:layout_toRightOf="@id/card_img_friend_profile"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:text="Azulegista"/>
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            app:srcCompat="@drawable/left_arrow"
+            android:backgroundTint="#074EAD"
+            android:layout_marginTop="15dp"
+
+            />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="579dp"
+        android:layout_marginTop="80dp"
+        android:backgroundTint="@color/Branco"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="200dp"
+        android:layout_marginBottom="0dp"
+        app:cardBackgroundColor="#223263">
+
+        <ImageButton
+            android:id="@+id/send_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_below="@id/recyclerview"
+            app:srcCompat="@drawable/send"
+            android:backgroundTint="#223263"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="370dp"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="340dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="13dp"
+            app:cardCornerRadius="19dp">
+
+            <EditText
+                android:id="@+id/editTextChat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textPersonName"
+                android:textSize="18dp" />
+        </androidx.cardview.widget.CardView>
+
+    </androidx.cardview.widget.CardView>
+<!--   ultima-->
+</RelativeLayout>
