@@ -249,6 +249,6 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_cards"
         android:layout_width="match_parent"
-        android:layout_height="520dp"
-        tools:listitem="@layout/lista_prestador_layout"/>
+        android:layout_height="510dp"
+        tools:listitem="@layout/lista_prestador_layout" />
 </LinearLayout>
