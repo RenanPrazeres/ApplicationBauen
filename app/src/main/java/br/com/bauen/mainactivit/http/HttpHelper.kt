@@ -91,30 +91,7 @@ class HttpHelper {
 
     }
 
-//       //GET PRESTADOR
-//        fun get(){
-//       //Definir URL do servidor
-//        val URLApi = "http://10.107.144.3:3334//service-provider"
-//
-//        // Criar cliente que vai disparar a requisição
-//        val client = OkHttpClient()
-//
-//        //Criar uma requisição GET
-//        val request = Request.Builder().url(URLApi).get().build()
-//
-//       //Enviar a requisição para o servidor
-//        val response = client.newCall(request).execute()
-//
-//        //Extrair o body da requisição
-//        val responseBody = response.body()
-//
-//        //Exibir o body da requisição
-//        if (responseBody != null){
-//            val json = responseBody.string()
-//            println("RESPOSTA ===========" + json)
-//        }
-//    }
-//}
+
 
     //GET Listagem
     fun get2() {

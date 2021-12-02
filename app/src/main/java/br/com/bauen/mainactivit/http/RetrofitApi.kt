@@ -7,7 +7,7 @@ class RetrofitApi {
     companion object {
         fun getRetrofit() : Retrofit {
             val retrofit = Retrofit.Builder()
-                .baseUrl("http://10.107.144.29:3334")
+                .baseUrl("http://10.107.140.74:3334")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
             return retrofit

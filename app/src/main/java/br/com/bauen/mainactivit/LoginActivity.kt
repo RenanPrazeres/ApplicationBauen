@@ -33,8 +33,7 @@ class LoginActivity : AppCompatActivity() {
         cadastre_se = findViewById(R.id.cadastre_se_login)
 
 
-<<<<<<< HEAD
-=======
+
 //        buttonLogin.setOnClickListener {
 //            login()
 //        }
@@ -71,7 +70,7 @@ class LoginActivity : AppCompatActivity() {
 
         alertDialog.setPositiveButton("Sim") { dialogInterface: DialogInterface, i: Int ->
             abrirTelaBiometria()
->>>>>>> fccf7fc3ed29bb67388b13f527d5ffb3bd5dfafa
+
         }
     }
 
