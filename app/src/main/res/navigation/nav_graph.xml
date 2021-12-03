@@ -10,29 +10,20 @@
         android:id="@+id/FirstFragment"
         android:name="br.com.bauen.mainactivit.ListagemPrestadorActivity"
         android:label="@string/first_fragment_label"
-        tools:layout="@layout/activity_listagem_prestador">
-
-        <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
-        <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment2"
-            app:destination="@id/SecondFragment" />
-        <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment3"
-            app:destination="@id/SecondFragment" />
-    </fragment>
+        tools:layout="@layout/activity_listagem_prestador"/>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="br.com.bauen.mainactivit.ChatActivity"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/activity_chat">
-
-        <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
-        <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment2"
-            app:destination="@id/FirstFragment" />
-    </fragment>
+        android:id="@+id/perfilFragment"
+        android:name="br.com.bauen.mainactivit.PerfilFragment"
+        android:label="fragment_perfil"
+        tools:layout="@layout/fragment_perfil" />
+    <fragment
+        android:id="@+id/servicosRapidosFragment"
+        android:name="br.com.bauen.mainactivit.ServicosRapidosFragment"
+        android:label="fragment_servicos_rapidos"
+        tools:layout="@layout/fragment_servicos_rapidos" />
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="br.com.bauen.mainactivit.ChatFragment"
+        android:label="fragment_chat"
+        tools:layout="@layout/fragment_chat" />
 </navigation>

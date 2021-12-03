@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/perfilFragment"
+        android:title="Perfil"
+        android:icon="@drawable/ic_perfil" />
+
+    <item
+        android:id="@+id/servicosRapidosFragment"
+        android:title="ServicoRapido"
+        android:icon="@drawable/ic_servico_rapido"/>
+
+    <item
+        android:id="@+id/chatFragment"
+        android:title="Chat"
+        android:icon="@drawable/ic_chat"/>
+</menu>

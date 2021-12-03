@@ -5,4 +5,6 @@
     <string name="second_fragment_label">Teste</string>
     <string name="app_name">Aplicativo</string>
     <string name="novaa">NOVA</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
