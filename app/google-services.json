@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "950509302912",
+    "firebase_url": "https://applicationbauen-default-rtdb.firebaseio.com",
+    "project_id": "applicationbauen",
+    "storage_bucket": "applicationbauen.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:950509302912:android:d4ff7c911d4c5e5b68a265",
+        "android_client_info": {
+          "package_name": "br.com.bauen.mainactivit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "950509302912-i62kgj6e09coisvqgfkcqont0rm8f8q1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMB_YBCwv6Xra5e-aGeo17_c56RTMqxOc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "950509302912-i62kgj6e09coisvqgfkcqont0rm8f8q1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
