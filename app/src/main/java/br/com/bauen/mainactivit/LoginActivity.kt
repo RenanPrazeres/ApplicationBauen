@@ -1,5 +1,6 @@
 package br.com.bauen.mainactivit
 
+import android.annotation.SuppressLint
 import android.content.DialogInterface
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -58,6 +59,7 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("ResourceType")
     fun abrirDialog(){
         val alertDialog = AlertDialog.Builder(this)
         val inflater = layoutInflater
@@ -68,8 +70,9 @@ class LoginActivity : AppCompatActivity() {
         val dialog = alertDialog.create()
         dialog.show()
 
-        alertDialog.setPositiveButton("Sim") { dialogInterface: DialogInterface, i: Int ->
-            abrirTelaBiometria()
+        alertDialog.setPositiveButton(R.id.bnt_contratar_prestador_dialog_cadastro) { dialogInterface: DialogInterface, i: Int ->
+            val abrirCadastroCliente = Intent (this, CadastroCliente::class.java)
+            startActivity(abrirCadastroCliente)
 
         }
     }
@@ -79,6 +82,23 @@ class LoginActivity : AppCompatActivity() {
         startActivity(intent)
         finish()
     }
+
+//    private fun abrirCaixaDialogo() {
+//
+//        val caixaDeDialogo = AlertDialog.Builder(this)
+//
+//        caixaDeDialogo.setTitle("Tem certeza que deseja sair?")
+//        caixaDeDialogo.setMessage("Você será redirecionado para a tela de início!")
+//        caixaDeDialogo.setPositiveButton("Sim") { dialogInterface: DialogInterface, i: Int ->
+//            logout()
+//            abrirMain()
+//        }
+//        caixaDeDialogo.setNegativeButton("Não") { dialogInterface: DialogInterface, i: Int ->
+//            closeContextMenu()
+//            drawerLayout.open()
+//        }
+//        caixaDeDialogo.show()
+//    }
 
 
 }

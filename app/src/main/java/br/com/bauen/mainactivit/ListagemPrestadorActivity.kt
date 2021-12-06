@@ -114,22 +114,6 @@ class ListagemPrestadorActivity : AppCompatActivity() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //lateinit var rvCard: RecyclerView
 //    lateinit var cardAdapeter: CardsAdapter
 

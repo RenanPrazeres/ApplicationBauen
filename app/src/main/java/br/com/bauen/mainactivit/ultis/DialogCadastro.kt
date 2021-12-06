@@ -18,18 +18,18 @@ class DialogCadastro : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dialog_cadastro)
 
-        bntCadastroCliente = findViewById(R.id.bnt_contratar_prestador_dialog_cadastro)
-        bntCadastroPrestador = findViewById(R.id.bnt_ser_prestador_dialog_cadastro)
-
-        bntCadastroCliente.setOnClickListener {
-            val abrirCadastroCliente = Intent (this, CadastroCliente::class.java)
-            startActivity(abrirCadastroCliente)
-        }
-
-        bntCadastroPrestador.setOnClickListener {
-            val abrirCadastroPrestador = Intent (this, CadastroPrestadorDeServico::class.java)
-            startActivity(abrirCadastroPrestador)
-        }
+//        bntCadastroCliente = findViewById(R.id.bnt_contratar_prestador_dialog_cadastro)
+//        bntCadastroPrestador = findViewById(R.id.bnt_ser_prestador_dialog_cadastro)
+//
+//        bntCadastroCliente.setOnClickListener {
+//            val abrirCadastroCliente = Intent (this, CadastroCliente::class.java)
+//            startActivity(abrirCadastroCliente)
+//        }
+//
+//        bntCadastroPrestador.setOnClickListener {
+//            val abrirCadastroPrestador = Intent (this, CadastroPrestadorDeServico::class.java)
+//            startActivity(abrirCadastroPrestador)
+//        }
 
 
     }
