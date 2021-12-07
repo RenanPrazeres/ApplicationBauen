@@ -1,6 +1,7 @@
 package br.com.bauen.mainactivit.http
 
-import br.com.bauen.mainactivit.ultis.Usuario
+import android.util.Log
+import br.com.bauen.mainactivit.ultis.UsuarioCliente
 import com.google.gson.Gson
 import okhttp3.MediaType
 import okhttp3.OkHttpClient
@@ -57,7 +58,8 @@ class HttpHelper {
 
     }
 
-    fun login(email: String, senha: String) : Usuario{
+//  LOGIN
+    fun login(email: String, senha: String): UsuarioCliente {
         //Definir URL do servidor
         val URLApiLoginCliente = "http://10.107.144.4:3334/login-client"
 
@@ -70,27 +72,25 @@ class HttpHelper {
             .url(URLApiLoginCliente)
             .get()
             .build()
-
 //        Enviar a requisição para o servidor
         val response = loginn.newCall(requestLogin).execute()
+    Log.i("loginResponse", response.toString())
 
         //Extrair o body da requisição
         val responseBody = response.body()
+       Log.i("loginRes", responseBody.toString())
 
-        var usuario = Usuario()
+        var usuario = UsuarioCliente()
 
         //Criar um objeto usuario
-        if(responseBody!!.contentLength().toInt() != 0 ){
+        if (responseBody!!.contentLength().toInt() != 0) {
             var json = responseBody.string()
             var gson = Gson()
 
-            usuario = gson.fromJson(json, Usuario::class.java)
+            usuario = gson.fromJson(json, UsuarioCliente::class.java)
         }
-
         return usuario
-
     }
-
 
 
     //GET Listagem

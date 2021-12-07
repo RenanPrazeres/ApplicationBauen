@@ -2,6 +2,7 @@ package br.com.bauen.mainactivit
 
 import android.annotation.SuppressLint
 import android.app.DatePickerDialog
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -107,8 +108,8 @@ class CadastroCliente : AppCompatActivity() {
                     val http = HttpHelper()
                     http.postCliente(clienteJson)
                 }
-
-                finish()
+                Toast.makeText(this, "CASDASTRO REALIZADO COM SUCESSO", Toast.LENGTH_LONG).show()
+                abrirLogin()
             }
         }
 
@@ -148,7 +149,7 @@ class CadastroCliente : AppCompatActivity() {
 
         numeroCasa.setOnFocusChangeListener { v, hasFocus ->
             if (!hasFocus) {
-                Toast.makeText(this, "CPF CLIENTE ABERTO", Toast.LENGTH_LONG).show()
+//                Toast.makeText(this, "CPF CLIENTE ABERTO", Toast.LENGTH_LONG).show()
                 cpfCliente.isVisible = true
             }
         }
@@ -156,14 +157,14 @@ class CadastroCliente : AppCompatActivity() {
 
         editDataNascimento.setOnFocusChangeListener { v, hasFocus ->
             if (!hasFocus) {
-                Toast.makeText(this, "RG CLIENTE ABERTO", Toast.LENGTH_LONG).show()
+//                Toast.makeText(this, "RG CLIENTE ABERTO", Toast.LENGTH_LONG).show()
                 rgCliente.isVisible = true
             }
         }
 
         cpfCliente.setOnFocusChangeListener { v, hasFocus ->
             if (!hasFocus) {
-                Toast.makeText(this, "ROOM CLIENTE ABERTO", Toast.LENGTH_LONG).show()
+//                Toast.makeText(this, "ROOM CLIENTE ABERTO", Toast.LENGTH_LONG).show()
                 numeroParaChatCliente .isVisible = true
             }
 
@@ -178,7 +179,7 @@ class CadastroCliente : AppCompatActivity() {
 
         rgCliente.setOnFocusChangeListener { v, hasFocus ->
             if (!hasFocus) {
-                Toast.makeText(this, "SENHA CLIENTE ABERTO", Toast.LENGTH_LONG).show()
+//                Toast.makeText(this, "SENHA CLIENTE ABERTO", Toast.LENGTH_LONG).show()
                 senhaCliente.isVisible = true
             }
             if (!hasFocus && rgCliente.length() == 9) {
@@ -191,7 +192,7 @@ class CadastroCliente : AppCompatActivity() {
 
         numeroParaChatCliente.setOnFocusChangeListener { v, hasFocus ->
             if (!hasFocus) {
-                Toast.makeText(this, "BOTÃO ABERTO", Toast.LENGTH_LONG).show()
+//                Toast.makeText(this, "BOTÃO ABERTO", Toast.LENGTH_LONG).show()
                 btnCadastrarCliente.isVisible = true
             }
         }
@@ -210,6 +211,11 @@ class CadastroCliente : AppCompatActivity() {
             }
         }
 
+    }
+
+    private fun abrirLogin() {
+        val intent = Intent(this, LoginActivity::class.java)
+        startActivity(intent)
     }
 
     private fun searchByCEP() {

@@ -1,6 +1,7 @@
 package br.com.bauen.mainactivit
 
 import android.app.DatePickerDialog
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -18,6 +19,7 @@ import br.com.bauen.mainactivit.tables.PrestadorDeServico
 import br.com.bauen.mainactivit.ultis.MaskFormatUtil
 import com.google.gson.Gson
 import org.jetbrains.anko.doAsync
+import org.jetbrains.anko.doAsyncResult
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -121,11 +123,10 @@ class CadastroPrestadorDeServico : AppCompatActivity() {
                     val http = HttpHelper()
                     http.postPrestador(prestadorJson)
 
-                    val http2 = HttpHelper()
+//                    val http2 = HttpHelper()
 //                    http2.postPrestador(enderecoJson)
                 }
-
-                finish()
+                abrirLogin()
             }
         }
 
@@ -176,21 +177,21 @@ class CadastroPrestadorDeServico : AppCompatActivity() {
 
         numeroCasa.setOnFocusChangeListener { v, hasFocus ->
             if (!hasFocus) {
-                Toast.makeText(this, "CPF CLIENTE ABERTO", Toast.LENGTH_LONG).show()
+//                Toast.makeText(this, "CPF CLIENTE ABERTO", Toast.LENGTH_LONG).show()
                 cpfPrestador.isVisible = true
             }
         }
 
         editDataNascimento.setOnFocusChangeListener { v, hasFocus ->
             if (!hasFocus) {
-                Toast.makeText(this, "RG CLIENTE ABERTO", Toast.LENGTH_LONG).show()
+//                Toast.makeText(this, "RG CLIENTE ABERTO", Toast.LENGTH_LONG).show()
                 rgPrestador.isVisible = true
             }
         }
 
         cpfPrestador.setOnFocusChangeListener { v, hasFocus ->
             if (!hasFocus) {
-                Toast.makeText(this, "ROOM CLIENTE ABERTO", Toast.LENGTH_LONG).show()
+//                Toast.makeText(this, "ROOM CLIENTE ABERTO", Toast.LENGTH_LONG).show()
                 numeroParaChatPrestador.isVisible = true
             }
 
@@ -205,7 +206,7 @@ class CadastroPrestadorDeServico : AppCompatActivity() {
 
         rgPrestador.setOnFocusChangeListener { v, hasFocus ->
             if (!hasFocus) {
-                Toast.makeText(this, "SENHA CLIENTE ABERTO", Toast.LENGTH_LONG).show()
+//                Toast.makeText(this, "SENHA CLIENTE ABERTO", Toast.LENGTH_LONG).show()
                 senhaPrestador.isVisible = true
             }
             if (!hasFocus && rgPrestador.length() == 9) {
@@ -218,12 +219,16 @@ class CadastroPrestadorDeServico : AppCompatActivity() {
 
         numeroParaChatPrestador.setOnFocusChangeListener { v, hasFocus ->
             if (!hasFocus) {
-                Toast.makeText(this, "BOTÃO ABERTO", Toast.LENGTH_LONG).show()
+//                Toast.makeText(this, "BOTÃO ABERTO", Toast.LENGTH_LONG).show()
                 btnCadastrarPrestador.isVisible = true
             }
         }
 
+    }
 
+    private fun abrirLogin() {
+        val intent = Intent(this, LoginActivity::class.java)
+        startActivity(intent)
     }
 
     private fun searchByCEP() {
