@@ -259,127 +259,159 @@
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="16dp" />
 
-        <HorizontalScrollView
-            android:id="@+id/horizontalScrollView2"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
             android:layout_width="match_parent"
-            android:layout_height="105dp"
-            android:background="@color/Primaria"
-            app:layout_constraintTop_toBottomOf="@+id/textView12">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="150dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="4dp">
-
-<!--                    <ImageView-->
-
-<!--                        android:id="@+id/btn_add"-->
-<!--                        android:layout_width="wrap_content"-->
-<!--                        android:layout_height="wrap_content"-->
-<!--                        android:layout_gravity="center"-->
-<!--                        android:src="@drawable/add" />-->
-
-
-                    <Button
-                        android:id="@+id/btn_test"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Button" />
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/card1"
-                    android:layout_width="150dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="4dp">
-
-
-                    <ImageView
-                        android:id="@+id/imagem_test"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        app:srcCompat="@drawable/images" />
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="150dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="4dp">
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="150dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="4dp" />
-            </LinearLayout>
-        </HorizontalScrollView>
+            android:layout_height="109dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/textView12"
+            tools:layout_editor_absoluteX="0dp"
+            tools:listitem="@layout/layout_portifolio" />
 
         <TextView
-            android:id="@+id/textView14"
+            android:id="@+id/textView13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="Comentarios"
+            android:layout_marginTop="8dp"
+            android:text="Comentários"
             android:textColor="@color/Branco"
-            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView2"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerView"
             tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="16dp" />
+            tools:layout_editor_absoluteX="19dp" />
 
-        <HorizontalScrollView
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView1"
             android:layout_width="match_parent"
-            android:layout_height="105dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView14"
-            tools:ignore="MissingConstraints">
+            android:layout_height="109dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/textView13"
+            tools:layout_editor_absoluteX="0dp"
+            tools:listitem="@layout/layout_portifolio" />
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="150dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="4dp">
+        <!--        <HorizontalScrollView-->
+        <!--            android:id="@+id/horizontalScrollView2"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="105dp"-->
+        <!--            android:background="@color/Primaria"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/textView12">-->
 
-                </androidx.cardview.widget.CardView>
+        <!--            <LinearLayout-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:orientation="horizontal">-->
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="150dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="4dp">
+        <!--                <androidx.cardview.widget.CardView-->
+        <!--                    android:layout_width="150dp"-->
+        <!--                    android:layout_height="100dp"-->
+        <!--                    android:layout_marginLeft="15dp"-->
+        <!--                    android:layout_marginTop="4dp">-->
 
-                </androidx.cardview.widget.CardView>
+        <!--&lt;!&ndash;                    <ImageView&ndash;&gt;-->
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="150dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="4dp">
+        <!--&lt;!&ndash;                        android:id="@+id/btn_add"&ndash;&gt;-->
+        <!--&lt;!&ndash;                        android:layout_width="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;                        android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;                        android:layout_gravity="center"&ndash;&gt;-->
+        <!--&lt;!&ndash;                        android:src="@drawable/add" />&ndash;&gt;-->
 
-                </androidx.cardview.widget.CardView>
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="150dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="4dp">
+        <!--                    <Button-->
+        <!--                        android:id="@+id/btn_test"-->
+        <!--                        android:layout_width="wrap_content"-->
+        <!--                        android:layout_height="wrap_content"-->
+        <!--                        android:text="Button" />-->
+        <!--                </androidx.cardview.widget.CardView>-->
 
-                </androidx.cardview.widget.CardView>
+        <!--                <androidx.cardview.widget.CardView-->
+        <!--                    android:id="@+id/card1"-->
+        <!--                    android:layout_width="150dp"-->
+        <!--                    android:layout_height="100dp"-->
+        <!--                    android:layout_marginLeft="15dp"-->
+        <!--                    android:layout_marginTop="4dp">-->
 
-            </LinearLayout>
 
-        </HorizontalScrollView>
+        <!--                    <ImageView-->
+        <!--                        android:id="@+id/imagem_test"-->
+        <!--                        android:layout_width="match_parent"-->
+        <!--                        android:layout_height="match_parent"-->
+        <!--                        app:srcCompat="@drawable/images" />-->
+        <!--                </androidx.cardview.widget.CardView>-->
+
+        <!--                <androidx.cardview.widget.CardView-->
+        <!--                    android:layout_width="150dp"-->
+        <!--                    android:layout_height="100dp"-->
+        <!--                    android:layout_marginLeft="15dp"-->
+        <!--                    android:layout_marginTop="4dp">-->
+
+        <!--                </androidx.cardview.widget.CardView>-->
+
+        <!--                <androidx.cardview.widget.CardView-->
+        <!--                    android:layout_width="150dp"-->
+        <!--                    android:layout_height="100dp"-->
+        <!--                    android:layout_marginLeft="15dp"-->
+        <!--                    android:layout_marginTop="4dp" />-->
+        <!--            </LinearLayout>-->
+        <!--        </HorizontalScrollView>-->
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/textView14"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="4dp"-->
+        <!--            android:text="Comentarios"-->
+        <!--            android:textColor="@color/Branco"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView2"-->
+        <!--            tools:ignore="MissingConstraints"-->
+        <!--            tools:layout_editor_absoluteX="16dp" />-->
+
+        <!--        <HorizontalScrollView-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="105dp"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/textView14"-->
+        <!--            tools:ignore="MissingConstraints">-->
+
+        <!--            <LinearLayout-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:orientation="horizontal">-->
+
+        <!--                <androidx.cardview.widget.CardView-->
+        <!--                    android:layout_width="150dp"-->
+        <!--                    android:layout_height="100dp"-->
+        <!--                    android:layout_marginLeft="15dp"-->
+        <!--                    android:layout_marginTop="4dp">-->
+
+        <!--                </androidx.cardview.widget.CardView>-->
+
+        <!--                <androidx.cardview.widget.CardView-->
+        <!--                    android:layout_width="150dp"-->
+        <!--                    android:layout_height="100dp"-->
+        <!--                    android:layout_marginLeft="15dp"-->
+        <!--                    android:layout_marginTop="4dp">-->
+
+        <!--                </androidx.cardview.widget.CardView>-->
+
+        <!--                <androidx.cardview.widget.CardView-->
+        <!--                    android:layout_width="150dp"-->
+        <!--                    android:layout_height="100dp"-->
+        <!--                    android:layout_marginLeft="15dp"-->
+        <!--                    android:layout_marginTop="4dp">-->
+
+        <!--                </androidx.cardview.widget.CardView>-->
+
+        <!--                <androidx.cardview.widget.CardView-->
+        <!--                    android:layout_width="150dp"-->
+        <!--                    android:layout_height="100dp"-->
+        <!--                    android:layout_marginLeft="15dp"-->
+        <!--                    android:layout_marginTop="4dp">-->
+
+        <!--                </androidx.cardview.widget.CardView>-->
+
+        <!--            </LinearLayout>-->
+
+        <!--        </HorizontalScrollView>-->
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>
