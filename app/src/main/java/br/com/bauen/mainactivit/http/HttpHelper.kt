@@ -13,7 +13,7 @@ class HttpHelper {
     //POST CADASTRO CLIENTE
     fun postCliente(json: String): String {
         //Definir URL do servidor
-        val URLApi = "http://10.107.144.4:3334/register/client"
+        val URLApi = "http://10.107.140.26:3334/register/client"
 
         //Definir o cabeçalho
         val headerHttp = MediaType.parse("application/json; charset=utf-8")
@@ -37,7 +37,7 @@ class HttpHelper {
     //POST CADASTRO PRESTADOR
     fun postPrestador(json: String): String {
         //Definir URL do servidor
-        val URLApi = "http://10.107.144.4:3334/register/service-provider"
+        val URLApi = "http://10.107.140.26:3334/register/service-provider"
 
         //Definir o cabeçalho
         val headerHttp = MediaType.parse("application/json; charset=utf-8")
@@ -61,7 +61,7 @@ class HttpHelper {
 //  LOGIN
     fun login(email: String, senha: String): UsuarioCliente {
         //Definir URL do servidor
-        val URLApiLoginCliente = "http://10.107.144.4:3334/login-client"
+        val URLApiLoginCliente = "http://10.107.140.26:3334/login-client"
 
         // Criar login que vai disparar a requisição
         val loginn = OkHttpClient()
@@ -96,7 +96,7 @@ class HttpHelper {
     //GET Listagem
     fun get2() {
         //Definir URL do servidor
-        val URLApi = "http://10.107.144.29:3334//service-provider"
+        val URLApi = "http://10.107.140.26:3334//service-provider"
 
         // Criar cliente que vai disparar a requisição
         val client = OkHttpClient()

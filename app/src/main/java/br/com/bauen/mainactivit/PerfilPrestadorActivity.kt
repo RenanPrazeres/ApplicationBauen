@@ -8,32 +8,36 @@ import android.widget.*
 import androidx.recyclerview.widget.LinearLayoutManager
 
 class PerfilPrestadorActivity : AppCompatActivity() {
+    lateinit var btncontato: Button
+    lateinit var btn_add: Button
+    lateinit var imageView: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.perfil_prestador)
 
+        btn_add = findViewById(R.id.btn_test)
+        imageView = findViewById(R.id.imagem_test)
+        btncontato = findViewById(R.id.btn_contato)
+
+        btn_add.setOnClickListener {
+//            pickImageGallery()
+        }
 
 
+        //BOTAO PARA ENTRAR EM CONTATO, DIRECIONANDO PARA TELA DE CHAT
+        btncontato.setOnClickListener {
+            val chat = Intent(this, ChatActivity::class.java)
+            startActivity(chat)
+
+        }
+    }
+
+
+    companion object {
+        val IMAGE_REQUEST_CODE = 100
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //val data :MutableList<DataObjetc> = ArrayList()
@@ -43,9 +47,6 @@ class PerfilPrestadorActivity : AppCompatActivity() {
 //        val layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
 
 
-
-
-
 //        rb_ratingBar.rating = 2.5f
 //        rb_ratingBar = stepSize = .5f
 //
@@ -53,27 +54,6 @@ class PerfilPrestadorActivity : AppCompatActivity() {
 //            Toast.makeText( this, "Rating: $rating", Toast.LENGTH_SHORT).show()
 //
 //        }
-
-
-
-//    btn_add = findViewById(R.id.btn_test)
-//        imageView = findViewById(R.id.imagem_test)
-//        btncontato = findViewById(R.id.btn_contato)
-//
-//        btn_add.setOnClickListener {
-//            pickImageGallery()
-//        }
-//
-//
-//        //BOTAO PARA ENTRAR EM CONTATO, DIRECIONANDO PARA TELA DE CHAT
-//        btncontato.setOnClickListener {
-//            val chat = Intent(this, ChatActivity::class.java)
-//            startActivity(chat)
-//
-//        }
-//    }
-
-
 
 
 //    lateinit var btncontato: Button

@@ -17,7 +17,7 @@ import org.jetbrains.anko.doAsync
 import org.jetbrains.anko.toast
 import org.jetbrains.anko.uiThread
 
-class LoginActivity : AppCompatActivity(), View.OnClickListener {
+class LoginActivity : AppCompatActivity() {
 
     lateinit var email_login: EditText
     lateinit var senha_login: EditText
@@ -35,30 +35,32 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         novoPorAqui = findViewById(R.id.nao_tem_conta)
         cadastre_se = findViewById(R.id.cadastre_se_login)
 
-        buttonLogin.setOnClickListener (this)
-
-    }
-
-    override fun onClick(v: View?) {
-        val httpHelper = HttpHelper()
-
-        doAsync {
-            val usuario = httpHelper.login(email_login.text.toString(), senha_login.text.toString())
-
-            uiThread {
-                if (usuario.email.isNotEmpty()){
-                    abrirListagemPrestador()
-                }else {
-                    toast("Dados incorretos! Tente novamente")
-                }
-            }
+        buttonLogin.setOnClickListener {
+            val intent = Intent(this, ListagemPrestadorActivity::class.java)
+            startActivity(intent)
         }
+
     }
 
-    private fun abrirListagemPrestador() {
-        val intent = Intent(this, PerfilPrestadorActivity::class.java)
-        startActivity(intent)
-    }
+//    override fun onClick(v: View?) {
+//        val httpHelper = HttpHelper()
+//
+//        doAsync {
+//            val usuario = httpHelper.login(email_login.text.toString(), senha_login.text.toString())
+//
+//            uiThread {
+//                if (usuario.email.isNotEmpty()){
+//                    abrirListagemPrestador()
+//                }else {
+//                    toast("Dados incorretos! Tente novamente")
+//                }
+//            }
+//        }
+//    }
+
+//    private fun abrirListagemPrestador() {
+//
+//    }
 
 
     fun showDialog(view: View) {
@@ -103,9 +105,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         startActivity(intent)
         finish()
     }
-
 }
-
 
 //    fun abrirDialog(){
 //        val alertDialog = AlertDialog.Builder(this)
