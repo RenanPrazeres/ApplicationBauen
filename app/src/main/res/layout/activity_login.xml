@@ -56,17 +56,17 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/email_login"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/const_logo_login"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/edit_text_login_background"
-            android:hint="E-mail"
-            android:padding="15dp" />
+            <EditText
+                android:id="@+id/email_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/const_logo_login"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/edit_text_login_background"
+                android:hint="E-mail"
+                android:padding="15dp" />
 
             <EditText
                 android:id="@+id/senha_login"
@@ -81,84 +81,84 @@
                 android:inputType="textPassword"
                 android:padding="15dp" />
 
-        <Button
-            android:id="@+id/button_login"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/senha_login"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="18dp"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/button_background"
-            android:padding="12dp"
-            android:text="LOGIN"
-            android:textColor="@color/Branco" />
+            <Button
+                android:id="@+id/button_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/senha_login"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/button_background"
+                android:padding="12dp"
+                android:text="LOGIN"
+                android:textColor="@color/Branco" />
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cv_conectar_google"
-            android:layout_width="350dp"
-            android:layout_height="40dp"
-            android:layout_below="@+id/button_login"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginStart="30dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginTop="19dp"
-            android:layout_marginEnd="31dp"
-            android:layout_marginRight="31dp"
-            android:background="@color/Preto">
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_conectar_google"
+                android:layout_width="350dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/button_login"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="19dp"
+                android:layout_marginEnd="31dp"
+                android:layout_marginRight="31dp"
+                android:background="@color/Preto">
 
 
-            <ImageView
-                android:id="@+id/iv_google"
-                android:layout_width="30dp"
-                android:layout_height="25dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="8dp"
-                android:scaleType="fitStart"
-                app:srcCompat="@drawable/google" />
+                <ImageView
+                    android:id="@+id/iv_google"
+                    android:layout_width="30dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="8dp"
+                    android:scaleType="fitStart"
+                    app:srcCompat="@drawable/google" />
+
+                <TextView
+                    android:id="@+id/tv_logar_com_google"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="120dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Login com Google"
+                    android:textColor="@color/Preto" />
+            </androidx.cardview.widget.CardView>
 
             <TextView
-                android:id="@+id/tv_logar_com_google"
+                android:id="@+id/esqueceu_senha_login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/cv_conectar_google"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="150dp"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="152dp"
+                android:layout_marginRight="152dp"
+                android:text="Esqueceu senha?"
+                android:textColor="@color/Primaria" />
+
+            <TextView
+                android:id="@+id/nao_tem_conta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/esqueceu_senha_login"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="260dp"
                 android:layout_marginLeft="120dp"
-                android:layout_marginTop="10dp"
-                android:text="Login com Google"
-                android:textColor="@color/Preto" />
-        </androidx.cardview.widget.CardView>
-
-        <TextView
-            android:id="@+id/esqueceu_senha_login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/cv_conectar_google"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginStart="150dp"
-            android:layout_marginLeft="150dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="152dp"
-            android:layout_marginRight="152dp"
-            android:text="Esqueceu senha?"
-            android:textColor="@color/Primaria" />
-
-        <TextView
-            android:id="@+id/nao_tem_conta"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/esqueceu_senha_login"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_marginStart="260dp"
-            android:layout_marginLeft="120dp"
-            android:layout_marginTop="15dp"
-            android:text="Não tem conta?"
-            android:textColor="@color/Cinza2" />
+                android:layout_marginTop="15dp"
+                android:text="Não tem conta?"
+                android:textColor="@color/Cinza2" />
 
             <TextView
                 android:id="@+id/cadastre_se_login"
@@ -174,9 +174,9 @@
                 android:layout_marginRight="118dp"
                 android:layout_toEndOf="@+id/novo_por_aqui"
                 android:layout_toRightOf="@+id/novo_por_aqui"
+                android:onClick="showDialog"
                 android:text="Cadastre-se"
-                android:textColor="@color/Primaria"
-                android:onClick="showDialog"/>
+                android:textColor="@color/Primaria" />
 
         </LinearLayout>
     </ScrollView>

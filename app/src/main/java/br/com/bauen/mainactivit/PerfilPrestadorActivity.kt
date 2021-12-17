@@ -9,18 +9,18 @@ import androidx.recyclerview.widget.LinearLayoutManager
 
 class PerfilPrestadorActivity : AppCompatActivity() {
     lateinit var btncontato: Button
-    lateinit var btn_add: Button
+    lateinit var img_add: ImageView
     lateinit var imageView: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.perfil_prestador)
 
-        btn_add = findViewById(R.id.btn_test)
+        img_add = findViewById(R.id.btn_add)
         imageView = findViewById(R.id.imagem_test)
         btncontato = findViewById(R.id.btn_contato)
 
-        btn_add.setOnClickListener {
+        img_add.setOnClickListener {
 //            pickImageGallery()
         }
 

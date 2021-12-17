@@ -36,7 +36,7 @@ class LoginActivity : AppCompatActivity() {
         cadastre_se = findViewById(R.id.cadastre_se_login)
 
         buttonLogin.setOnClickListener {
-            val intent = Intent(this, ListagemPrestadorActivity::class.java)
+            val intent = Intent(this, PerfilPrestadorActivity::class.java)
             startActivity(intent)
         }
 

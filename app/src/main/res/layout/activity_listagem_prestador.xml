@@ -66,7 +66,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
-            android:text="0 Resultados"
+            android:text="2 Resultados"
             android:textColor="@color/Secundária"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -319,12 +319,196 @@
 
     </HorizontalScrollView>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_cards"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/recycleCard"
         android:layout_width="match_parent"
-        android:layout_height="510dp"
-        android:orientation="vertical"
-        tools:listitem="@layout/lista_prestador_layout" />
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:cardBackgroundColor="@color/Branco"
+        app:cardCornerRadius="8dp"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/card"
+            android:layout_width="match_parent"
+            android:layout_height="119dp"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="35dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/foto_listagem"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/jardineiro" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textNome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Junior f\arias "
+                android:textColor="@color/Primaria"
+                android:layout_marginLeft="18dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="6dp"
+                app:layout_constraintStart_toEndOf="@+id/card_view_profile"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textProfissao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jardineiro"
+                android:textColor="@color/Primaria"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginRight="4dp" />
+
+            <TextView
+                android:id="@+id/textDescricao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mais de 30 Projetos Realizados"
+                android:textColor="@color/Primaria"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/card_view_profile"
+                android:layout_marginLeft="18dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginBottom="6dp"/>
+
+            <RatingBar
+                android:id="@+id/ratingAvaliacao"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="81dp"
+                android:layout_height="19dp"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="18dp"
+                android:layout_marginLeft="18dp"
+                android:numStars="5"
+                android:stepSize="0.5"
+                android:theme="@style/RatingBar"
+                app:layout_constraintBottom_toTopOf="@+id/textDescricao"
+                app:layout_constraintStart_toEndOf="@+id/card_view_profile"
+                app:layout_constraintTop_toBottomOf="@+id/textNome" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/recycleCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:cardBackgroundColor="@color/Branco"
+        app:cardCornerRadius="8dp"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/card"
+            android:layout_width="match_parent"
+            android:layout_height="119dp"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_view_profile1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="35dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/foto_listagem1"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:scaleType="fitXY"
+                    app:srcCompat="@drawable/woman_profile" />
+
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textNome1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Maria Eduarda "
+                android:textColor="@color/Primaria"
+                android:layout_marginLeft="18dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="6dp"
+                app:layout_constraintStart_toEndOf="@+id/card_view_profile1"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textProfissao1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Engenheira"
+                android:textColor="@color/Primaria"
+                android:layout_marginEnd="4dp"
+                android:layout_marginBottom="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginRight="4dp" />
+
+            <TextView
+                android:id="@+id/textDescricao1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mais de 10 Projetos Realizados"
+                android:textColor="@color/Primaria"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/card_view_profile1"
+                android:layout_marginLeft="18dp"
+                android:layout_marginStart="18dp"
+                android:layout_marginBottom="6dp"/>
+
+            <RatingBar
+                android:id="@+id/ratingAvaliacao1"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="81dp"
+                android:layout_height="19dp"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="18dp"
+                android:layout_marginLeft="18dp"
+                android:numStars="5"
+                android:stepSize="0.5"
+                android:theme="@style/RatingBar"
+                app:layout_constraintBottom_toTopOf="@+id/textDescricao1"
+                app:layout_constraintStart_toEndOf="@+id/card_view_profile1"
+                app:layout_constraintTop_toBottomOf="@+id/textNome1" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/rv_cards"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="510dp"-->
+<!--        android:orientation="vertical"-->
+<!--        tools:listitem="@layout/lista_prestador_layout" />-->
 
 <!--        <com.google.android.material.bottomnavigation.BottomNavigationView-->
 <!--            android:layout_width="match_parent"-->

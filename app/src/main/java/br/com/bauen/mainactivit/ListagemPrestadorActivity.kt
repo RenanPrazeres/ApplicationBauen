@@ -31,15 +31,15 @@ class ListagemPrestadorActivity : AppCompatActivity() {
         setContentView(R.layout.activity_listagem_prestador)
 
 
-        rvServiceProvider = findViewById(R.id.rv_cards)
-        rvServiceProvider.layoutManager =
-            LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-
-        adapterServiceProviders = ServiceProviderAdapter(this)
-
-        rvServiceProvider.adapter = adapterServiceProviders
-
-        loadproviderList()
+//        rvServiceProvider = findViewById(R.id.rv_cards)
+//        rvServiceProvider.layoutManager =
+//            LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+//
+//        adapterServiceProviders = ServiceProviderAdapter(this)
+//
+//        rvServiceProvider.adapter = adapterServiceProviders
+//
+//        loadproviderList()
     }
 
     private fun loadproviderList() {

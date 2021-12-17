@@ -3,8 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Beatriz Freitas/Desktop/Beatriz/ESTUDOS/SENAI/DS3M/TCC/ApplicationBauen/app/src/main/res/drawable/edit_text_login_background.xml" value="0.20833333333333334" />
         <entry key="..\:/Users/Beatriz Freitas/Desktop/Beatriz/ESTUDOS/SENAI/DS3M/TCC/ApplicationBauen/app/src/main/res/layout/activity_cadastro.xml" value="0.22" />
-        <entry key="..\:/Users/Beatriz Freitas/Desktop/Beatriz/ESTUDOS/SENAI/DS3M/TCC/ApplicationBauen/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/Users/Beatriz Freitas/Desktop/Beatriz/ESTUDOS/SENAI/DS3M/TCC/ApplicationBauen/app/src/main/res/layout/activity_listagem_prestador.xml" value="0.22" />
+        <entry key="..\:/Users/Beatriz Freitas/Desktop/Beatriz/ESTUDOS/SENAI/DS3M/TCC/ApplicationBauen/app/src/main/res/layout/activity_login.xml" value="0.18" />
+        <entry key="..\:/Users/Beatriz Freitas/Desktop/Beatriz/ESTUDOS/SENAI/DS3M/TCC/ApplicationBauen/app/src/main/res/layout/lista_prestador_layout.xml" value="0.1921875" />
+        <entry key="..\:/Users/Beatriz Freitas/Desktop/Beatriz/ESTUDOS/SENAI/DS3M/TCC/ApplicationBauen/app/src/main/res/layout/perfil_prestador.xml" value="0.25" />
         <entry key="..\:/Users/Beatriz Freitas/Desktop/Beatriz/ESTUDOS/SENAI/DS3M/TCC/ApplicationBauen/app/src/main/res/xml/network_security_config.xml" value="0.1" />
       </map>
     </option>
